@@ -14,10 +14,10 @@ Unity 2022.6.3f1
 │   ├── Audio/
 │   │   ├── SFX/
 │   │   └── Music/
-│   ├── Scripts/
-│   │   ├── Gameplay/
-│   │   ├── Tools/
-│   │   └── Editor/
+|   ├── Scripts/
+│   │   ├── GameManager/
+|   |   ├── Gameplay/
+|   |   └── UI
 │   └── Scenes
 ```
 
