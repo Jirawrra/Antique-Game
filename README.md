@@ -1,7 +1,7 @@
 ## Isometric Pixel Art Tycoon Game that sells ancient artifact to ghost customers
 
 ### Unity Version 
-Unity 2022.6.3f1
+Unity 6000.3.2f1
 
 ## Project Structure
 
