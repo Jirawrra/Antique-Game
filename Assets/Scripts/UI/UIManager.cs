@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject NotificationPanel;
 
-
+      public static event Action OnNotificationClosed;
 
     private void Start()
     {
@@ -22,38 +23,19 @@ public class UIManager : MonoBehaviour
     public void Upgrades()
     {
         Debug.Log ("Show Upgrades UI");
-
+            
     }
 
     public void Antique()
     {
-            
         Debug.Log ("Show Antique UI");
     }
     public void Yes()
     {
         Debug.Log ("Yes");
-        NotificationPanel.SetActive(false);
-        
+
+      //  NotificationPanel.SetActive(false);
+        OnNotificationClosed?.Invoke();
     }
 
-    // IEnumerator Animate(Vector2 target)
-    // {
-    //     Vector2 start = rect.anchoredPosition;
-    //     float time = 0f;
-
-    //     while (time < duration)
-    //     {
-    //         time += Time.deltaTime;
-    //         float t = time / duration;
-    //         rect.anchoredPosition = Vector2.Lerp(start, target, t);
-    //         yield return null;
-    //     }
-
-    //     rect.anchoredPosition = target;
-    // }
-    
-    
-
- 
 }
