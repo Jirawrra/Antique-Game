@@ -2,57 +2,58 @@ using UnityEngine;
 using System;
 using System.Collections;
 
-public class PopOutAnimation : MonoBehaviour
+public class PopInAnimation : MonoBehaviour
 {
-
     [Header("Animation Settings")]
     public float duration = 0.25f;
-
-    [Tooltip("Easing curve for the animation (0=start, 1=end)")]
     public AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     private Coroutine animationCoroutine;
 
     void OnEnable()
     {
-        UIManager.OnNotificationClosed += PlayCloseAnimation;
+        UIManager.OnNotificationOpened += PlayOpenAnimation;
     }
 
     void OnDisable()
     {
-        UIManager.OnNotificationClosed -= PlayCloseAnimation;
+        UIManager.OnNotificationOpened -= PlayOpenAnimation;
     }
 
-    void PlayCloseAnimation()
+    public void PlayOpenAnimation()
     {
+        // Stop any running close animation
         if (animationCoroutine != null)
             StopCoroutine(animationCoroutine);
 
-        animationCoroutine = StartCoroutine(AnimateClose());
+        // Force enable panel before opening
+        gameObject.SetActive(true);
+
+        // Start the pop-in animation
+        animationCoroutine = StartCoroutine(AnimateOpen());
     }
 
-    IEnumerator AnimateClose()
+    IEnumerator AnimateOpen()
     {
-        Vector3 startScale = transform.localScale;
-        Vector3 targetScale = Vector3.zero; // shrink to disappear
+        Vector3 startScale = Vector3.zero;
+        Vector3 targetScale = Vector3.one;
+
         float time = 0f;
+        transform.localScale = startScale;
 
         while (time < duration)
         {
             time += Time.deltaTime;
             float t = Mathf.Clamp01(time / duration);
-
-            // Use easing curve
             float easedT = easingCurve.Evaluate(t);
 
-            transform.localScale = Vector3.Lerp(startScale, targetScale, easedT);
+            transform.localScale =
+                Vector3.Lerp(startScale, targetScale, easedT);
 
             yield return null;
         }
 
         transform.localScale = targetScale;
-
-        // Optionally disable panel after animation
-        gameObject.SetActive(false);
     }
+
 }

@@ -1,40 +1,48 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
-using UnityEngine.UI;
 using System;
+using System.Net.Mail;
+
+
 
 public class UIManager : MonoBehaviour
 {
-    //public Image UpgradeImage;
-     public float duration = 0.25f;
-    private RectTransform rect;
+    public static event Action OnNotificationClosed;
+    public static event Action OnNotificationOpened;
 
-    public GameObject NotificationPanel;
+    public GameObject notificationPanel;
 
-      public static event Action OnNotificationClosed;
-
-    private void Start()
+    void Start()
     {
-        rect = GetComponent<RectTransform>();
-        
+
+    }
+
+    void Update()
+    {
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            notificationPanel.SetActive(true);
+            OnNotificationOpened?.Invoke();
+            Debug.Log("Notification is Called");
+        }
     }
 
     public void Upgrades()
     {
-        Debug.Log ("Show Upgrades UI");
-            
+        Debug.Log("Show Upgrades UI");
+
     }
 
     public void Antique()
     {
-        Debug.Log ("Show Antique UI");
+        Debug.Log("Show Antique UI");
     }
     public void Yes()
     {
-        Debug.Log ("Yes");
+        Debug.Log("Yes");
 
-      //  NotificationPanel.SetActive(false);
+        //  NotificationPanel.SetActive(false);
         OnNotificationClosed?.Invoke();
     }
 
