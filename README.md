@@ -39,13 +39,3 @@ Unity 6000.3.2f1
 ## Branching
 
 Main - Keep stable 
-
-Development - All features are merged here first
-
-Supporting branches 
-feature/
-bugfix/
-
-
-
-
