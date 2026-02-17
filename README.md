@@ -1,6 +1,8 @@
-## Isometric Pixel Art Tycoon Game that sells ancient artifact to ghost customers
+## Isometric Pixel Art Tycoon Game that sells ancient artefacts to ghost customers
 
-### [GDD](https://docs.google.com/document/d/1t01sbBmrGm1AgO76bAs0oLU08kyMyzSFqB_mYw1m0dE/edit?tab=t.0)
+### [Documentation](https://docs.google.com/document/d/1t01sbBmrGm1AgO76bAs0oLU08kyMyzSFqB_mYw1m0dE/edit?tab=t.0)
+### [Mastersheet](https://docs.google.com/spreadsheets/d/1iFkrWjrHKfmh67OTsAloo9MOUdXhFeanlY9jQFFxcsg/edit?gid=1152636205#gid=1152636205)
+
 ### Unity Version 
 Unity 6000.3.2f1
 
@@ -43,13 +45,6 @@ Development - All features are merged here first
 Supporting branches 
 feature/
 bugfix/
-
-    
-    
-    
-    
-
-
 
 
 
