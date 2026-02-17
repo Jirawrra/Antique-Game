@@ -1,5 +1,5 @@
 # Antique Store Tycoon README.
-An isometric pixel art tycoon game that sells ancient artefacts to ghost customers
+An isometric pixel art tycoon game that sells ancient artefacts to ghost customers.
 
 References:
 - [Documentation](https://docs.google.com/document/d/1t01sbBmrGm1AgO76bAs0oLU08kyMyzSFqB_mYw1m0dE/edit?tab=t.0)
