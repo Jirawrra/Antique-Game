@@ -11,7 +11,7 @@ public class PopAnimation : MonoBehaviour
 
     void OnEnable()
     {
-        // Subscribe to UIManager events
+
         UIManager.OnNotificationOpened += PlayOpenAnimation;
         UIManager.OnNotificationClosed += PlayCloseAnimation;
     }

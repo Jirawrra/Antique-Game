@@ -1,22 +1,21 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
-using System.Collections;
 using System;
-using System.Net.Mail;
-
-
+using System.Collections;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
+    private enum Tab { None, Antiques, Upgrades }
     public static event Action OnNotificationClosed;
     public static event Action OnNotificationOpened;
 
-    public GameObject notificationPanel;
+    [SerializeField] private GameObject notificationPanel;
 
-    void Start()
-    {
+    [SerializeField] private GameObject antiquesPanel;
+    [SerializeField] private GameObject upgradesPanel;
+    [SerializeField] private PanelSlideMove panelMover;
 
-    }
+    private Tab currentTab = Tab.None;
 
     void Update()
     {
@@ -24,26 +23,52 @@ public class UIManager : MonoBehaviour
         {
             notificationPanel.SetActive(true);
             OnNotificationOpened?.Invoke();
-            Debug.Log("Notification is Called");
         }
     }
 
-    public void Upgrades()
+    public void closeNotification()
     {
-        Debug.Log("Show Upgrades UI");
-
-    }
-
-    public void Antique()
-    {
-        Debug.Log("Show Antique UI");
-    }
-    public void Yes()
-    {
-        Debug.Log("Yes");
-
-        //  NotificationPanel.SetActive(false);
+        // notificationPanel.SetActive(false);
         OnNotificationClosed?.Invoke();
+    }
+
+
+
+    public void OnAntiques(bool isOn)
+    {
+        if (!isOn) return;
+
+        HandleTab(Tab.Antiques);
+    }
+
+    public void OnUpgrades(bool isOn)
+    {
+        if (!isOn) return;
+
+        HandleTab(Tab.Upgrades);
+    }
+
+    private void HandleTab(Tab clickedTab)
+    {
+
+        if (currentTab == clickedTab) // Toggle the same tab
+        {
+            if (panelMover.IsUp)
+                panelMover.SlideDown();
+            else
+                panelMover.SlideUp();
+
+            return;
+        }
+
+        currentTab = clickedTab;
+
+        antiquesPanel.SetActive(clickedTab == Tab.Antiques); // Show Antiques panel if selected
+        upgradesPanel.SetActive(clickedTab == Tab.Upgrades); // Show Upgrades panel if selected
+
+        //Slide Up if the panel is not already up
+        if (!panelMover.IsUp)
+            panelMover.SlideUp();
     }
 
 }
