@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8710307345230360293}
   - component: {fileID: 5483657324176003018}
   m_Layer: 5
-  m_Name: Premium Shop Button
+  m_Name: P_Shop Button Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
