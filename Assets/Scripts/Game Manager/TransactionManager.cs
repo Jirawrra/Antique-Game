@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class TransactionManager : MonoBehaviour
 {
     public InventoryManager inventory;
     public CurrencyManager currency;
