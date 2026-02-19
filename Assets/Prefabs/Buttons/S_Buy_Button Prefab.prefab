@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 8553013610439693390}
   - component: {fileID: 5407494551122491118}
   m_Layer: 5
-  m_Name: S_Buy_Button
+  m_Name: S_Buy_Button Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
