@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: deb7d24fb0d7743478685d6e0991f437
+guid: 306061a55c6e28d4d90d7f2b5383ca40
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -16793423984005362
-    second: gems_0
+      213: -7241040041679556720
+    second: Ghosts - Layer 3 (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gems_0
+      name: Ghosts - Layer 3 (3)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 18
-        height: 20
+        x: 729
+        y: 249
+        width: 182
+        height: 212
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0feed8487654cff0800000000000000
-      internalID: -16793423984005362
+      spriteID: 09f6f4f5278a28b90800000000000000
+      internalID: -7241040041679556720
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gems_0: -16793423984005362
+      Ghosts - Layer 3 (3)_0: -7241040041679556720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

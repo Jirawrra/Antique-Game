@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public int obols; // Player currency
+    public GameObject Oboltext;
+    public GameObject Drachmatext;
+    
+    // Player currency
+    public int obols; // Standard
+    public int drachma; // Premium
 
     public void AddObols(int Amount)
     {
         obols += Amount;
+        Debug.Log("Obols : " + obols);
+        
+        drachma += Amount;
         Debug.Log("Obols : " + obols);
     }
 
@@ -15,6 +23,12 @@ public class CurrencyManager : MonoBehaviour
         if ( obols >= amount)
         {
             obols -= amount;
+            return true;
+        }
+        
+        if ( drachma >= amount)
+        {
+            drachma -= amount;
             return true;
         }
 
