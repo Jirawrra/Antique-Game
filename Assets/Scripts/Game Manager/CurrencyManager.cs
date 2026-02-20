@@ -1,20 +1,33 @@
+using Newtonsoft.Json.Bson;
+using System;
 using UnityEngine;
 
 public class CurrencyManager : MonoBehaviour
-{
-    public GameObject Oboltext;
-    public GameObject Drachmatext;
-    
+{  
     // Player currency
     public int obols; // Standard
     public int drachma; // Premium
 
-    public void AddObols(int Amount)
+    public event Action<int> OnObolsChanged;
+    public event Action<int> OnDrachmaChanged;
+
+    private void Start()
     {
-        obols += Amount;
+        OnObolsChanged?.Invoke(obols);
+        OnDrachmaChanged?.Invoke(drachma);
+    }
+
+    public void AddObols(int amount)
+    {
+        obols += amount;
+        OnObolsChanged?.Invoke(obols);
         Debug.Log("Obols : " + obols);
-        
-        drachma += Amount;
+    }
+
+    public void AddDrachma(int amount)
+    {
+        drachma += amount;
+        OnDrachmaChanged?.Invoke(drachma);
         Debug.Log("Obols : " + obols);
     }
 
@@ -23,15 +36,20 @@ public class CurrencyManager : MonoBehaviour
         if ( obols >= amount)
         {
             obols -= amount;
+            OnObolsChanged?.Invoke(obols);
             return true;
         }
-        
-        if ( drachma >= amount)
+        return false;
+    }
+
+    public bool SpendDrachma(int amount)
+    {
+        if (drachma >= amount)
         {
             drachma -= amount;
+            OnDrachmaChanged?.Invoke(drachma);
             return true;
         }
-
         return false;
     }
 }

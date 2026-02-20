@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,13 +10,26 @@ public class UIManager : MonoBehaviour
     public static event Action OnNotificationClosed;
     public static event Action OnNotificationOpened;
 
+    [Header("Notification")]
     [SerializeField] private GameObject notificationPanel;
 
+    [Header("Panels")]
     [SerializeField] private GameObject antiquesPanel;
     [SerializeField] private GameObject upgradesPanel;
     [SerializeField] private PanelSlideMove panelMover;
 
+    [Header("Currency UI")]
+    [SerializeField] private CurrencyManager currencyManager;
+    [SerializeField] private TextMeshProUGUI obolsText;
+    [SerializeField] private TextMeshProUGUI drachmaText;
+
     private Tab currentTab = Tab.None;
+
+    void Start()
+    {
+        currencyManager.OnObolsChanged += UpdateObolsUI;
+        currencyManager.OnDrachmaChanged += UpdateDrachmaUI;
+    }
 
     void Update()
     {
@@ -32,12 +46,9 @@ public class UIManager : MonoBehaviour
         OnNotificationClosed?.Invoke();
     }
 
-
-
     public void OnAntiques(bool isOn)
     {
         if (!isOn) return;
-
         HandleTab(Tab.Antiques);
     }
 
@@ -69,6 +80,16 @@ public class UIManager : MonoBehaviour
         //Slide Up if the panel is not already up
         if (!panelMover.IsUp)
             panelMover.SlideUp();
+    }
+
+    private void UpdateObolsUI(int amount)
+    {
+        obolsText.text = amount.ToString();
+    }
+
+    private void UpdateDrachmaUI(int amount)
+    {
+        drachmaText.text = amount.ToString();
     }
 
 }
