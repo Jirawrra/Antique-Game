@@ -1382,11 +1382,17 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   m_IsOn: 1
---- !u!1 &287463616 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5737094181159952613, guid: dbd989dd11dc97a4fb442ba92120b99e, type: 3}
+--- !u!114 &287463619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5929214017845888098, guid: dbd989dd11dc97a4fb442ba92120b99e, type: 3}
   m_PrefabInstance: {fileID: 8975241363130542740}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &317761048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6717,6 +6723,9 @@ MonoBehaviour:
   antiquesPanel: {fileID: 8689962807156608909}
   upgradesPanel: {fileID: 960333293320642178}
   panelMover: {fileID: 273026432}
+  currencyManager: {fileID: 1894796515}
+  obolsText: {fileID: 287463619}
+  drachmaText: {fileID: 2024748084}
 --- !u!4 &1488165850
 Transform:
   m_ObjectHideFlags: 0
@@ -9033,8 +9042,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced1257b171acc04496ae7b24dced8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CurrencyManager
-  Oboltext: {fileID: 287463616}
-  Drachmatext: {fileID: 2024748083}
   obols: 0
   drachma: 0
 --- !u!4 &1894796516
@@ -9389,11 +9396,17 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2024748083 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5266634329106092382, guid: dbd989dd11dc97a4fb442ba92120b99e, type: 3}
+--- !u!114 &2024748084 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2919392912774610242, guid: dbd989dd11dc97a4fb442ba92120b99e, type: 3}
   m_PrefabInstance: {fileID: 8975241363130542740}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &2026296683
 GameObject:
   m_ObjectHideFlags: 0
