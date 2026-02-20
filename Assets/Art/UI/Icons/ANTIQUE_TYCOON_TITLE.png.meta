@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 0aea9164d97a8f44c87c3e4150c80d7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4522971054441851492
+    second: ANTIQUE_TYCOON_TITLE_0
+  - first:
+      213: -876728880338705332
+    second: ANTIQUE_TYCOON_TITLE_1
+  - first:
+      213: -567078607099185775
+    second: ANTIQUE_TYCOON_TITLE_2
+  - first:
+      213: 247464733905932734
+    second: ANTIQUE_TYCOON_TITLE_3
+  - first:
+      213: 6579797301156771087
+    second: ANTIQUE_TYCOON_TITLE_4
+  - first:
+      213: -7970601159544592514
+    second: ANTIQUE_TYCOON_TITLE_5
+  - first:
+      213: 2578914419118533741
+    second: ANTIQUE_TYCOON_TITLE_6
+  - first:
+      213: 410037534118161298
+    second: ANTIQUE_TYCOON_TITLE_7
+  - first:
+      213: -3542901936708785145
+    second: ANTIQUE_TYCOON_TITLE_8
+  - first:
+      213: -590115021226734549
+    second: ANTIQUE_TYCOON_TITLE_9
+  - first:
+      213: -2807634380627351133
+    second: ANTIQUE_TYCOON_TITLE_10
+  - first:
+      213: -583278155674874254
+    second: ANTIQUE_TYCOON_TITLE_11
+  - first:
+      213: -2695388225351700121
+    second: ANTIQUE_TYCOON_TITLE_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 103
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a6165d532d4ce30800000000000000
+      internalID: 4522971054441851492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 103
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c44e51b7abb35d3f0800000000000000
+      internalID: -876728880338705332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 103
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1953128e2055128f0800000000000000
+      internalID: -567078607099185775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_3
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 103
+        width: 21
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb156e64ddb2f6300800000000000000
+      internalID: 247464733905932734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_4
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 97
+        width: 45
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05f58db8c2205b50800000000000000
+      internalID: 6579797301156771087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_5
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 103
+        width: 45
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e772707b97cb26190800000000000000
+      internalID: -7970601159544592514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_6
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 103
+        width: 44
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c61b120052ac320800000000000000
+      internalID: 2578914419118533741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ba0bdf6feb0b500800000000000000
+      internalID: 410037534118161298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 0
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ced6ca57515dec0800000000000000
+      internalID: -3542901936708785145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_9
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c8827c38d7fc7f0800000000000000
+      internalID: -590115021226734549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a9688308674909d0800000000000000
+      internalID: -2807634380627351133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e01c59b97c7e7f0800000000000000
+      internalID: -583278155674874254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ANTIQUE_TYCOON_TITLE_12
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 45
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761342890be089ad0800000000000000
+      internalID: -2695388225351700121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ANTIQUE_TYCOON_TITLE_0: 4522971054441851492
+      ANTIQUE_TYCOON_TITLE_1: -876728880338705332
+      ANTIQUE_TYCOON_TITLE_10: -2807634380627351133
+      ANTIQUE_TYCOON_TITLE_11: -583278155674874254
+      ANTIQUE_TYCOON_TITLE_12: -2695388225351700121
+      ANTIQUE_TYCOON_TITLE_2: -567078607099185775
+      ANTIQUE_TYCOON_TITLE_3: 247464733905932734
+      ANTIQUE_TYCOON_TITLE_4: 6579797301156771087
+      ANTIQUE_TYCOON_TITLE_5: -7970601159544592514
+      ANTIQUE_TYCOON_TITLE_6: 2578914419118533741
+      ANTIQUE_TYCOON_TITLE_7: 410037534118161298
+      ANTIQUE_TYCOON_TITLE_8: -3542901936708785145
+      ANTIQUE_TYCOON_TITLE_9: -590115021226734549
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
