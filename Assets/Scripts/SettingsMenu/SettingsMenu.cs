@@ -7,6 +7,23 @@ public class SettingsMenu : MonoBehaviour
 {
 
     public AudioMixer audioMixer;
+    public GameObject settingsPanel;
+    public GameObject creditsPanel;
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+    }
+    public void OpenCredits()
+    {
+        settingsPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+    }
+
+    public void CloseCredits()
+    {
+        creditsPanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
     public void SetBGMVolume(float volume)
     {
         audioMixer.SetFloat("BGMVolume", volume);
@@ -16,4 +33,6 @@ public class SettingsMenu : MonoBehaviour
     {
         audioMixer.SetFloat("SFXVolume", volume);
     }
+
+
 }
