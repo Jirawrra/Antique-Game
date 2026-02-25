@@ -9,6 +9,7 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public GameObject settingsPanel;
     public GameObject creditsPanel;
+    public GameObject tosPanel;
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
@@ -32,6 +33,17 @@ public class SettingsMenu : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         audioMixer.SetFloat("SFXVolume", volume);
+    }
+    public void OpenTOS()
+    {
+        settingsPanel.SetActive(false);
+        tosPanel.SetActive(true);
+    }
+
+    public void CloseTOS()
+    {
+        tosPanel.SetActive(false);
+        settingsPanel.SetActive(true);
     }
 
 
