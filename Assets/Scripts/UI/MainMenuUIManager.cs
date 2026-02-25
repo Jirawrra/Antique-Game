@@ -1,20 +1,15 @@
 using UnityEngine;
-
+using System;
+using UnityEngine.InputSystem;
 
 public class MainMenuUIManager : MonoBehaviour
 {
 
-    [SerializeField] private CreditsPanel creditsPanel;
+    [SerializeField] private GameObject creditsPanel;
 
-    public void OpenCredits()
-    {
-        creditsPanel.OpenCredits();
-    }
-
-    public void CloseCredits()
-    {
-        creditsPanel.CloseCredits();
-    }
+    
+    public static event Action OnCreditsPanelClosed;
+    public static event Action OnCreditsPanelOpened;
 
     public void StartGame()
     {
@@ -22,5 +17,20 @@ public class MainMenuUIManager : MonoBehaviour
         SceneLoader.Instance.LoadScene("Main Level");
     }
 
+    public void CreditsPanelOpened()
+    {
+            creditsPanel.SetActive(true);
+            OnCreditsPanelOpened?.Invoke(); 
+            Debug.Log("Credits Panel Opened");
+    }
+
+    public void CreditsPanelClosed()
+    {
+        //creditsPanel.SetActive(false);
+        OnCreditsPanelClosed?.Invoke();
+        Debug.Log("Credits Panel Closed");
+        
+
+    }
 
 }
