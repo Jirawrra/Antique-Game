@@ -2629,6 +2629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423351889}
   - component: {fileID: 423351890}
+  - component: {fileID: 423351891}
   m_Layer: 0
   m_Name: Spot Light 2D
   m_TagString: Untagged
@@ -2644,13 +2645,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423351888}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06336999, y: 1.187, z: -23.61666}
+  m_LocalRotation: {x: -0, y: -0, z: -0.99999815, w: -0.001922555}
+  m_LocalPosition: {x: -0.316, y: 1.623, z: -23.61666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2145972545}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -900.22}
 --- !u!114 &423351890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2666,9 +2667,9 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.387
   m_Color: {r: 0.9056604, g: 0.68778926, b: 0.68778926, a: 1}
-  m_Intensity: 2.13
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -2681,7 +2682,7 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 0.8
   m_ShadowSoftness: 0.3
   m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
@@ -2689,8 +2690,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
+  m_PointLightInnerAngle: 65.82857
+  m_PointLightOuterAngle: 209.82857
   m_PointLightInnerRadius: 0
   m_PointLightOuterRadius: 1
   m_ShapeLightParametricSides: 5
@@ -2703,6 +2704,24 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &423351891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423351888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6badf3dc9fbe2e6468207e62634860bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightAnimation
+  baseIntensity: 2
+  flickerAmount: 0.6
+  flickerSpeed: 5
+  dropChance: 0.08
+  dropIntensity: 0.15
+  dropDuration: 2
 --- !u!1 &447643311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2810,7 +2829,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.27
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2854,8 +2873,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   panSpeed: 5
-  minBounds: {x: -10, y: -10}
-  maxBounds: {x: 10, y: 10}
+  minBounds: {x: -3, y: -3}
+  maxBounds: {x: 3, y: 3}
+  panSmoothTime: 0.1
+  returnDelay: 1
+  returnSpeed: 2.5
 --- !u!1 &450796985
 GameObject:
   m_ObjectHideFlags: 0
@@ -5046,6 +5068,109 @@ MonoBehaviour:
   inventory: {fileID: 1033879051}
   currency: {fileID: 1894796515}
   ghostManager: {fileID: 1277731069}
+--- !u!1 &894229221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894229222}
+  - component: {fileID: 894229224}
+  - component: {fileID: 894229223}
+  m_Layer: 0
+  m_Name: Spot Light 2D (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894229222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894229221}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.99999815, w: -0.001922555}
+  m_LocalPosition: {x: -2.139, y: 0.314, z: -23.61666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2145972545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -900.22}
+--- !u!114 &894229223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894229221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6badf3dc9fbe2e6468207e62634860bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightAnimation
+  baseIntensity: 2
+  flickerAmount: 0.5
+  flickerSpeed: 3
+  dropChance: 0.08
+  dropIntensity: 0.15
+  dropDuration: 2
+--- !u!114 &894229224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894229221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.464
+  m_Color: {r: 0.9056604, g: 0.68778926, b: 0.68778926, a: 1}
+  m_Intensity: 2.13
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.8
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 65.82857
+  m_PointLightOuterAngle: 183.08571
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &907386885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5753,6 +5878,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994974722}
   m_CullTransparentMesh: 1
+--- !u!1 &997807109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997807110}
+  - component: {fileID: 997807111}
+  m_Layer: 0
+  m_Name: Spot Light 2D (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &997807110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997807109}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.99965733, w: 0.026176542}
+  m_LocalPosition: {x: -0.449, y: 1.316, z: -23.61666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2145972545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1983}
+--- !u!114 &997807111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997807109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.359
+  m_Color: {r: 0.9056604, g: 0.68778926, b: 0.68778926, a: 1}
+  m_Intensity: 2.13
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.8
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 129.59999
+  m_PointLightOuterAngle: 218.05713
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &998709233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6323,6 +6532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1092462994}
   - component: {fileID: 1092462995}
+  - component: {fileID: 1092462996}
   m_Layer: 0
   m_Name: Freeform Light 2D
   m_TagString: Untagged
@@ -6360,7 +6570,7 @@ MonoBehaviour:
   m_ComponentVersion: 2
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.6
+  m_FalloffIntensity: 1
   m_Color: {r: 0.21226418, g: 1, b: 0.9842485, a: 1}
   m_Intensity: 1.5
   m_LightVolumeIntensity: 1
@@ -6375,14 +6585,14 @@ MonoBehaviour:
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
   m_ShadowsEnabled: 1
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensity: 0.739
   m_ShadowSoftness: 0.3
-  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowSoftnessFalloffIntensity: 0.386
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -1.066, y: -0.045700014, z: 0}
-    m_Extent: {x: 1.8951001, y: 1.8829999, z: 0}
+    m_Center: {x: -0.81985, y: -0.20379996, z: 0}
+    m_Extent: {x: 2.4551501, y: 2.1903, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6390,22 +6600,46 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 1
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -2.4532688, y: -0.9839296, z: 0}
-  - {x: -1.9671243, y: -1.2108805, z: 0.00000005540494}
-  - {x: -1.5211117, y: -1.430602, z: -0.00000007716264}
-  - {x: -1.5298709, y: -0.74340457, z: 0.00000002434227}
-  - {x: -1.1701044, y: -0.56650466, z: -0.000000017463947}
-  - {x: -0.96724546, y: -0.69740725, z: 0.00000003618046}
-  - {x: -0.97452927, y: -1.2356148, z: -9.422934e-10}
-  - {x: -0.6772596, y: -1.0960221, z: -0.000000007587744}
-  - {x: -0.26853237, y: -1.1074029, z: 0.000000032900203}
-  - {x: 0.33009934, y: -0.82297015, z: -0.00000006784042}
-  - {x: -0.798046, y: -0.19760914, z: 0}
-  - {x: -0.79125667, y: 1.3371205, z: 0}
-  - {x: -2.4601922, y: 0.4460853, z: 0}
+  - {x: -2.275135, y: -0.06824203, z: 0}
+  - {x: -2.0389822, y: 0.050847057, z: 0}
+  - {x: -1.7790799, y: -0.074623, z: 0}
+  - {x: -1.766988, y: -1.0479789, z: 0.00000005540494}
+  - {x: -1.5621014, y: -1.1172594, z: -0.00000007716264}
+  - {x: -1.5623016, y: -0.71502763, z: 0.00000002434227}
+  - {x: -1.206589, y: -0.54218155, z: -0.000000017463947}
+  - {x: -0.95203346, y: -0.69132245, z: 0.00000003618046}
+  - {x: -0.9299369, y: -1.182286, z: -9.422934e-10}
+  - {x: -0.69752884, y: -1.0798066, z: -0.000000007587744}
+  - {x: -0.68592715, y: -1.1884799, z: 0.000000032900203}
+  - {x: -0.1648199, y: -0.9314882, z: 0}
+  - {x: -0.15593177, y: -1.2509617, z: 0}
+  - {x: 0.13944589, y: -1.3940871, z: 0}
+  - {x: 0.63499576, y: -1.1406735, z: 0}
+  - {x: -0.26122367, y: -0.007865559, z: 0}
+  - {x: -0.9799359, y: 0.9873387, z: 0}
+  - {x: -2.2749724, y: 0.35121664, z: 0}
+--- !u!114 &1092462996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092462993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f76c8a854668e45907e59dd03aedc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowLightAnimation
+  baseIntensity: 1.5
+  occludedIntensity: 5
+  fadeInTime: 0.35
+  holdTime: 0.05
+  fadeOutTime: 0.7
+  minDelay: 8
+  maxDelay: 18
 --- !u!1 &1154255219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7059,6 +7293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1373603355}
   - component: {fileID: 1373603356}
+  - component: {fileID: 1373603357}
   m_Layer: 0
   m_Name: Freeform Light 2D (1)
   m_TagString: Untagged
@@ -7117,8 +7352,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -2.2403002, y: 0.69845, z: 0}
-    m_Extent: {x: 0.64110005, y: 0.74575, z: 0}
+    m_Center: {x: -2.24555, y: 0.69554996, z: 0}
+    m_Extent: {x: 0.37744993, y: 0.47524998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7126,13 +7361,31 @@ MonoBehaviour:
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 0.25
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -2.3759809, y: 0.45372105, z: 0}
-  - {x: -2.0994477, y: 0.58265364, z: 0}
-  - {x: -2.102324, y: 0.9434809, z: 0}
-  - {x: -2.380807, y: 0.8091596, z: 0}
+  - {x: -2.3466115, y: 0.4699362, z: 0}
+  - {x: -2.117447, y: 0.9212125, z: 0}
+  - {x: -2.3726995, y: 0.81485766, z: 0}
+--- !u!114 &1373603357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373603354}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53f76c8a854668e45907e59dd03aedc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowLightAnimation
+  baseIntensity: 1.5
+  occludedIntensity: 5
+  fadeInTime: 0.35
+  holdTime: 0.05
+  fadeOutTime: 0.7
+  minDelay: 8
+  maxDelay: 18
 --- !u!224 &1406996924 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8923759720242786609, guid: caacff731f1aafd45ae87a310e753a61, type: 3}
@@ -9234,6 +9487,90 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caacff731f1aafd45ae87a310e753a61, type: 3}
+--- !u!1 &1830552012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830552013}
+  - component: {fileID: 1830552014}
+  m_Layer: 0
+  m_Name: Spot Light 2D (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1830552013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830552012}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.99999815, w: -0.001922555}
+  m_LocalPosition: {x: -2.396, y: 0.425, z: -23.61666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2145972545}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -900.22}
+--- !u!114 &1830552014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830552012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.2D.Runtime::UnityEngine.Rendering.Universal.Light2D
+  m_ComponentVersion: 2
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.464
+  m_Color: {r: 0.9056604, g: 0.68778926, b: 0.68778926, a: 1}
+  m_Intensity: 2.13
+  m_LightVolumeIntensity: 1
+  m_LightVolumeEnabled: 0
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowsEnabled: 1
+  m_ShadowIntensity: 0.8
+  m_ShadowSoftness: 0.3
+  m_ShadowSoftnessFalloffIntensity: 0.5
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 65.82857
+  m_PointLightOuterAngle: 205.71428
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &1849974863
 GameObject:
   m_ObjectHideFlags: 0
@@ -10481,8 +10818,8 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23139909, g: 0.56074834, b: 0.754717, a: 1}
-  m_Intensity: 0.58
+  m_Color: {r: 0.14978638, g: 0.46093035, b: 0.6226415, a: 1}
+  m_Intensity: 0.8
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -10793,6 +11130,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 423351889}
+  - {fileID: 894229222}
+  - {fileID: 1830552013}
+  - {fileID: 997807110}
   - {fileID: 880376212}
   - {fileID: 1092462994}
   - {fileID: 2034709769}
