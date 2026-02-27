@@ -1,9 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
 
 public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
+
+
+    [SerializeField] private Animator transitionAnimator;
+    [SerializeField] private float transitionTime = 1f;
+
 
     private void Awake()
     {
@@ -20,6 +27,15 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator LoadSceneWithTransition(string sceneName)
+    {
+        transitionAnimator.SetTrigger("FadeOut");
+
+        yield return new WaitForSeconds(transitionTime);
+
         SceneManager.LoadScene(sceneName);
     }
 
