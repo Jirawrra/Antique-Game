@@ -2,13 +2,15 @@ using UnityEngine;
 using System.Collections;
 public class CreditsPanel : MonoBehaviour
 {
-  
+
     [Header("Animation Settings")]
     public float duration = 0.25f;
     public AnimationCurve easingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     private Coroutine animationCoroutine;
 
-    
+
+
+
     void OnEnable()
     {
 
@@ -18,18 +20,17 @@ public class CreditsPanel : MonoBehaviour
 
     void OnDisable()
     {
-        MainMenuUIManager.OnCreditsPanelOpened-= PlayOpenAnimation;
-        MainMenuUIManager.OnCreditsPanelClosed-= PlayCloseAnimation;
+        MainMenuUIManager.OnCreditsPanelOpened -= PlayOpenAnimation;
+        MainMenuUIManager.OnCreditsPanelClosed -= PlayCloseAnimation;
     }
 
 
-     private void PlayOpenAnimation()
+    private void PlayOpenAnimation()
     {
         if (animationCoroutine != null)
             StopCoroutine(animationCoroutine);
 
-        // Make sure panel is active
-        gameObject.SetActive(true);
+
 
         animationCoroutine = StartCoroutine(Animate(Vector3.zero, Vector3.one));
     }
@@ -57,7 +58,10 @@ public class CreditsPanel : MonoBehaviour
         transform.localScale = to;
 
         if (disableOnEnd)
+
             gameObject.SetActive(false);
+
+        Debug.Log("Animation Credits Panel Closed");
 
 
     }
