@@ -1,42 +1,67 @@
-using Newtonsoft.Json.Bson;
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem; // for Keyboard.current
 
 public class CurrencyManager : MonoBehaviour
-{  
+{
     // Player currency
-    public int obols; // Standard
-    public int drachma; // Premium
+    [SerializeField] private int obols;   // Standard
+    [SerializeField] private int drachma; // Premium
 
+    // Events to notify UI
     public event Action<int> OnObolsChanged;
     public event Action<int> OnDrachmaChanged;
 
+    // Properties to auto-update UI even if changed in Inspector
+    public int Obols
+    {
+        get => obols;
+        set
+        {
+            obols = value;
+            OnObolsChanged?.Invoke(obols);
+        }
+    }
+
+    public int Drachma
+    {
+        get => drachma;
+        set
+        {
+            drachma = value;
+            OnDrachmaChanged?.Invoke(drachma);
+        }
+    }
+
     private void Start()
     {
+        // Make sure UI reflects starting values
         OnObolsChanged?.Invoke(obols);
         OnDrachmaChanged?.Invoke(drachma);
     }
 
-    public void AddObols(int amount)
+    private void Update()
     {
-        obols += amount;
-        OnObolsChanged?.Invoke(obols);
-        Debug.Log("Obols : " + obols);
+        // Debug keys to add currency
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.oKey.wasPressedThisFrame)
+                AddObols(10);
+
+            if (Keyboard.current.dKey.wasPressedThisFrame)
+                AddDrachma(5);
+        }
     }
 
-    public void AddDrachma(int amount)
-    {
-        drachma += amount;
-        OnDrachmaChanged?.Invoke(drachma);
-        Debug.Log("Obols : " + obols);
-    }
+    // Public methods to modify currency
+    public void AddObols(int amount) => Obols += amount;
+    public void AddDrachma(int amount) => Drachma += amount;
 
     public bool SpendObols(int amount)
     {
-        if ( obols >= amount)
+        if (Obols >= amount)
         {
-            obols -= amount;
-            OnObolsChanged?.Invoke(obols);
+            Obols -= amount;
             return true;
         }
         return false;
@@ -44,10 +69,9 @@ public class CurrencyManager : MonoBehaviour
 
     public bool SpendDrachma(int amount)
     {
-        if (drachma >= amount)
+        if (Drachma >= amount)
         {
-            drachma -= amount;
-            OnDrachmaChanged?.Invoke(drachma);
+            Drachma -= amount;
             return true;
         }
         return false;

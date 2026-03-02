@@ -20,10 +20,9 @@ public class TransactionManager : MonoBehaviour
             currency.AddObols(selectedItem.ObolValue);
             inventory.RemoveItem(selectedItem);
 
-
             Debug.Log("Item Sold!");
             ghostManager.ClearGhost();
-            ghostManager.SpawnGhost();
+            ghostManager.RequestRandomItem();
         }
         else
         {
