@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8c56ce85-68c5-4bcf-ba07-e9cd77755d42" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Antique-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Antique-Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/Premium Shop/PsUiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/Premium Shop/PsUiManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="8c56ce85-68c5-4bcf-ba07-e9cd77755d42" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +21,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jirawrra/Antique-Game&quot;,
+    &quot;url&quot;: &quot;https://github.com/Jirawrra/Antique-Game.git&quot;,
     &quot;accountId&quot;: &quot;714738ce-8108-4b95-93bd-5f3f122c6a98&quot;
   }
 }</component>
@@ -59,7 +55,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Unity Attach To.Attach to.executor&quot;: &quot;Debug&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.27102804&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Test&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;UI/UX-Premium-Shop&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -123,8 +119,6 @@
       <workItem from="1771513525696" duration="16000" />
       <workItem from="1772038970508" duration="20618000" />
       <workItem from="1772131238673" duration="1649000" />
-      <workItem from="1772449748248" duration="1326000" />
-      <workItem from="1772451159374" duration="1561000" />
     </task>
     <servers />
   </component>
