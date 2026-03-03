@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Antique-Game.slnx"
+    "dotnet.defaultSolution": "Antique-Game-Repo.slnx"
 }

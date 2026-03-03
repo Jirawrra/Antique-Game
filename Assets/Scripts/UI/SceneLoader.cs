@@ -6,11 +6,7 @@ using System.Collections;
 public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
-
-
-    [SerializeField] private Animator transitionAnimator;
-    [SerializeField] private float transitionTime = 1f;
-
+    [SerializeField] Animator transitionAnimator;
 
     private void Awake()
     {
@@ -27,16 +23,18 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        StartCoroutine(LoadSceneRoutine(sceneName));
     }
 
-    private IEnumerator LoadSceneWithTransition(string sceneName)
+    private IEnumerator LoadSceneRoutine(string sceneName)
     {
-        transitionAnimator.SetTrigger("FadeOut");
-
-        yield return new WaitForSeconds(transitionTime);
-
+        transitionAnimator.SetTrigger("End");
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(sceneName);
+        transitionAnimator.SetTrigger("Start");
     }
+
+
+
 
 }

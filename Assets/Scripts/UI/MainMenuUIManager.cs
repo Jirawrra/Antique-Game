@@ -16,6 +16,9 @@ public class MainMenuUIManager : MonoBehaviour
     {
         //loads game scene
         SceneLoader.Instance.LoadScene("Main Level");
+
+
+
     }
 
     public void CreditsPanelOpened()
