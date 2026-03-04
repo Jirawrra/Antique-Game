@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
-using UnityEngine.InputSystem; // for Keyboard.current
+using UnityEngine.InputSystem;
 
 public class CurrencyManager : MonoBehaviour
 {
-    // Player currency
+    [Header("Currency Values")]
     [SerializeField] private int obols;   // Standard
     [SerializeField] private int drachma; // Premium
 
@@ -12,7 +12,7 @@ public class CurrencyManager : MonoBehaviour
     public event Action<int> OnObolsChanged;
     public event Action<int> OnDrachmaChanged;
 
-    // Properties to auto-update UI even if changed in Inspector
+    // Properties to auto-update UI 
     public int Obols
     {
         get => obols;

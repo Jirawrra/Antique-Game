@@ -1384,8 +1384,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b7c7316b434e04589300976e5a46ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostSpawner
+  gameMaster: {fileID: 818522899}
   ghostPrefab: {fileID: 9011612776804593391, guid: 74e80a8009b635349b781702e6585fbf, type: 3}
   spawnPoint: {fileID: 428388583}
+  availableGhosts: []
 --- !u!1 &447643311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,6 +2418,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
+--- !u!1 &818522898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 818522900}
+  - component: {fileID: 818522899}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &818522899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818522898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac16cfc95860d064389d4b8ac69cc270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameMaster
+  tiers:
+  - {fileID: 11400000, guid: 9c12668fa6a5b2248a80bafdb9907412, type: 2}
+  - {fileID: 11400000, guid: 7e19548c915569e4bab6a61d1785e349, type: 2}
+--- !u!4 &818522900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818522898}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 151.8651, y: 744.1237, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &867763655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5500,3 +5549,4 @@ SceneRoots:
   - {fileID: 428388583}
   - {fileID: 1152846215}
   - {fileID: 933833415}
+  - {fileID: 818522900}

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 134f7cbf4b43c4944a4a124f276f0c66, type: 3}
+  m_Name: UncommonGhostData
+  m_EditorClassIdentifier: Assembly-CSharp::GhostData
+  ghostID: 2
+  ghostName: UncommonGhost
+  ghostSprite: {fileID: -7968709785891483803, guid: 46434b3198db88d40ac1c0e7b154ec05, type: 3}
+  coinReward: 30

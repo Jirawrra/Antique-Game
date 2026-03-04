@@ -5,7 +5,7 @@ public class TransactionManager : MonoBehaviour
 {
     public InventoryManager inventory;
     public CurrencyManager currency;
-    public GhostManager ghostManager;
+    public GhostBehavior ghostManager;
 
     public void TrySellItem(ItemData selectedItem)
     {

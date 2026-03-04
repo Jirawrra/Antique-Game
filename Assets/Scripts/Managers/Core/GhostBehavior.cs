@@ -3,15 +3,36 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine.UI;
 
-public class GhostManager : MonoBehaviour
+public class GhostBehavior : MonoBehaviour
 {
-    public InventoryManager inventory;
+    [Header("References")]
+    private GhostSpawner spawner;
+
+    [Header("Data")]
+    private GhostData ghostData;
     public List<ItemData> allItems;
 
-    [HideInInspector]
+    //[HideInInspector]
     public ItemData currentRequestedItem;
 
-    public Image AntiqueImage; // Reference to the UI Image component for displaying the requested item
+    [Header("Visual")]
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    public Image AntiqueImage;
+
+    public void Init(GhostSpawner ghostSpawner, GhostData data)
+    {
+        spawner = ghostSpawner;
+        ghostData = data;
+
+        ApplyData();
+    }
+
+    private void ApplyData()
+    {
+        if (ghostData == null) return;
+
+        spriteRenderer.sprite = ghostData.ghostSprite;
+    }
 
     void Awake()
     {
@@ -35,8 +56,22 @@ public class GhostManager : MonoBehaviour
 
     }
 
-    public void ClearGhost() // removes ghost after transaction
+    public void ClearGhost()
     {
         currentRequestedItem = null;
     }
+
+    public void Leave()
+    {
+        spawner.OnGhostRemoved();
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        // Safety net
+        if (spawner != null)
+            spawner.OnGhostRemoved();
+    }
+
 }
