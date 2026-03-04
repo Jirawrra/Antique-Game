@@ -23,6 +23,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI obolsText;
     [SerializeField] private TextMeshProUGUI drachmaText;
 
+    [SerializeField] private ShopManager shopManager;
+
     private Tab currentTab = Tab.None;
 
     void Start()

@@ -7,26 +7,20 @@ public class TransactionManager : MonoBehaviour
     public CurrencyManager currency;
     public GhostBehavior ghostManager;
 
-    public void TrySellItem(ItemData selectedItem)
+    public void TryBuyItem(ItemData item)
     {
-        if (ghostManager.currentRequestedItem == null)
+        if (currency.SpendObols(item.ObolValue))
         {
-            Debug.Log("No ghost present.");
-            return;
+            inventory.AddItem(item);
         }
+    }
 
-        if (selectedItem == ghostManager.currentRequestedItem && inventory.HasItem(selectedItem))
+    public void TrySellItem(ItemData item)
+    {
+        if (inventory.HasItem(item))
         {
-            currency.AddObols(selectedItem.ObolValue);
-            inventory.RemoveItem(selectedItem);
-
-            Debug.Log("Item Sold!");
-            ghostManager.ClearGhost();
-            ghostManager.RequestRandomItem();
-        }
-        else
-        {
-            Debug.Log("Wrong item.");
+            inventory.RemoveItem(item);
+            currency.AddObols(item.ObolValue);
         }
     }
 }
