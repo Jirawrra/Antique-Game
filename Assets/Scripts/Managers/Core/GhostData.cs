@@ -14,5 +14,8 @@ public class GhostData : ScriptableObject
     [Header("Behavior")]
     public int coinReward;
 
+    public int patienceLevel;
+
+
 
 }
