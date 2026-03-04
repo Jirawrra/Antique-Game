@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class UIManager : MonoBehaviour
     {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
+            Debug.Log("Space key pressed - toggling notification");
             notificationPanel.SetActive(true);
             OnNotificationOpened?.Invoke();
         }
