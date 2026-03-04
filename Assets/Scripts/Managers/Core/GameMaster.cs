@@ -4,6 +4,7 @@ using System;
 using UnityEngine.InputSystem;
 public class GameMaster : MonoBehaviour
 {
+    public static GameMaster Instance { get; private set; }
 
     [Header("Tier")]
     [SerializeField] private TierData[] tiers;
@@ -12,18 +13,29 @@ public class GameMaster : MonoBehaviour
     public int CurrentTierLevel => CurrentTier.tierLevel; // Display tiers starting from 1 instead of 0
     public event Action<TierData> OnTierChanged;
 
-
     private void Start()
     {
         ApplyTier();
     }
 
-
+    private void Awake()
+    {
+        // Standard Singleton pattern
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Update()
     {
         // DEBUG: Press T to increase tier
         if (Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
         {
+
             IncreaseTier();
         }
     }
