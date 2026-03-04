@@ -73,6 +73,8 @@ public class GhostSpawner : MonoBehaviour
     private void SpawnGhostInternal()
     {
 
+        if (currentGhostCount >= maxGhosts) return;
+
         GhostData selectedGhost = GetRandomGhost(); // Get a random ghost from the allowed list for the current tier
         if (selectedGhost == null) return;
 
@@ -83,7 +85,9 @@ public class GhostSpawner : MonoBehaviour
         );
 
         GhostBehavior ghostBehavior = ghostGO.GetComponent<GhostBehavior>(); // Make sure your ghost prefab has a GhostBehavior component attached
-        ghostBehavior.Init(this, selectedGhost); // Pass the selected ghost data to the ghost's behavior script so it can set up its visuals and behavior accordingly
+        ghostBehavior.Init(this, gameMaster, selectedGhost); // Pass the selected ghost data to the ghost's behavior script so it can set up its visuals and behavior accordingly
+
+
 
         currentGhostCount++;
 

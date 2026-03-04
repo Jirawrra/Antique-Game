@@ -16,3 +16,4 @@ MonoBehaviour:
   ghostName: CommonGhost
   ghostSprite: {fileID: 4514066551911091984, guid: 1537dde1099702d409e75e8373281857, type: 3}
   coinReward: 10
+  patienceLevel: 30

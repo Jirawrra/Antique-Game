@@ -9,7 +9,7 @@ public class GameMaster : MonoBehaviour
     [SerializeField] private TierData[] tiers;
     public int CurrentTierIndex { get; private set; }
     public TierData CurrentTier => tiers[CurrentTierIndex];
-    public int CurrentTierLevel => CurrentTier.tierLevel + 1; // Display tiers starting from 1 instead of 0
+    public int CurrentTierLevel => CurrentTier.tierLevel; // Display tiers starting from 1 instead of 0
     public event Action<TierData> OnTierChanged;
 
 

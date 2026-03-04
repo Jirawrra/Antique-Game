@@ -1,20 +1,17 @@
 using UnityEngine;
-using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine.UI;
-using System.Security.Cryptography.X509Certificates;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.Contracts;
-using System.Security.Cryptography;
-
+using System.Collections.Generic;
 public class GhostBehavior : MonoBehaviour
 {
     [Header("References")]
     private GhostSpawner spawner;
+    [SerializeField] private GameMaster gameMaster;
+    [SerializeField] private GhostData ghostData;
 
-    [Header("Data")]
-    private GhostData ghostData;
-    public List<ItemData> allItems;
+    [Header("Debug (Read Only)")]
+
+    [SerializeField] private TierData debugCurrentTier;
+    [SerializeField] private List<ItemData> debugAllowedItems = new();
 
     //[HideInInspector]
     public ItemData currentRequestedItem;
@@ -23,13 +20,23 @@ public class GhostBehavior : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     public Image AntiqueImage;
 
-
-    public void Init(GhostSpawner ghostSpawner, GhostData data)
+    [Header("Patience")]
+    [SerializeField] private GameObject irritatedSprite;
+    [SerializeField] private int currentPatience;
+    private float patienceTimer = 0f;
+    public float patienceDrainPerSecond = 1f;
+    public void Init(GhostSpawner ghostSpawner, GameMaster gameMaster, GhostData data)
     {
-        spawner = ghostSpawner;
-        ghostData = data;
+        this.spawner = ghostSpawner;
+        this.gameMaster = gameMaster;
+        this.ghostData = data;
+
+        //See which items are allowed in the current tier
+        debugCurrentTier = gameMaster.CurrentTier;
+        currentPatience = ghostData.patienceLevel;
 
         ApplyData();
+        RequestRandomItem();
     }
 
     private void ApplyData()
@@ -39,26 +46,69 @@ public class GhostBehavior : MonoBehaviour
         spriteRenderer.sprite = ghostData.ghostSprite;
     }
 
-    void Awake()
+    public void RequestRandomItem()
     {
-        if (allItems != null && allItems.Count > 0)
+
+        TierData tier = gameMaster.CurrentTier; // Get the current tier from the GameMaster to know which items are allowed for this ghost to request
+        ItemData[] allowedItems = tier.allowedItems;
+
+        debugAllowedItems.Clear();
+        debugAllowedItems.AddRange(tier.allowedItems);
+
+        currentRequestedItem =
+            allowedItems[Random.Range(0, allowedItems.Length)];
+
+        Debug.Log("Ghost wants: " + currentRequestedItem.itemName);
+
+        AntiqueImage.sprite = currentRequestedItem.icon;
+
+
+    }
+
+    private void Update()
+    {
+        TickPatience();
+    }
+
+    private void TickPatience()
+    {
+        if (currentPatience <= 0)
+            return;
+
+        patienceTimer += Time.deltaTime; // accumulate seconds
+
+        if (patienceTimer >= 1f) // 1 second per patience point
         {
-            RequestRandomItem();
-        }
-        else
-        {
-            Debug.LogWarning("GhostManager: allItems list is null or empty! Assign it in the Inspector.");
+            patienceTimer = 0f;
+            currentPatience--;
+            Debug.Log("Patience: " + currentPatience);
+
+            UpdateIrritatedState(); // Show irritated sprite if patience is low
+
+            if (currentPatience <= 0)
+            {
+                OnFailedPurchase();
+            }
         }
     }
 
-    public void RequestRandomItem()
+    private void UpdateIrritatedState()
     {
-        if (allItems == null || allItems.Count == 0) return;
-        currentRequestedItem = allItems[Random.Range(0, allItems.Count)];  //selects random item from list of all items
-        Debug.Log("Ghost wants: " + currentRequestedItem.itemName);
+        if (irritatedSprite == null || ghostData == null)
+            return;
 
-        AntiqueImage.sprite = currentRequestedItem.icon; // Update the UI image to show the requested item
+        float patiencePercent = (float)currentPatience / ghostData.patienceLevel;
 
+        if (patiencePercent <= 0.25f) // below 25%
+        {
+            if (!irritatedSprite.activeSelf)
+                irritatedSprite.SetActive(true); // show sprite
+        }
+        else
+        {
+            if (irritatedSprite.activeSelf)
+                irritatedSprite.SetActive(false); // hide sprite
+        }
     }
 
     private void BuyItem()
@@ -90,25 +140,20 @@ public class GhostBehavior : MonoBehaviour
 
         // This method can be called by the transaction manager if the purchase fails (e.g., not enough coins)
         // You can add any logic here for what happens when a purchase fails (like playing a sad animation, reducing patience, etc.)
+        Debug.Log("Ghost has run out of patience and is leaving!");
+        Leave();
 
     }
 
-
-
     public void Leave()
     {
-
-        spawner.OnGhostRemoved();
         Destroy(gameObject);
     }
 
     private void OnDestroy()
     {
-        // Safety net
         if (spawner != null)
             spawner.OnGhostRemoved();
-
-
     }
 
 }
