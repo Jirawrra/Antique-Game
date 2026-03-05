@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 public class LevelUpNotification : MonoBehaviour
 {
     [Header("UI References")]
-    // [SerializeField] private GameObject panel;
-    [SerializeField] private Text tierNameText;
-
-    [SerializeField] private Transform contentParent; // ScrollView/Content
+    [SerializeField] private TMP_Text tierNameText;
+    [SerializeField] private Transform contentParent;
     [SerializeField] private TierItemAvailableUI itemEntryPrefab;
 
 
@@ -37,20 +36,18 @@ public class LevelUpNotification : MonoBehaviour
     private void Refresh(TierData tier)
     {
         gameObject.SetActive(true);
-        ClearList();
-        BuildList(tier.allowedItems);
-
-
-
+        tierNameText.text = tier.TierName;
+        ClearList(); //clear the existing list
+        BuildList(tier.newAllowedItems); // replace the previous list with new allowed items according to tier
     }
 
-    private void BuildList(ItemData[] items)
+    private void BuildList(ItemData[] items) // placing the available item list to the prefab container 
     {
         foreach (ItemData item in items)
         {
-            TierItemAvailableUI entry =
-                Instantiate(itemEntryPrefab, contentParent);
+            TierItemAvailableUI entry = Instantiate(itemEntryPrefab, contentParent);
 
+            entry.gameObject.SetActive(true);
             entry.Setup(item);
             spawnedEntries.Add(entry.gameObject);
         }
@@ -59,6 +56,7 @@ public class LevelUpNotification : MonoBehaviour
     private void ClearList()
     {
         foreach (GameObject obj in spawnedEntries)
+
             Destroy(obj);
 
         spawnedEntries.Clear();

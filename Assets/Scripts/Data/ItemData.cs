@@ -17,7 +17,7 @@ public enum Era
 }
 
 [CreateAssetMenu(fileName = "NewAntique", menuName = "Antique Shop/Item")]
-public class  ItemData : ScriptableObject
+public class ItemData : ScriptableObject
 {
     [Header("Identity")]
     public string itemName;
