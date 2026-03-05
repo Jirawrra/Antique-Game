@@ -5,15 +5,20 @@ using TMPro;
 public class LevelUpNotification : MonoBehaviour
 {
     [Header("UI References")]
+
+    [SerializeField] private GameObject backgroundOverlay;
+    [SerializeField] private GameObject levelUpNotificationPanel;
     [SerializeField] private TMP_Text tierNameText;
     [SerializeField] private Transform contentParent;
     [SerializeField] private TierItemAvailableUI itemEntryPrefab;
 
+    [Header("Behavior References")]
+    public UIAnimator levelUpAnimator;
 
     [SerializeField] private List<GameObject> spawnedEntries = new();
 
 
-    [Header("References")]
+    [Header("Data References")]
     [SerializeField] private GameMaster gameMaster;
 
 
@@ -35,11 +40,13 @@ public class LevelUpNotification : MonoBehaviour
     }
     private void Refresh(TierData tier)
     {
-        gameObject.SetActive(true);
+        levelUpNotificationPanel.SetActive(true);
+        backgroundOverlay.SetActive(true);
         tierNameText.text = tier.TierName;
         ClearList(); //clear the existing list
         BuildList(tier.newAllowedItems); // replace the previous list with new allowed items according to tier
     }
+
 
     private void BuildList(ItemData[] items) // placing the available item list to the prefab container 
     {
@@ -64,7 +71,8 @@ public class LevelUpNotification : MonoBehaviour
 
     public void Close()
     {
-        gameObject.SetActive(false);
+        backgroundOverlay.SetActive(false);
+        levelUpAnimator.AnimateClose();
     }
 
 

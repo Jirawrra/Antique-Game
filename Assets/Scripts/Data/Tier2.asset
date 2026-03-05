@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tier2
   m_EditorClassIdentifier: Assembly-CSharp::TierData
   tierLevel: 2
-  TierName: Early Modern Era
+  TierName: EARLY MODERN ERA
   maxGhosts: 7
   spawnIntervalRange: {x: 2, y: 4}
   allowedItems:
