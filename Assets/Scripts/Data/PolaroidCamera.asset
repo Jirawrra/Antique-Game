@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: POLAROID CAMERA
   description: Say Cheezee
-  icon: {fileID: 21300000, guid: de2c89bb25082b7488da2dcb0b66d6be, type: 3}
+  icon: {fileID: 6153377429729754245, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   era: 0
   rarity: 0
   ObolValue: 20

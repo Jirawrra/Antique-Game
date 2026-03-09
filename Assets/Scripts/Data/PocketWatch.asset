@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: POCKETWATCH
   description: dooo doo
-  icon: {fileID: 21300000, guid: 077f4261c7fb6ce41a217876ffad1548, type: 3}
+  icon: {fileID: -2650790264841209233, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   era: 3
   rarity: 0
   ObolValue: 30

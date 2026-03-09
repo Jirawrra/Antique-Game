@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: CARD
   description: pickachu
-  icon: {fileID: 21300000, guid: f4a0123410e356441939db859cec213b, type: 3}
+  icon: {fileID: -31652270101761057, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   era: 0
   rarity: 0
   ObolValue: 10

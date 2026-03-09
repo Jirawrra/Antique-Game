@@ -18,7 +18,7 @@ public class GhostBehavior : MonoBehaviour
 
     [Header("Visual")]
     [SerializeField] private SpriteRenderer spriteRenderer;
-    public Image AntiqueImage;
+    [SerializeField] private SpriteRenderer AntiqueImage;
 
     [Header("Patience")]
     [SerializeField] private GameObject irritatedSprite;

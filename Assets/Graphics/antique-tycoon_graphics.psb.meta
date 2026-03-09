@@ -1,0 +1,2942 @@
+fileFormatVersion: 2
+guid: 8da097d3e0b889246b475ab290898983
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 16
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 951ffe9d9c658ac4fa2d4f590a2184b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: at_painting-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 992
+      y: 77
+      width: 25
+      height: 24
+    spriteID: 8d0f1cec69a7dea419a064ed79ea19c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 992, y: 77}
+    spritePosition: {x: 1091, y: 36}
+  - name: at_8ball-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 1522
+      width: 19
+      height: 19
+    spriteID: 71f70038ca70ad844acbb11d2ee0a9c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 1522}
+    spritePosition: {x: 1223, y: 39}
+  - name: at_pocketwatch-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 1140
+      width: 29
+      height: 21
+    spriteID: 97570414848ba2d47a57f32d8ea25566
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 1140}
+    spritePosition: {x: 1122, y: 39}
+  - name: at_old-television-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 2006
+      width: 27
+      height: 27
+    spriteID: 166d996f21ac7cc4f905255456215291
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 2006}
+    spritePosition: {x: 1059, y: 34}
+  - name: at_card-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 1221
+      width: 25
+      height: 17
+    spriteID: 09c5ecd7fc9d94049a8f9d4cd2b584ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 1221}
+    spritePosition: {x: 1156, y: 40}
+  - name: at_polaroid-camera-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1968
+      width: 30
+      height: 30
+    spriteID: e64ca19d4940aca4ea7e2bf35b133a0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1968}
+    spritePosition: {x: 1185, y: 33}
+  - name: at_irrate-frame1-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 240
+      y: 1101
+      width: 30
+      height: 31
+    spriteID: d0d7214ba13d7b8459e8dcc5be34595a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 240, y: 1101}
+    spritePosition: {x: 1188, y: 77}
+  - name: at_irrate-frame2-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 242
+      y: 1372
+      width: 26
+      height: 27
+    spriteID: 04cd990fa87d2174e9cc6584347dd7d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 242, y: 1372}
+    spritePosition: {x: 1190, y: 79}
+  - name: at_irrate-frame3-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 825
+      y: 335
+      width: 24
+      height: 25
+    spriteID: dc31d5f1a36a76c40a428f83bdb58e66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 825, y: 335}
+    spritePosition: {x: 1191, y: 79}
+  - name: at_irrate-frame4-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 857
+      y: 335
+      width: 24
+      height: 25
+    spriteID: e331cc7f8d6ce2c4c874e84565410e56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 857, y: 335}
+    spritePosition: {x: 1191, y: 79}
+  - name: at_irrate-frame5-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 992
+      y: 4
+      width: 26
+      height: 27
+    spriteID: 9957ebd98d025044482ca644a41437ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 992, y: 4}
+    spritePosition: {x: 1190, y: 79}
+  - name: at_irrate-frame6-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1929
+      width: 30
+      height: 31
+    spriteID: 2017df70725c9e6429ec0236444cf5b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1929}
+    spritePosition: {x: 1217, y: 161}
+  - name: at_gems-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 1549
+      width: 18
+      height: 20
+    spriteID: 56ef9c5fe25f8b04eba81201a5b3e0c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 1549}
+    spritePosition: {x: 1224, y: 101}
+  - name: at_obols-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 1490
+      width: 22
+      height: 24
+    spriteID: 54fe87ee199c8d34e8c78aa9babde769
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 1490}
+    spritePosition: {x: 1189, y: 101}
+  - name: at_emptybox-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 2006
+      width: 40
+      height: 36
+    spriteID: 57223c88a78a90e4f937142091ed38f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 2006}
+    spritePosition: {x: 608, y: 518}
+  - name: at_8ball-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 124
+      y: 1327
+      width: 17
+      height: 17
+    spriteID: c077c771543cf5a46bc4c79b71f17d9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 124, y: 1327}
+    spritePosition: {x: 662, y: 824}
+  - name: at_pocketwatch-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 788
+      y: 335
+      width: 29
+      height: 21
+    spriteID: f9b2408b305f3d14184910e877fbdc7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 788, y: 335}
+    spritePosition: {x: 519, y: 704}
+  - name: at_cardbox-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1682
+      width: 48
+      height: 43
+    spriteID: 26bf864a4a4fd7c46a6043caa9072228
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1682}
+    spritePosition: {x: 838, y: 650}
+  - name: at_card-display-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1424
+      width: 56
+      height: 62
+    spriteID: 2b6a737b52e43174eab9d0c6af872a12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1424}
+    spritePosition: {x: 690, y: 618}
+  - name: at_dvd-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 664
+      y: 662
+      width: 48
+      height: 34
+    spriteID: c68545a66281ff840ad4e800dda00eb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 664, y: 662}
+    spritePosition: {x: 678, y: 799}
+  - name: at_music-box-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 992
+      y: 39
+      width: 21
+      height: 30
+    spriteID: 9bb095099e7f3b445a49a4814184f524
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 992, y: 39}
+    spritePosition: {x: 1028, y: 33}
+  - name: at_music-box-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1494
+      width: 49
+      height: 70
+    spriteID: 286e3c76c090253418fcef1715ce8ba7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1494}
+    spritePosition: {x: 632, y: 544}
+  - name: at_old-television-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1628
+      width: 46
+      height: 46
+    spriteID: 3aa44142c47919343863551ab205c325
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1628}
+    spritePosition: {x: 558, y: 715}
+  - name: at_old-camera-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 121
+      y: 1459
+      width: 24
+      height: 23
+    spriteID: 802121e92aecf3646a8998ab8f1f8a62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 121, y: 1459}
+    spritePosition: {x: 666, y: 856}
+  - name: at_polaroid-camera-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 986
+      y: 181
+      width: 34
+      height: 39
+    spriteID: 945dd83f89d15d7409264331c8202f7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 986, y: 181}
+    spritePosition: {x: 691, y: 838}
+  - name: at_box-of-scrolls-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1101
+      width: 78
+      height: 60
+    spriteID: 9266ffe879b32544d92bf82bf2bc795a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1101}
+    spritePosition: {x: 555, y: 521}
+  - name: at_paintings-item
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1459
+      width: 53
+      height: 125
+    spriteID: 27025f8229ff7bf49ab59bed0c102a98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1459}
+    spritePosition: {x: 734, y: 745}
+  - name: at_ad-signage-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 226
+      y: 1169
+      width: 37
+      height: 44
+    spriteID: c24a39eec0c0a2f42a9a45d0b89bfa52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 226, y: 1169}
+    spritePosition: {x: 801, y: 630}
+  - name: at_open-signage-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 234
+      y: 1307
+      width: 33
+      height: 48
+    spriteID: 5c6e1041ff4fa7847927f6fc3159e0a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 234, y: 1307}
+    spritePosition: {x: 520, y: 781}
+  - name: at_exit-signage-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 720
+      y: 662
+      width: 33
+      height: 31
+    spriteID: f63e02a84356c0b41bd7f48077634bd2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 720, y: 662}
+    spritePosition: {x: 591, y: 879}
+  - name: at_hanging-lamps_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 1750
+      width: 56
+      height: 122
+    spriteID: a4b1bd093bdc0e84e9bdf9475a66dd6a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 1750}
+    spritePosition: {x: 437, y: 742}
+  - name: at_cashier-station_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 788
+      y: 4
+      width: 196
+      height: 113
+    spriteID: 680f691cabb0c5641b6b9882835ecb0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 788, y: 4}
+    spritePosition: {x: 702, y: 584}
+  - name: at_shelf-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 532
+      y: 662
+      width: 58
+      height: 33
+    spriteID: 60479fed25e074442a160393f864674c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 532, y: 662}
+    spritePosition: {x: 838, y: 761}
+  - name: at_shelf-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 598
+      y: 662
+      width: 58
+      height: 33
+    spriteID: 41ae09b4714c3054e9b74582b3df0dff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 598, y: 662}
+    spritePosition: {x: 838, y: 728}
+  - name: at_shelf-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 930
+      y: 641
+      width: 80
+      height: 44
+    spriteID: 7dde2ec44b1d94b438f090835e5ee858
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 930, y: 641}
+    spritePosition: {x: 652, y: 831}
+  - name: at_shelf-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1372
+      width: 80
+      height: 44
+    spriteID: 05e492a3305ebc647a7a714254d60bf5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1372}
+    spritePosition: {x: 650, y: 793}
+  - name: at_disc-shelves-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 910
+      y: 230
+      width: 83
+      height: 113
+    spriteID: 0325bc406be18e940930f74bd7060fa5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 910, y: 230}
+    spritePosition: {x: 645, y: 700}
+  - name: at_shelf-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 930
+      y: 498
+      width: 78
+      height: 135
+    spriteID: f6929088ac86a2f4aa5b3732fb88d248
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 930, y: 498}
+    spritePosition: {x: 402, y: 605}
+  - name: at_shelf-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1327
+      width: 56
+      height: 124
+    spriteID: 01f7f273c00c66340b70cd4fa6362dae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1327}
+    spritePosition: {x: 506, y: 553}
+  - name: at_counter_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 278
+      y: 1033
+      width: 64
+      height: 48
+    spriteID: 87e4459830cf2da48bfe506626bed569
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 278, y: 1033}
+    spritePosition: {x: 624, y: 524}
+  - name: at_counter_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 788
+      y: 230
+      width: 114
+      height: 97
+    spriteID: 3303f100e8814e143981c51e49e1e983
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 788, y: 230}
+    spritePosition: {x: 452, y: 631}
+  - name: at_counter_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1592
+      width: 82
+      height: 71
+    spriteID: 195ebad4e770e4f4b82ade91e91aa9e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1592}
+    spritePosition: {x: 532, y: 671}
+  - name: at_counter_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1572
+      width: 48
+      height: 48
+    spriteID: b72ce45fd31fd5b48b795ea73735b820
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1572}
+    spritePosition: {x: 492, y: 564}
+  - name: at_counter_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1169
+      width: 64
+      height: 72
+    spriteID: 25f3cf8d524f7934b89d2f15b516bc22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1169}
+    spritePosition: {x: 526, y: 567}
+  - name: at_glass-display-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1307
+      width: 72
+      height: 57
+    spriteID: 1e2489f292f9ba342bc77e8cf2f357a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1307}
+    spritePosition: {x: 561, y: 615}
+  - name: at_counter_decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1671
+      width: 82
+      height: 71
+    spriteID: 1a353dd7bf4d7e64d8a05abc084a7ca2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1671}
+    spritePosition: {x: 558, y: 583}
+  - name: at_display-rack-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: 1880
+      width: 32
+      height: 118
+    spriteID: 7491910a88416224e860e3ae308e2664
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 100, y: 1880}
+    spritePosition: {x: 622, y: 607}
+  - name: cashier-npc
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1195
+      width: 68
+      height: 124
+    spriteID: f1e1c9ee97e694042a28119b42a2fff1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1195}
+    spritePosition: {x: 780, y: 629}
+  - name: at_pipe-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 540
+      y: 4
+      width: 240
+      height: 331
+    spriteID: 20995e78f8ad1fd41ba4dfd89f1576a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 540, y: 4}
+    spritePosition: {x: 664, y: 613}
+  - name: at_hanging-lamps-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 60
+      y: 1750
+      width: 32
+      height: 171
+    spriteID: 6ccce3fc28a6de34099ebe550119bc67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 60, y: 1750}
+    spritePosition: {x: 632, y: 815}
+  - name: at_open-sign-decor
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 986
+      y: 125
+      width: 33
+      height: 48
+    spriteID: 6948ce90f8883874e8d2e3b29818a914
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 986, y: 125}
+    spritePosition: {x: 520, y: 781}
+  - name: at_carper-decor-1a
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1033
+      width: 116
+      height: 60
+    spriteID: dc3290aa17edbc14ea7a23d0af299e16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1033}
+    spritePosition: {x: 554, y: 612}
+  - name: at_carper-decor-2a
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 788
+      y: 125
+      width: 190
+      height: 97
+    spriteID: 99d8b8e4107714643a60db735dd2768c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 788, y: 125}
+    spritePosition: {x: 565, y: 502}
+  - name: at_carper-decor-3a
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 154
+      y: 1249
+      width: 92
+      height: 50
+    spriteID: c62a095234d5c2743ac248cec2100d35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 154, y: 1249}
+    spritePosition: {x: 662, y: 544}
+  - name: at_carper-decor-4a
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 778
+      y: 368
+      width: 240
+      height: 122
+    spriteID: f88546190d4721046a24bbbd866aec53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 778, y: 368}
+    spritePosition: {x: 669, y: 568}
+  - name: at_carper-decor-5a
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1033
+      width: 142
+      height: 73
+    spriteID: b2a9fdf42c137e341a5ca5fc02737e6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1033}
+    spritePosition: {x: 462, y: 553}
+  - name: at_carper-decor-6a
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1114
+      width: 142
+      height: 73
+    spriteID: f99e14a698f10a945bc0491cf8d2d243
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1114}
+    spritePosition: {x: 605, y: 565}
+  - name: at_door-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1195
+      width: 48
+      height: 184
+    spriteID: 544b810c2957190458b7c6f07ee08676
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1195}
+    spritePosition: {x: 582, y: 707}
+  - name: at_wall-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 506
+      y: 705
+      width: 496
+      height: 176
+    spriteID: 50068190b9a177d4eb028cc4d4fbebb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 506, y: 705}
+    spritePosition: {x: 408, y: 620}
+  - name: at_window-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 778
+      y: 498
+      width: 144
+      height: 185
+    spriteID: 4e737c882ebb8f44692600cedf05fe25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 778, y: 498}
+    spritePosition: {x: 423, y: 659}
+  - name: at_wall-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 532
+      y: 368
+      width: 238
+      height: 286
+    spriteID: 7cfeef1c7c1d57941b97547fd4bc5702
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 532, y: 368}
+    spritePosition: {x: 408, y: 652}
+  - name: at_wall-border-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 528
+      height: 356
+    spriteID: d193db3b48d63bb4986b91dc1878d3a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 392, y: 600}
+  - name: at_wall-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 705
+      width: 494
+      height: 320
+    spriteID: a05bf46472e5c4549b9bd279065a63de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 705}
+    spritePosition: {x: 409, y: 623}
+  - name: at_ground-tile
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 368
+      width: 520
+      height: 329
+    spriteID: d9e7033a93c0fe24bad576e6f162eaa5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 368}
+    spritePosition: {x: 400, y: 472}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 0
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  generateTileAssets: 0
+  tilePaletteCellLayout: 0
+  tilePaletteHexagonLayout: 0
+  tilePaletteCellSize: {x: 1, y: 1, z: 0}
+  tilePaletteCellSizing: 0
+  transparencySortMode: 0
+  transparencySortAxis: {x: 0, y: 0, z: 1}
+  tileTemplate: {instanceID: 0}
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting:
+  - spriteId: ab86174c43804354392005eb633e51b4
+    name: background
+    layerId: 920
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 93e804860c78bb94aac482782bab2162
+    name: grid
+    layerId: 1387
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 1aa8b13b42f575342a3337795b6d0afd
+    name: isometric-grid-16x16
+    layerId: 14
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: da34478ca7f8d47408e1ccd3c32f1e64
+    name: grid-8x8
+    layerId: 403
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: c40ab6098b25f264eb9e7ba8989bfca1
+    name: -test-
+    layerId: 1362
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: b82f6eb715b4bf245821686b2a859325
+    name: Layer 18
+    layerId: 238
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: a265412d41efb8940a21e50d97a0aab7
+    name: Layer 5
+    layerId: 129
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: a4668b453ee4ce94b9692e3674c2a823
+    name: Layer 5 copy 2
+    layerId: 72
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 8713d076aadd3514dab5d87ee53fabc4
+    name: Layer 4 copy 12
+    layerId: 65
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 431af61b3ed630f4693d18cf44516efc
+    name: Layer 4 copy 15
+    layerId: 71
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: ac041be66d159e84e9a542cf54458675
+    name: Layer 4 copy 13
+    layerId: 66
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: b4935e2917191c446b8263e207eebd15
+    name: Layer 4 copy 8
+    layerId: 59
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 13572fa7af83709409fea399ed351b98
+    name: Layer 4 copy 8
+    layerId: 61
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 3d917cad4caf87f4a86fe6c38b1df322
+    name: Layer 4 copy 9
+    layerId: 62
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 8752f7c76797c754c84e50d6cd90d8f7
+    name: Layer 5 copy
+    layerId: 70
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 3c9639e923d295a43a2e261f677af565
+    name: Layer 4 copy 18
+    layerId: 88
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 2dda938b56cd49e4bba4b4d8c22f7cde
+    name: Layer 4 copy 3
+    layerId: 32
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 3a38ad162c9c37b49993f5adff50082d
+    name: Layer 4 copy
+    layerId: 30
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 40e1afd2c5d157e47bfd10c7d35c6a6d
+    name: Layer 4
+    layerId: 28
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 7bc6d01cd1971a342a36674dcbe63d2a
+    name: Layer 3 copy 3
+    layerId: 34
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 5416943a4422e31489120c47e2a53900
+    name: Layer 3 copy 11
+    layerId: 39
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 9c78d88f475f9b7449f13c5374b2e274
+    name: Layer 3 copy 2
+    layerId: 17
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 0146548f00b492240910f5f0f6eb4bb0
+    name: Layer 3 copy 5
+    layerId: 35
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 23f5d91c48fa36645837ce9e7ee23ddf
+    name: Layer 3 copy 10
+    layerId: 38
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 00e61b1213e2324439d893e6a863b1f1
+    name: Layer 3 copy 9
+    layerId: 37
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 523fe9afa79b6494a930abacbc4f4c77
+    name: Layer 3 copy 4
+    layerId: 205
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: b5422d9d99f48c84087e055fd4cc952e
+    name: Layer 3 copy
+    layerId: 16
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: a748bd3b499a5c34cb42492f713b6049
+    name: Layer 3 copy 7
+    layerId: 22
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: caaa850688396624f95ecee6f7dcb28e
+    name: Layer 3 copy 6
+    layerId: 21
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: fd6ae8724d277dd4491bb628f4334583
+    name: Layer 3
+    layerId: 15
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 81400345df4401540b55eff2ba0cbcec
+    name: wip
+    layerId: 1382
+    flatten: 0
+    isGroup: 1
+    importLayer: 0
+  - spriteId: 0588f040a6036a34d918b9ef452a4081
+    name: Layer 127
+    layerId: 825
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 1dfbbc3220bc01d4ab62e535795528a6
+    name: Layer 106 copy 2
+    layerId: 740
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 3a35628b80618f044a5e236c9ba65385
+    name: Layer 128
+    layerId: 826
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: 29226629104a61843b22a05670a78c0f
+    name: Layer 124
+    layerId: 803
+    flatten: 0
+    isGroup: 0
+    importLayer: 0
+  - spriteId: ecdd3fef43532164389976f761930c05
+    name: -item-icons-
+    layerId: 1364
+    flatten: 0
+    isGroup: 1
+    importLayer: 1
+  - spriteId: 8d0f1cec69a7dea419a064ed79ea19c1
+    name: Layer 94 copy
+    layerId: 1339
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 71f70038ca70ad844acbb11d2ee0a9c3
+    name: 8ball-icon
+    layerId: 1350
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 97570414848ba2d47a57f32d8ea25566
+    name: pocketwatch-icon
+    layerId: 1337
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 166d996f21ac7cc4f905255456215291
+    name: Layer 211
+    layerId: 1346
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 09c5ecd7fc9d94049a8f9d4cd2b584ab
+    name: Layer 207
+    layerId: 1320
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+    name: Layer 69 copy 2
+    layerId: 1338
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  psdLayers:
+  - name: wip
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 81400345df4401540b55eff2ba0cbcec
+    layerID: 1382
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 127
+    spriteName: Layer 127
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0588f040a6036a34d918b9ef452a4081
+    layerID: 825
+    mosaicPosition: {x: 1214, y: 1618}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 106 copy 2
+    spriteName: Layer 106 copy 2
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1dfbbc3220bc01d4ab62e535795528a6
+    layerID: 740
+    mosaicPosition: {x: 1214, y: 1549}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 128
+    spriteName: Layer 128
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 3a35628b80618f044a5e236c9ba65385
+    layerID: 826
+    mosaicPosition: {x: 1068, y: 1549}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 124
+    spriteName: Layer 124
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 29226629104a61843b22a05670a78c0f
+    layerID: 803
+    mosaicPosition: {x: 1068, y: 1420}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: -item-icons-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ecdd3fef43532164389976f761930c05
+    layerID: 1364
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_painting-icon
+    spriteName: at_painting-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 8d0f1cec69a7dea419a064ed79ea19c1
+    layerID: 1339
+    mosaicPosition: {x: 992, y: 77}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_8ball-icon
+    spriteName: at_8ball-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 71f70038ca70ad844acbb11d2ee0a9c3
+    layerID: 1350
+    mosaicPosition: {x: 121, y: 1522}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_pocketwatch-icon
+    spriteName: at_pocketwatch-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 97570414848ba2d47a57f32d8ea25566
+    layerID: 1337
+    mosaicPosition: {x: 240, y: 1140}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_old-television-icon
+    spriteName: at_old-television-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 166d996f21ac7cc4f905255456215291
+    layerID: 1346
+    mosaicPosition: {x: 60, y: 2006}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_card-icon
+    spriteName: at_card-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 09c5ecd7fc9d94049a8f9d4cd2b584ab
+    layerID: 1320
+    mosaicPosition: {x: 226, y: 1221}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_music-box-icon
+    spriteName: at_music-box-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 9bb095099e7f3b445a49a4814184f524
+    layerID: 1419
+    mosaicPosition: {x: 992, y: 39}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_polaroid-camera-icon
+    spriteName: at_polaroid-camera-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: e64ca19d4940aca4ea7e2bf35b133a0c
+    layerID: 1338
+    mosaicPosition: {x: 60, y: 1968}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -effects-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: fca9984e7d433c742b61567c63b824fa
+    layerID: 1370
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Video Group 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 13
+    spriteID: 074321bb6717e5943b361ac54b64fc7e
+    layerID: 1399
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_irrate-frame1-icon
+    spriteName: at_irrate-frame1-icon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: d0d7214ba13d7b8459e8dcc5be34595a
+    layerID: 1401
+    mosaicPosition: {x: 240, y: 1101}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_irrate-frame2-icon
+    spriteName: at_irrate-frame2-icon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 04cd990fa87d2174e9cc6584347dd7d3
+    layerID: 1402
+    mosaicPosition: {x: 242, y: 1372}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_irrate-frame3-icon
+    spriteName: at_irrate-frame3-icon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: dc31d5f1a36a76c40a428f83bdb58e66
+    layerID: 1403
+    mosaicPosition: {x: 825, y: 335}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_irrate-frame4-icon
+    spriteName: at_irrate-frame4-icon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: e331cc7f8d6ce2c4c874e84565410e56
+    layerID: 1393
+    mosaicPosition: {x: 857, y: 335}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_irrate-frame5-icon
+    spriteName: at_irrate-frame5-icon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 9957ebd98d025044482ca644a41437ba
+    layerID: 1392
+    mosaicPosition: {x: 992, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_irrate-frame6-icon
+    spriteName: at_irrate-frame6-icon
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 2017df70725c9e6429ec0236444cf5b3
+    layerID: 1391
+    mosaicPosition: {x: 60, y: 1929}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_gems-icon
+    spriteName: at_gems-icon
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 56ef9c5fe25f8b04eba81201a5b3e0c0
+    layerID: 1390
+    mosaicPosition: {x: 121, y: 1549}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_obols-icon
+    spriteName: at_obols-icon
+    isGroup: 0
+    parentIndex: 13
+    spriteID: 54fe87ee199c8d34e8c78aa9babde769
+    layerID: 1389
+    mosaicPosition: {x: 121, y: 1490}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -items-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: c451eff2f0fec054f805890ce1e3887f
+    layerID: 1348
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_emptybox-item
+    spriteName: at_emptybox-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 57223c88a78a90e4f937142091ed38f8
+    layerID: 1358
+    mosaicPosition: {x: 100, y: 2006}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_8ball-item
+    spriteName: at_8ball-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: c077c771543cf5a46bc4c79b71f17d9d
+    layerID: 582
+    mosaicPosition: {x: 124, y: 1327}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_pocketwatch-item
+    spriteName: at_pocketwatch-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: f9b2408b305f3d14184910e877fbdc7d
+    layerID: 1210
+    mosaicPosition: {x: 788, y: 335}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_cardbox-item
+    spriteName: at_cardbox-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 26bf864a4a4fd7c46a6043caa9072228
+    layerID: 786
+    mosaicPosition: {x: 154, y: 1682}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_card-display-item
+    spriteName: at_card-display-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 2b6a737b52e43174eab9d0c6af872a12
+    layerID: 737
+    mosaicPosition: {x: 154, y: 1424}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_dvd-item
+    spriteName: at_dvd-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: c68545a66281ff840ad4e800dda00eb6
+    layerID: 662
+    mosaicPosition: {x: 664, y: 662}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_music-box-item
+    spriteName: at_music-box-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 286e3c76c090253418fcef1715ce8ba7
+    layerID: 1181
+    mosaicPosition: {x: 154, y: 1494}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_old-television-item
+    spriteName: at_old-television-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 3aa44142c47919343863551ab205c325
+    layerID: 1200
+    mosaicPosition: {x: 154, y: 1628}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_old-camera-item
+    spriteName: at_old-camera-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 802121e92aecf3646a8998ab8f1f8a62
+    layerID: 559
+    mosaicPosition: {x: 121, y: 1459}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_polaroid-camera-item
+    spriteName: at_polaroid-camera-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 945dd83f89d15d7409264331c8202f7b
+    layerID: 1314
+    mosaicPosition: {x: 986, y: 181}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_box-of-scrolls-item
+    spriteName: at_box-of-scrolls-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 9266ffe879b32544d92bf82bf2bc795a
+    layerID: 1313
+    mosaicPosition: {x: 154, y: 1101}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_paintings-item
+    spriteName: at_paintings-item
+    isGroup: 0
+    parentIndex: 23
+    spriteID: 27025f8229ff7bf49ab59bed0c102a98
+    layerID: 1357
+    mosaicPosition: {x: 60, y: 1459}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -decorations-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: ade23560599e35343917b81a128a1e44
+    layerID: 1381
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_ad-signage-decor
+    spriteName: at_ad-signage-decor
+    isGroup: 0
+    parentIndex: 36
+    spriteID: c24a39eec0c0a2f42a9a45d0b89bfa52
+    layerID: 1378
+    mosaicPosition: {x: 226, y: 1169}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_open-signage-decor
+    spriteName: at_open-signage-decor
+    isGroup: 0
+    parentIndex: 36
+    spriteID: 5c6e1041ff4fa7847927f6fc3159e0a7
+    layerID: 1377
+    mosaicPosition: {x: 234, y: 1307}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_exit-signage-decor
+    spriteName: at_exit-signage-decor
+    isGroup: 0
+    parentIndex: 36
+    spriteID: f63e02a84356c0b41bd7f48077634bd2
+    layerID: 1376
+    mosaicPosition: {x: 720, y: 662}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_hanging-lamps_decor
+    spriteName: at_hanging-lamps_decor
+    isGroup: 0
+    parentIndex: 36
+    spriteID: a4b1bd093bdc0e84e9bdf9475a66dd6a
+    layerID: 1375
+    mosaicPosition: {x: 100, y: 1750}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -shelves-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: b5b9fee207d591a469df54b9915be0c4
+    layerID: 1351
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_cashier-station_decor
+    spriteName: at_cashier-station_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 680f691cabb0c5641b6b9882835ecb0b
+    layerID: 1405
+    mosaicPosition: {x: 788, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_shelf-decor
+    spriteName: at_shelf-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 60479fed25e074442a160393f864674c
+    layerID: 1406
+    mosaicPosition: {x: 532, y: 662}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_shelf-decor
+    spriteName: at_shelf-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 41ae09b4714c3054e9b74582b3df0dff
+    layerID: 755
+    mosaicPosition: {x: 598, y: 662}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_shelf-decor
+    spriteName: at_shelf-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 7dde2ec44b1d94b438f090835e5ee858
+    layerID: 486
+    mosaicPosition: {x: 930, y: 641}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_shelf-decor
+    spriteName: at_shelf-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 05e492a3305ebc647a7a714254d60bf5
+    layerID: 487
+    mosaicPosition: {x: 154, y: 1372}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_disc-shelves-decor
+    spriteName: at_disc-shelves-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 0325bc406be18e940930f74bd7060fa5
+    layerID: 1186
+    mosaicPosition: {x: 910, y: 230}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_shelf-decor
+    spriteName: at_shelf-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: f6929088ac86a2f4aa5b3732fb88d248
+    layerID: 814
+    mosaicPosition: {x: 930, y: 498}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_shelf-decor
+    spriteName: at_shelf-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 01f7f273c00c66340b70cd4fa6362dae
+    layerID: 172
+    mosaicPosition: {x: 60, y: 1327}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_counter_decor
+    spriteName: at_counter_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 87e4459830cf2da48bfe506626bed569
+    layerID: 1213
+    mosaicPosition: {x: 278, y: 1033}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_counter_decor
+    spriteName: at_counter_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 3303f100e8814e143981c51e49e1e983
+    layerID: 676
+    mosaicPosition: {x: 788, y: 230}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_counter_decor
+    spriteName: at_counter_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 195ebad4e770e4f4b82ade91e91aa9e8
+    layerID: 1407
+    mosaicPosition: {x: 60, y: 1592}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_counter_decor
+    spriteName: at_counter_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: b72ce45fd31fd5b48b795ea73735b820
+    layerID: 1408
+    mosaicPosition: {x: 154, y: 1572}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_counter_decor
+    spriteName: at_counter_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 25f3cf8d524f7934b89d2f15b516bc22
+    layerID: 1409
+    mosaicPosition: {x: 154, y: 1169}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_glass-display-decor
+    spriteName: at_glass-display-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 1e2489f292f9ba342bc77e8cf2f357a3
+    layerID: 1185
+    mosaicPosition: {x: 154, y: 1307}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_counter_decor
+    spriteName: at_counter_decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 1a353dd7bf4d7e64d8a05abc084a7ca2
+    layerID: 1410
+    mosaicPosition: {x: 60, y: 1671}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_display-rack-decor
+    spriteName: at_display-rack-decor
+    isGroup: 0
+    parentIndex: 41
+    spriteID: 7491910a88416224e860e3ae308e2664
+    layerID: 1411
+    mosaicPosition: {x: 100, y: 1880}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -npc-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 3719ad817c0bf4c40abab167c84c331b
+    layerID: 1384
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: cashier-npc
+    spriteName: cashier-npc
+    isGroup: 0
+    parentIndex: 58
+    spriteID: f1e1c9ee97e694042a28119b42a2fff1
+    layerID: 1369
+    mosaicPosition: {x: 60, y: 1195}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -decorations-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 59f7f73f66ea8f94e82ab46ee9b458ce
+    layerID: 1366
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_pipe-decor
+    spriteName: at_pipe-decor
+    isGroup: 0
+    parentIndex: 60
+    spriteID: 20995e78f8ad1fd41ba4dfd89f1576a0
+    layerID: 1202
+    mosaicPosition: {x: 540, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_hanging-lamps-decor
+    spriteName: at_hanging-lamps-decor
+    isGroup: 0
+    parentIndex: 60
+    spriteID: 6ccce3fc28a6de34099ebe550119bc67
+    layerID: 960
+    mosaicPosition: {x: 60, y: 1750}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_open-sign-decor
+    spriteName: at_open-sign-decor
+    isGroup: 0
+    parentIndex: 60
+    spriteID: 6948ce90f8883874e8d2e3b29818a914
+    layerID: 917
+    mosaicPosition: {x: 986, y: 125}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -carpet-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d9d215d86c9cb5e4b9ec63f7423f72c6
+    layerID: 1353
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_carper-decor-1a
+    spriteName: at_carper-decor-1a
+    isGroup: 0
+    parentIndex: 64
+    spriteID: dc3290aa17edbc14ea7a23d0af299e16
+    layerID: 294
+    mosaicPosition: {x: 154, y: 1033}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_carper-decor-2a
+    spriteName: at_carper-decor-2a
+    isGroup: 0
+    parentIndex: 64
+    spriteID: 99d8b8e4107714643a60db735dd2768c
+    layerID: 315
+    mosaicPosition: {x: 788, y: 125}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_carper-decor-3a
+    spriteName: at_carper-decor-3a
+    isGroup: 0
+    parentIndex: 64
+    spriteID: c62a095234d5c2743ac248cec2100d35
+    layerID: 304
+    mosaicPosition: {x: 154, y: 1249}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_carper-decor-4a
+    spriteName: at_carper-decor-4a
+    isGroup: 0
+    parentIndex: 64
+    spriteID: f88546190d4721046a24bbbd866aec53
+    layerID: 607
+    mosaicPosition: {x: 778, y: 368}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_carper-decor-5a
+    spriteName: at_carper-decor-5a
+    isGroup: 0
+    parentIndex: 64
+    spriteID: b2a9fdf42c137e341a5ca5fc02737e6c
+    layerID: 620
+    mosaicPosition: {x: 4, y: 1033}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_carper-decor-6a
+    spriteName: at_carper-decor-6a
+    isGroup: 0
+    parentIndex: 64
+    spriteID: f99e14a698f10a945bc0491cf8d2d243
+    layerID: 278
+    mosaicPosition: {x: 4, y: 1114}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -base-shop-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: d299f13c11b6a8648be01c73d919eabb
+    layerID: 1360
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: at_door-tile
+    spriteName: at_door-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: 544b810c2957190458b7c6f07ee08676
+    layerID: 505
+    mosaicPosition: {x: 4, y: 1195}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_wall-tile
+    spriteName: at_wall-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: 50068190b9a177d4eb028cc4d4fbebb1
+    layerID: 940
+    mosaicPosition: {x: 506, y: 705}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_window-tile
+    spriteName: at_window-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: 4e737c882ebb8f44692600cedf05fe25
+    layerID: 519
+    mosaicPosition: {x: 778, y: 498}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_wall-tile
+    spriteName: at_wall-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: 7cfeef1c7c1d57941b97547fd4bc5702
+    layerID: 939
+    mosaicPosition: {x: 532, y: 368}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_wall-border-tile
+    spriteName: at_wall-border-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: d193db3b48d63bb4986b91dc1878d3a8
+    layerID: 942
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_wall-tile
+    spriteName: at_wall-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: a05bf46472e5c4549b9bd279065a63de
+    layerID: 944
+    mosaicPosition: {x: 4, y: 705}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: at_ground-tile
+    spriteName: at_ground-tile
+    isGroup: 0
+    parentIndex: 71
+    spriteID: d9e7033a93c0fe24bad576e6f162eaa5
+    layerID: 936
+    mosaicPosition: {x: 4, y: 368}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: -test-
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: c40ab6098b25f264eb9e7ba8989bfca1
+    layerID: 1362
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 18
+    spriteName: Layer 18
+    isGroup: 0
+    parentIndex: 79
+    spriteID: b82f6eb715b4bf245821686b2a859325
+    layerID: 238
+    mosaicPosition: {x: 2042, y: 1791}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 5
+    spriteName: Layer 5
+    isGroup: 0
+    parentIndex: 79
+    spriteID: a265412d41efb8940a21e50d97a0aab7
+    layerID: 129
+    mosaicPosition: {x: 686, y: 1757}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 5 copy 2
+    spriteName: Layer 5 copy 2
+    isGroup: 0
+    parentIndex: 79
+    spriteID: a4668b453ee4ce94b9692e3674c2a823
+    layerID: 72
+    mosaicPosition: {x: 1769, y: 2019}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 12
+    spriteName: Layer 4 copy 12
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 8713d076aadd3514dab5d87ee53fabc4
+    layerID: 65
+    mosaicPosition: {x: 1121, y: 1990}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 15
+    spriteName: Layer 4 copy 15
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 431af61b3ed630f4693d18cf44516efc
+    layerID: 71
+    mosaicPosition: {x: 508, y: 1880}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 13
+    spriteName: Layer 4 copy 13
+    isGroup: 0
+    parentIndex: 79
+    spriteID: ac041be66d159e84e9a542cf54458675
+    layerID: 66
+    mosaicPosition: {x: 508, y: 1912}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 8
+    spriteName: Layer 4 copy 8
+    isGroup: 0
+    parentIndex: 79
+    spriteID: b4935e2917191c446b8263e207eebd15
+    layerID: 59
+    mosaicPosition: {x: 1153, y: 1990}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 8
+    spriteName: Layer 4 copy 8
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 13572fa7af83709409fea399ed351b98
+    layerID: 61
+    mosaicPosition: {x: 1185, y: 1990}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 9
+    spriteName: Layer 4 copy 9
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 3d917cad4caf87f4a86fe6c38b1df322
+    layerID: 62
+    mosaicPosition: {x: 1217, y: 1990}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 5 copy
+    spriteName: Layer 5 copy
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 8752f7c76797c754c84e50d6cd90d8f7
+    layerID: 70
+    mosaicPosition: {x: 662, y: 1757}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 18
+    spriteName: Layer 4 copy 18
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 3c9639e923d295a43a2e261f677af565
+    layerID: 88
+    mosaicPosition: {x: 1172, y: 1862}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy 3
+    spriteName: Layer 4 copy 3
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 2dda938b56cd49e4bba4b4d8c22f7cde
+    layerID: 32
+    mosaicPosition: {x: 2042, y: 1937}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4 copy
+    spriteName: Layer 4 copy
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 3a38ad162c9c37b49993f5adff50082d
+    layerID: 30
+    mosaicPosition: {x: 2042, y: 1977}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 4
+    spriteName: Layer 4
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 40e1afd2c5d157e47bfd10c7d35c6a6d
+    layerID: 28
+    mosaicPosition: {x: 1916, y: 2010}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 3
+    spriteName: Layer 3 copy 3
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 7bc6d01cd1971a342a36674dcbe63d2a
+    layerID: 34
+    mosaicPosition: {x: 1956, y: 2010}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 11
+    spriteName: Layer 3 copy 11
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 5416943a4422e31489120c47e2a53900
+    layerID: 39
+    mosaicPosition: {x: 1996, y: 2010}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 2
+    spriteName: Layer 3 copy 2
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 9c78d88f475f9b7449f13c5374b2e274
+    layerID: 17
+    mosaicPosition: {x: 960, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 5
+    spriteName: Layer 3 copy 5
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 0146548f00b492240910f5f0f6eb4bb0
+    layerID: 35
+    mosaicPosition: {x: 1000, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 10
+    spriteName: Layer 3 copy 10
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 23f5d91c48fa36645837ce9e7ee23ddf
+    layerID: 38
+    mosaicPosition: {x: 1040, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 9
+    spriteName: Layer 3 copy 9
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 00e61b1213e2324439d893e6a863b1f1
+    layerID: 37
+    mosaicPosition: {x: 1080, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 4
+    spriteName: Layer 3 copy 4
+    isGroup: 0
+    parentIndex: 79
+    spriteID: 523fe9afa79b6494a930abacbc4f4c77
+    layerID: 205
+    mosaicPosition: {x: 1120, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy
+    spriteName: Layer 3 copy
+    isGroup: 0
+    parentIndex: 79
+    spriteID: b5422d9d99f48c84087e055fd4cc952e
+    layerID: 16
+    mosaicPosition: {x: 1160, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 7
+    spriteName: Layer 3 copy 7
+    isGroup: 0
+    parentIndex: 79
+    spriteID: a748bd3b499a5c34cb42492f713b6049
+    layerID: 22
+    mosaicPosition: {x: 1200, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3 copy 6
+    spriteName: Layer 3 copy 6
+    isGroup: 0
+    parentIndex: 79
+    spriteID: caaa850688396624f95ecee6f7dcb28e
+    layerID: 21
+    mosaicPosition: {x: 1240, y: 1920}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Layer 3
+    spriteName: Layer 3
+    isGroup: 0
+    parentIndex: 79
+    spriteID: fd6ae8724d277dd4491bb628f4334583
+    layerID: 15
+    mosaicPosition: {x: 896, y: 1990}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: grid
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 93e804860c78bb94aac482782bab2162
+    layerID: 1387
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: isometric-grid-16x16
+    spriteName: isometric-grid-16x16
+    isGroup: 0
+    parentIndex: 105
+    spriteID: 1aa8b13b42f575342a3337795b6d0afd
+    layerID: 14
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: grid-8x8
+    spriteName: grid-8x8
+    isGroup: 0
+    parentIndex: 105
+    spriteID: da34478ca7f8d47408e1ccd3c32f1e64
+    layerID: 403
+    mosaicPosition: {x: 1292, y: 4}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: background
+    spriteName: background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ab86174c43804354392005eb633e51b4
+    layerID: 920
+    mosaicPosition: {x: 2580, y: 4}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 639086714159013516
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
