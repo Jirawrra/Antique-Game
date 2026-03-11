@@ -47,5 +47,8 @@ TagManager:
   - name: Customer
     uniqueID: 3420167427
     locked: 0
+  - name: Npc
+    uniqueID: 1605109481
+    locked: 0
   m_RenderingLayers:
   - Default

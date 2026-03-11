@@ -205,6 +205,28 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 226, y: 1221}
     spritePosition: {x: 1156, y: 40}
+  - name: at_music-box-icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 992
+      y: 39
+      width: 21
+      height: 30
+    spriteID: 9bb095099e7f3b445a49a4814184f524
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 992, y: 39}
+    spritePosition: {x: 1028, y: 33}
   - name: at_polaroid-camera-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -239,7 +261,7 @@ ScriptedImporter:
       y: 1101
       width: 30
       height: 31
-    spriteID: d0d7214ba13d7b8459e8dcc5be34595a
+    spriteID: 305254b0b7e15f04d9bc20bb83f78f63
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -248,7 +270,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 240, y: 1101}
-    spritePosition: {x: 1188, y: 77}
+    spritePosition: {x: 1233, y: 147}
   - name: at_irrate-frame2-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -261,7 +283,7 @@ ScriptedImporter:
       y: 1372
       width: 26
       height: 27
-    spriteID: 04cd990fa87d2174e9cc6584347dd7d3
+    spriteID: 039777312c3a314449462143b8ff8ec6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +292,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 242, y: 1372}
-    spritePosition: {x: 1190, y: 79}
+    spritePosition: {x: 1235, y: 149}
   - name: at_irrate-frame3-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -283,7 +305,7 @@ ScriptedImporter:
       y: 335
       width: 24
       height: 25
-    spriteID: dc31d5f1a36a76c40a428f83bdb58e66
+    spriteID: 9c0d8151bc945ac4d8da20179f809ab3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -292,7 +314,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 825, y: 335}
-    spritePosition: {x: 1191, y: 79}
+    spritePosition: {x: 1236, y: 149}
   - name: at_irrate-frame4-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -305,7 +327,7 @@ ScriptedImporter:
       y: 335
       width: 24
       height: 25
-    spriteID: e331cc7f8d6ce2c4c874e84565410e56
+    spriteID: 65ac4129c1eed104cbcf365c2548780a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -314,7 +336,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 857, y: 335}
-    spritePosition: {x: 1191, y: 79}
+    spritePosition: {x: 1236, y: 149}
   - name: at_irrate-frame5-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -327,7 +349,7 @@ ScriptedImporter:
       y: 4
       width: 26
       height: 27
-    spriteID: 9957ebd98d025044482ca644a41437ba
+    spriteID: 6d0219ec7650e6d4dbd23667078b4d25
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -336,7 +358,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 992, y: 4}
-    spritePosition: {x: 1190, y: 79}
+    spritePosition: {x: 1235, y: 149}
   - name: at_irrate-frame6-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -349,7 +371,7 @@ ScriptedImporter:
       y: 1929
       width: 30
       height: 31
-    spriteID: 2017df70725c9e6429ec0236444cf5b3
+    spriteID: 9c5574a3d4426434caccd9653b886c36
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -358,7 +380,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 60, y: 1929}
-    spritePosition: {x: 1217, y: 161}
+    spritePosition: {x: 1233, y: 146}
   - name: at_gems-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -535,28 +557,6 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 664, y: 662}
     spritePosition: {x: 678, y: 799}
-  - name: at_music-box-icon
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 992
-      y: 39
-      width: 21
-      height: 30
-    spriteID: 9bb095099e7f3b445a49a4814184f524
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 992, y: 39}
-    spritePosition: {x: 1028, y: 33}
   - name: at_music-box-item
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1837,6 +1837,72 @@ ScriptedImporter:
     flatten: 0
     isGroup: 0
     importLayer: 1
+  - spriteId: fca9984e7d433c742b61567c63b824fa
+    name: -effects-
+    layerId: 1370
+    flatten: 0
+    isGroup: 1
+    importLayer: 1
+  - spriteId: 00000000000000000000000000000000
+    name: Video Group 1
+    layerId: 1399
+    flatten: 0
+    isGroup: 1
+    importLayer: 1
+  - spriteId: 305254b0b7e15f04d9bc20bb83f78f63
+    name: at_irrate-frame1-icon
+    layerId: 1401
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 039777312c3a314449462143b8ff8ec6
+    name: at_irrate-frame2-icon
+    layerId: 1402
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 9c0d8151bc945ac4d8da20179f809ab3
+    name: at_irrate-frame3-icon
+    layerId: 1403
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 65ac4129c1eed104cbcf365c2548780a
+    name: at_irrate-frame4-icon
+    layerId: 1393
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 6d0219ec7650e6d4dbd23667078b4d25
+    name: at_irrate-frame5-icon
+    layerId: 1392
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 9c5574a3d4426434caccd9653b886c36
+    name: at_irrate-frame6-icon
+    layerId: 1391
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 56ef9c5fe25f8b04eba81201a5b3e0c0
+    name: at_gems-icon
+    layerId: 1390
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: 54fe87ee199c8d34e8c78aa9babde769
+    name: at_obols-icon
+    layerId: 1389
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
+  - spriteId: d2734b9867a153e4f823de8715193478
+    name: Video Group 1
+    layerId: 1427
+    flatten: 0
+    isGroup: 0
+    importLayer: 1
   psdLayers:
   - name: wip
     spriteName: 
@@ -1982,7 +2048,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 13
-    spriteID: 074321bb6717e5943b361ac54b64fc7e
+    spriteID: 00000000000000000000000000000000
     layerID: 1399
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -1992,7 +2058,7 @@ ScriptedImporter:
     spriteName: at_irrate-frame1-icon
     isGroup: 0
     parentIndex: 14
-    spriteID: d0d7214ba13d7b8459e8dcc5be34595a
+    spriteID: 305254b0b7e15f04d9bc20bb83f78f63
     layerID: 1401
     mosaicPosition: {x: 240, y: 1101}
     flatten: 0
@@ -2002,7 +2068,7 @@ ScriptedImporter:
     spriteName: at_irrate-frame2-icon
     isGroup: 0
     parentIndex: 14
-    spriteID: 04cd990fa87d2174e9cc6584347dd7d3
+    spriteID: 039777312c3a314449462143b8ff8ec6
     layerID: 1402
     mosaicPosition: {x: 242, y: 1372}
     flatten: 0
@@ -2012,7 +2078,7 @@ ScriptedImporter:
     spriteName: at_irrate-frame3-icon
     isGroup: 0
     parentIndex: 14
-    spriteID: dc31d5f1a36a76c40a428f83bdb58e66
+    spriteID: 9c0d8151bc945ac4d8da20179f809ab3
     layerID: 1403
     mosaicPosition: {x: 825, y: 335}
     flatten: 0
@@ -2022,7 +2088,7 @@ ScriptedImporter:
     spriteName: at_irrate-frame4-icon
     isGroup: 0
     parentIndex: 14
-    spriteID: e331cc7f8d6ce2c4c874e84565410e56
+    spriteID: 65ac4129c1eed104cbcf365c2548780a
     layerID: 1393
     mosaicPosition: {x: 857, y: 335}
     flatten: 0
@@ -2032,7 +2098,7 @@ ScriptedImporter:
     spriteName: at_irrate-frame5-icon
     isGroup: 0
     parentIndex: 14
-    spriteID: 9957ebd98d025044482ca644a41437ba
+    spriteID: 6d0219ec7650e6d4dbd23667078b4d25
     layerID: 1392
     mosaicPosition: {x: 992, y: 4}
     flatten: 0
@@ -2042,7 +2108,7 @@ ScriptedImporter:
     spriteName: at_irrate-frame6-icon
     isGroup: 0
     parentIndex: 14
-    spriteID: 2017df70725c9e6429ec0236444cf5b3
+    spriteID: 9c5574a3d4426434caccd9653b886c36
     layerID: 1391
     mosaicPosition: {x: 60, y: 1929}
     flatten: 0
