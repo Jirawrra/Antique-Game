@@ -24,6 +24,10 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI obolsText;
     [SerializeField] private TextMeshProUGUI drachmaText;
 
+    [Header("Shop UI")]
+    [SerializeField] private Transform antiquesContentParent;
+    [SerializeField] private GameObject shopItemPrefab;
+
     [SerializeField] private ShopManager shopManager;
 
     private Tab currentTab = Tab.None;
@@ -42,6 +46,27 @@ public class UIManager : MonoBehaviour
             notificationPanel.SetActive(true);
             OnNotificationOpened?.Invoke();
         }
+    }
+
+    void BuildAntiquesUI()
+    {
+        foreach (Transform child in antiquesContentParent) //Clear existing UI
+            Destroy(child.gameObject);
+
+        foreach (var itemState in shopManager.shopItems) // Create UI for each item that gets added
+        {
+            Debug.Log("Spawning shop item: " + itemState.item.itemName);
+            GameObject slot = Instantiate(shopItemPrefab, antiquesContentParent);
+
+            ShopItemUI ui = slot.GetComponent<ShopItemUI>();
+            
+            if (ui != null)
+            {
+                ui.Setup(itemState.item);
+            }
+        }
+
+        Debug.Log("Shop items count: " + shopManager.shopItems.Count);
     }
 
     public void closeNotification()
@@ -79,6 +104,11 @@ public class UIManager : MonoBehaviour
         currentTab = clickedTab;
 
         antiquesPanel.SetActive(clickedTab == Tab.Antiques); // Show Antiques panel if selected
+        if (clickedTab == Tab.Antiques)
+        {
+            BuildAntiquesUI();
+        }
+
         upgradesPanel.SetActive(clickedTab == Tab.Upgrades); // Show Upgrades panel if selected
 
         //Slide Up if the panel is not already up

@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 309041630006769065}
   - component: {fileID: 4848605218009305984}
   - component: {fileID: 8103057027162445301}
+  - component: {fileID: -5475297757616158913}
   m_Layer: 5
   m_Name: Item Panel Prefab
   m_TagString: Untagged
@@ -267,6 +268,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-5475297757616158913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4874067295173771898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9781a012ba04f824a82e200346b7e3e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopItemUI
+  icon: {fileID: 4960676621353023119}
+  nameText: {fileID: 263309630154164704}
+  priceText: {fileID: 1490182754305227272}
 --- !u!1 &6257561492334678887
 GameObject:
   m_ObjectHideFlags: 0

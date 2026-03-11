@@ -10,6 +10,7 @@ public class ShopManager : MonoBehaviour
     void Start()
     {
         LoadTierItems();
+        Debug.Log("Shop loaded items: " + shopItems.Count);
     }
 
     void LoadTierItems()
