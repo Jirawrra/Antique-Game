@@ -1843,43 +1843,43 @@ ScriptedImporter:
     flatten: 0
     isGroup: 1
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 00000000000000000000000000000000
     name: Video Group 1
     layerId: 1399
     flatten: 0
     isGroup: 1
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 305254b0b7e15f04d9bc20bb83f78f63
     name: at_irrate-frame1-icon
     layerId: 1401
     flatten: 0
     isGroup: 0
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 039777312c3a314449462143b8ff8ec6
     name: at_irrate-frame2-icon
     layerId: 1402
     flatten: 0
     isGroup: 0
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 9c0d8151bc945ac4d8da20179f809ab3
     name: at_irrate-frame3-icon
     layerId: 1403
     flatten: 0
     isGroup: 0
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 65ac4129c1eed104cbcf365c2548780a
     name: at_irrate-frame4-icon
     layerId: 1393
     flatten: 0
     isGroup: 0
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 6d0219ec7650e6d4dbd23667078b4d25
     name: at_irrate-frame5-icon
     layerId: 1392
     flatten: 0
     isGroup: 0
     importLayer: 1
-  - spriteId: e64ca19d4940aca4ea7e2bf35b133a0c
+  - spriteId: 9c5574a3d4426434caccd9653b886c36
     name: at_irrate-frame6-icon
     layerId: 1391
     flatten: 0
