@@ -1,35 +1,46 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class TutorialManager : MonoBehaviour
 {
     public static TutorialManager Instance { get; private set; }
 
     [Header("References")]
-    public GameObject tutorialButton;       // The button shown at game start
-    public GameObject tutorialPanel;        // The UI panel shown during tutorial
-    public TutorialAnimationPopIn spritePopIn;         // Your sprite pop-in script
+    public GameObject tutorialButton;
+    public GameObject tutorialPanel;
+    public TutorialAnimationPopIn spritePopIn;
 
     [Header("Settings")]
-    public float delayBeforeSprite = 0.5f;  // Pause before sprite slides in
+    public float delayBeforeSprite = 0.5f;
 
+    [Header("Tutorial Content")]
+    public TutorialData tutorialData;           // Drag your TutorialData SO here
+    public TextMeshProUGUI stepText;            // TMP text inside panel
+    public Image stepImage;                     // Image inside panel
+    public GameObject skipButton;               // Skip button
+    public GameObject finishButton;
+
+
+    private int currentStep = 0;
     private bool isTutorialRunning = false;
 
     void Awake()
     {
-        // Singleton setup
+
         if (Instance != null && Instance != this) { Destroy(gameObject); return; }
         Instance = this;
     }
 
     void Start()
     {
-        // Show the trigger button, hide tutorial panel
+
         tutorialButton.SetActive(true);
         tutorialPanel.SetActive(false);
     }
 
-    // --- Called by the tutorial button's OnClick ---
+
     public void OnTutorialButtonPressed()
     {
         if (isTutorialRunning) return;
@@ -39,19 +50,44 @@ public class TutorialManager : MonoBehaviour
     IEnumerator RunTutorial()
     {
         isTutorialRunning = true;
-
-        // 1. Hide the trigger button
+        currentStep = 0;
         tutorialButton.SetActive(false);
 
-        // 4. Show tutorial UI panel
+
+        yield return new WaitForSecondsRealtime(delayBeforeSprite);
         tutorialPanel.SetActive(true);
         Debug.Log("TutorialPanel Opened");
-
-        // 5. Wait briefly, then trigger sprite pop-in
-        yield return new WaitForSecondsRealtime(delayBeforeSprite);
         spritePopIn.PlayAnimation();
 
     }
+
+    public void OnSkipPressed()
+    {
+        currentStep++;
+
+        if (currentStep >= tutorialData.steps.Length)
+        {
+            EndTutorial();
+            return;
+        }
+
+        ShowStep(currentStep);
+    }
+
+    void ShowStep(int index)
+    {
+        TutorialStepData step = tutorialData.steps[index];
+
+        // Update content
+        stepText.text = step.stepText;
+        stepImage.sprite = step.stepImage;
+
+        // Show Finish button on last step, Skip otherwise
+        bool isLastStep = index >= tutorialData.steps.Length - 1;
+        skipButton.SetActive(!isLastStep);
+        finishButton.SetActive(isLastStep);
+    }
+
 
     public void EndTutorial()
     {
@@ -62,8 +98,8 @@ public class TutorialManager : MonoBehaviour
     IEnumerator FinishTutorial()
     {
         tutorialPanel.SetActive(false);
-
         isTutorialRunning = false;
+        spritePopIn.PlayOutAnimation();
 
         yield return null;
     }
