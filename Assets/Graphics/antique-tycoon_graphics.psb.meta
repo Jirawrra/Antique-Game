@@ -249,7 +249,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 226, y: 1221}
     spritePosition: {x: 1156, y: 40}
-  - name: Layer 132
+  - name: at_scroll-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -271,7 +271,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 720, y: 662}
     spritePosition: {x: 991, y: 31}
-  - name: Layer 130
+  - name: at_music-box-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -513,7 +513,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 992, y: 4}
     spritePosition: {x: 865, y: 768}
-  - name: Layer 135 copy 3
+  - name: at_old-plate-icon
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -2180,6 +2180,16 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: at_old-plate-icon
+    spriteName: at_old-plate-icon
+    isGroup: 0
+    parentIndex: 5
+    spriteID: e5a80b49bfbd8b74d92a40a9a0b658e4
+    layerID: 1523
+    mosaicPosition: {x: 121, y: 1525}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: at_used-lamp-icon
     spriteName: at_used-lamp-icon
     isGroup: 0
@@ -2200,8 +2210,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 132
-    spriteName: Layer 132
+  - name: at_scroll-icon
+    spriteName: at_scroll-icon
     isGroup: 0
     parentIndex: 5
     spriteID: 667d6304cbebe3c488d5bd4ade0719c8
@@ -2210,8 +2220,8 @@ ScriptedImporter:
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 130
-    spriteName: Layer 130
+  - name: at_music-box-icon
+    spriteName: at_music-box-icon
     isGroup: 0
     parentIndex: 5
     spriteID: b2c3e8ef09d279944a67ad7d70d60cae
@@ -2243,7 +2253,7 @@ ScriptedImporter:
   - name: Video Group 1
     spriteName: 
     isGroup: 1
-    parentIndex: 16
+    parentIndex: 17
     spriteID: 00000000000000000000000000000000
     layerID: 1399
     mosaicPosition: {x: 0, y: 0}
@@ -2253,7 +2263,7 @@ ScriptedImporter:
   - name: at_irrate-frame1-icon
     spriteName: at_irrate-frame1-icon
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 18
     spriteID: 305254b0b7e15f04d9bc20bb83f78f63
     layerID: 1401
     mosaicPosition: {x: 60, y: 1929}
@@ -2263,7 +2273,7 @@ ScriptedImporter:
   - name: at_irrate-frame2-icon
     spriteName: at_irrate-frame2-icon
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 18
     spriteID: 039777312c3a314449462143b8ff8ec6
     layerID: 1402
     mosaicPosition: {x: 992, y: 83}
@@ -2273,7 +2283,7 @@ ScriptedImporter:
   - name: at_irrate-frame3-icon
     spriteName: at_irrate-frame3-icon
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 18
     spriteID: 9c0d8151bc945ac4d8da20179f809ab3
     layerID: 1403
     mosaicPosition: {x: 121, y: 1459}
@@ -2283,7 +2293,7 @@ ScriptedImporter:
   - name: at_irrate-frame4-icon
     spriteName: at_irrate-frame4-icon
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 18
     spriteID: 65ac4129c1eed104cbcf365c2548780a
     layerID: 1393
     mosaicPosition: {x: 121, y: 1492}
@@ -2293,7 +2303,7 @@ ScriptedImporter:
   - name: at_irrate-frame5-icon
     spriteName: at_irrate-frame5-icon
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 18
     spriteID: 6d0219ec7650e6d4dbd23667078b4d25
     layerID: 1392
     mosaicPosition: {x: 154, y: 1772}
@@ -2303,7 +2313,7 @@ ScriptedImporter:
   - name: at_irrate-frame6-icon
     spriteName: at_irrate-frame6-icon
     isGroup: 0
-    parentIndex: 17
+    parentIndex: 18
     spriteID: 9c5574a3d4426434caccd9653b886c36
     layerID: 1391
     mosaicPosition: {x: 60, y: 1968}
@@ -2313,7 +2323,7 @@ ScriptedImporter:
   - name: at_gems-icon
     spriteName: at_gems-icon
     isGroup: 0
-    parentIndex: 16
+    parentIndex: 17
     spriteID: 56ef9c5fe25f8b04eba81201a5b3e0c0
     layerID: 1390
     mosaicPosition: {x: 1001, y: 257}
@@ -2323,7 +2333,7 @@ ScriptedImporter:
   - name: at_obols-icon
     spriteName: at_obols-icon
     isGroup: 0
-    parentIndex: 16
+    parentIndex: 17
     spriteID: 54fe87ee199c8d34e8c78aa9babde769
     layerID: 1389
     mosaicPosition: {x: 154, y: 1807}
@@ -2343,27 +2353,17 @@ ScriptedImporter:
   - name: Layer 138 copy 5
     spriteName: Layer 138 copy 5
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 5be0b4b629854d24cbe7f5c57e5fa7a1
     layerID: 1520
     mosaicPosition: {x: 992, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 135 copy 3
-    spriteName: Layer 135 copy 3
-    isGroup: 0
-    parentIndex: 26
-    spriteID: e5a80b49bfbd8b74d92a40a9a0b658e4
-    layerID: 1523
-    mosaicPosition: {x: 121, y: 1525}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
   - name: at_dried-ink-quill
     spriteName: at_dried-ink-quill
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 9c550ea52a3f22b4a80c0e6d8bde151e
     layerID: 1492
     mosaicPosition: {x: 124, y: 1365}
@@ -2373,7 +2373,7 @@ ScriptedImporter:
   - name: at_used-lamp-item
     spriteName: at_used-lamp-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: da8b845b17afb444c973a3ea07551710
     layerID: 1479
     mosaicPosition: {x: 240, y: 1101}
@@ -2383,7 +2383,7 @@ ScriptedImporter:
   - name: at_emptybox-item
     spriteName: at_emptybox-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 57223c88a78a90e4f937142091ed38f8
     layerID: 1358
     mosaicPosition: {x: 100, y: 2006}
@@ -2393,7 +2393,7 @@ ScriptedImporter:
   - name: at_8ball-item
     spriteName: at_8ball-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: c077c771543cf5a46bc4c79b71f17d9d
     layerID: 582
     mosaicPosition: {x: 1001, y: 285}
@@ -2403,7 +2403,7 @@ ScriptedImporter:
   - name: at_pocketwatch-item
     spriteName: at_pocketwatch-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: f9b2408b305f3d14184910e877fbdc7d
     layerID: 1210
     mosaicPosition: {x: 825, y: 335}
@@ -2413,7 +2413,7 @@ ScriptedImporter:
   - name: at_cardbox-item
     spriteName: at_cardbox-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 26bf864a4a4fd7c46a6043caa9072228
     layerID: 786
     mosaicPosition: {x: 154, y: 1682}
@@ -2423,7 +2423,7 @@ ScriptedImporter:
   - name: at_card-display-item
     spriteName: at_card-display-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 2b6a737b52e43174eab9d0c6af872a12
     layerID: 737
     mosaicPosition: {x: 154, y: 1424}
@@ -2433,7 +2433,7 @@ ScriptedImporter:
   - name: at_dvd-item
     spriteName: at_dvd-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: c68545a66281ff840ad4e800dda00eb6
     layerID: 662
     mosaicPosition: {x: 664, y: 662}
@@ -2443,7 +2443,7 @@ ScriptedImporter:
   - name: at_music-box-item
     spriteName: at_music-box-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 286e3c76c090253418fcef1715ce8ba7
     layerID: 1181
     mosaicPosition: {x: 154, y: 1494}
@@ -2453,7 +2453,7 @@ ScriptedImporter:
   - name: at_old-television-item
     spriteName: at_old-television-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 3aa44142c47919343863551ab205c325
     layerID: 1200
     mosaicPosition: {x: 154, y: 1628}
@@ -2463,7 +2463,7 @@ ScriptedImporter:
   - name: at_old-camera-item
     spriteName: at_old-camera-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 802121e92aecf3646a8998ab8f1f8a62
     layerID: 559
     mosaicPosition: {x: 121, y: 1556}
@@ -2473,7 +2473,7 @@ ScriptedImporter:
   - name: at_polaroid-camera-item
     spriteName: at_polaroid-camera-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 945dd83f89d15d7409264331c8202f7b
     layerID: 1314
     mosaicPosition: {x: 986, y: 181}
@@ -2483,7 +2483,7 @@ ScriptedImporter:
   - name: at_box-of-scrolls-item
     spriteName: at_box-of-scrolls-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 9266ffe879b32544d92bf82bf2bc795a
     layerID: 1313
     mosaicPosition: {x: 154, y: 1101}
@@ -2493,7 +2493,7 @@ ScriptedImporter:
   - name: at_paintings-item
     spriteName: at_paintings-item
     isGroup: 0
-    parentIndex: 26
+    parentIndex: 27
     spriteID: 27025f8229ff7bf49ab59bed0c102a98
     layerID: 1357
     mosaicPosition: {x: 60, y: 1459}

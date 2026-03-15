@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: MUSIC BOX
   description: ring ring ring
-  icon: {fileID: -6554226858158062044, guid: 8da097d3e0b889246b475ab290898983, type: 3}
+  icon: {fileID: -6152518676381023826, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   era: 0
   rarity: 0
   ObolValue: 50
