@@ -12,21 +12,29 @@ namespace Managers.Core
         public static event Action OnNotificationOpened;
 
         private Tab currentTab = Tab.None;
-        
+
         [SerializeField] private ShopManager shopManager;
 
         [Header("Currency UI")]
         [SerializeField] private CurrencyManager currencyManager;
         [SerializeField] private TextMeshProUGUI obolsText;
         [SerializeField] private TextMeshProUGUI drachmaText;
-        
+
         [Header("Notification")]
         [SerializeField] private GameObject notificationPanel;
-        
+
         [Header("Shop Panels")]
         [SerializeField] private GameObject antiquesPanel;
         [SerializeField] private GameObject upgradesPanel;
         [SerializeField] private PanelSlideMove panelMover;
+
+        [Header("PremiumShop Panel")]
+        [SerializeField] private GameObject premiumShopPanel;
+
+        [Header("Black background Panel")]
+        [SerializeField] private GameObject backgroundOverlay;
+
+
 
         void Start()
         {
@@ -48,6 +56,18 @@ namespace Managers.Core
         {
             // notificationPanel.SetActive(false);
             OnNotificationClosed?.Invoke();
+        }
+
+        public void OnPremiumShop()
+        {
+            Debug.Log("Premium Shop Opened");
+            premiumShopPanel.SetActive(true);
+            backgroundOverlay.SetActive(true);
+        }
+
+        public void OnPremiumShopClose()
+        {
+            backgroundOverlay.SetActive(false);
         }
 
         public void OnAntiques(bool isOn)

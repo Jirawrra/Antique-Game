@@ -59,6 +59,8 @@ public class TutorialManager : MonoBehaviour
         Debug.Log("TutorialPanel Opened");
         spritePopIn.PlayAnimation();
 
+        ShowStep(currentStep);
+
     }
 
     public void OnSkipPressed()
