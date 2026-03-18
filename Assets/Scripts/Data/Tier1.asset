@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TierData
   tierLevel: 1
   TierName: MODERN ERA
-  maxGhosts: 5
+  maxGhosts: 2
   spawnIntervalRange: {x: 2, y: 5}
   allowedItems:
   - {fileID: 11400000, guid: 7c286f89bf6aec24e96bc30139d71002, type: 2}
