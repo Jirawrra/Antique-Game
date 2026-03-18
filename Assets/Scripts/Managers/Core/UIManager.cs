@@ -1,99 +1,99 @@
-using UnityEngine;
 using System;
-using System.Collections;
-using UnityEngine.InputSystem;
 using TMPro;
-using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class UIManager : MonoBehaviour
+namespace Managers.Core
 {
-    private enum Tab { None, Antiques, Upgrades }
-    public static event Action OnNotificationClosed;
-    public static event Action OnNotificationOpened;
-
-    [Header("Notification")]
-    [SerializeField] private GameObject notificationPanel;
-
-    [Header("Panels")]
-    [SerializeField] private GameObject antiquesPanel;
-    [SerializeField] private GameObject upgradesPanel;
-    [SerializeField] private PanelSlideMove panelMover;
-
-    [Header("Currency UI")]
-    [SerializeField] private CurrencyManager currencyManager;
-    [SerializeField] private TextMeshProUGUI obolsText;
-    [SerializeField] private TextMeshProUGUI drachmaText;
-
-    [SerializeField] private ShopManager shopManager;
-
-    private Tab currentTab = Tab.None;
-
-    void Start()
+    public class UIManager : MonoBehaviour
     {
-        currencyManager.OnObolsChanged += UpdateObolsUI;
-        currencyManager.OnDrachmaChanged += UpdateDrachmaUI;
-    }
+        private enum Tab { None, Antiques, Upgrades }
+        public static event Action OnNotificationClosed;
+        public static event Action OnNotificationOpened;
 
-    void Update()
-    {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        private Tab currentTab = Tab.None;
+        
+        [SerializeField] private ShopManager shopManager;
+
+        [Header("Currency UI")]
+        [SerializeField] private CurrencyManager currencyManager;
+        [SerializeField] private TextMeshProUGUI obolsText;
+        [SerializeField] private TextMeshProUGUI drachmaText;
+        
+        [Header("Notification")]
+        [SerializeField] private GameObject notificationPanel;
+        
+        [Header("Shop Panels")]
+        [SerializeField] private GameObject antiquesPanel;
+        [SerializeField] private GameObject upgradesPanel;
+        [SerializeField] private PanelSlideMove panelMover;
+
+        void Start()
         {
-            Debug.Log("Space key pressed - toggling notification");
-            notificationPanel.SetActive(true);
-            OnNotificationOpened?.Invoke();
+            currencyManager.OnObolsChanged += UpdateObolsUI;
+            currencyManager.OnDrachmaChanged += UpdateDrachmaUI;
         }
-    }
 
-    public void closeNotification()
-    {
-        // notificationPanel.SetActive(false);
-        OnNotificationClosed?.Invoke();
-    }
-
-    public void OnAntiques(bool isOn)
-    {
-        if (!isOn) return;
-        HandleTab(Tab.Antiques);
-    }
-
-    public void OnUpgrades(bool isOn)
-    {
-        if (!isOn) return;
-
-        HandleTab(Tab.Upgrades);
-    }
-
-    private void HandleTab(Tab clickedTab)
-    {
-
-        if (currentTab == clickedTab) // Toggle the same tab
+        void Update()
         {
-            if (panelMover.IsUp)
-                panelMover.SlideDown();
-            else
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                Debug.Log("Space key pressed - toggling notification");
+                notificationPanel.SetActive(true);
+                OnNotificationOpened?.Invoke();
+            }
+        }
+
+        public void CloseNotification()
+        {
+            // notificationPanel.SetActive(false);
+            OnNotificationClosed?.Invoke();
+        }
+
+        public void OnAntiques(bool isOn)
+        {
+            if (!isOn) return;
+            HandleTab(Tab.Antiques);
+        }
+
+        public void OnUpgrades(bool isOn)
+        {
+            if (!isOn) return;
+
+            HandleTab(Tab.Upgrades);
+        }
+
+        private void HandleTab(Tab clickedTab)
+        {
+
+            if (currentTab == clickedTab) // Toggle the same tab
+            {
+                if (panelMover.IsUp)
+                    panelMover.SlideDown();
+                else
+                    panelMover.SlideUp();
+
+                return;
+            }
+
+            currentTab = clickedTab;
+
+            antiquesPanel.SetActive(clickedTab == Tab.Antiques); // Show Antiques panel if selected
+            upgradesPanel.SetActive(clickedTab == Tab.Upgrades); // Show Upgrades panel if selected
+
+            //Slide Up if the panel is not already up
+            if (!panelMover.IsUp)
                 panelMover.SlideUp();
-
-            return;
         }
 
-        currentTab = clickedTab;
+        private void UpdateObolsUI(int amount)
+        {
+            obolsText.text = amount.ToString();
+        }
 
-        antiquesPanel.SetActive(clickedTab == Tab.Antiques); // Show Antiques panel if selected
-        upgradesPanel.SetActive(clickedTab == Tab.Upgrades); // Show Upgrades panel if selected
-
-        //Slide Up if the panel is not already up
-        if (!panelMover.IsUp)
-            panelMover.SlideUp();
+        private void UpdateDrachmaUI(int amount)
+        {
+            drachmaText.text = amount.ToString();
+        }
     }
-
-    private void UpdateObolsUI(int amount)
-    {
-        obolsText.text = amount.ToString();
-    }
-
-    private void UpdateDrachmaUI(int amount)
-    {
-        drachmaText.text = amount.ToString();
-    }
-
 }
