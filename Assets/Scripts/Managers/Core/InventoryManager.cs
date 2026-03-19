@@ -4,39 +4,38 @@ using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Dictionary<ItemData, int> inventory = new();
+    public static InventoryManager Instance;
+    private Dictionary<ItemData, int> itemStocks = new Dictionary<ItemData, int>();
 
-    public event Action OnInventoryChanged; // correct event type
-
-    public void AddItem(ItemData item)
+    private void Awake()
     {
-        if (!inventory.ContainsKey(item))
-            inventory[item] = 1;
+        Instance = this;
+    }
+
+    // Add stock
+    public void AddItem(ItemData item, int amount)
+    {
+        if (itemStocks.ContainsKey(item))
+            itemStocks[item] += amount;
         else
-            inventory[item]++;
+            itemStocks[item] = amount;
 
-        OnInventoryChanged?.Invoke(); // notify UI
+        Debug.Log($"Added {amount}x {item.itemName}. Total: {itemStocks[item]}");
     }
 
-    public void RemoveItem(ItemData item)
+    // Remove stock
+    public bool RemoveItem(ItemData item, int amount)
     {
-        if (!inventory.ContainsKey(item)) return;
+        if (!itemStocks.ContainsKey(item) || itemStocks[item] < amount)
+            return false;
 
-        inventory[item]--;
-
-        if (inventory[item] <= 0)
-            inventory.Remove(item);
-
-        OnInventoryChanged?.Invoke(); // notify UI
+        itemStocks[item] -= amount;
+        return true;
     }
 
-    public bool HasItem(ItemData item)
+    // Get stock
+    public int GetStock(ItemData item)
     {
-        return inventory.ContainsKey(item);
-    }
-
-    public int GetItemCount(ItemData item)
-    {
-        return inventory.ContainsKey(item) ? inventory[item] : 0;
+        return itemStocks.ContainsKey(item) ? itemStocks[item] : 0;
     }
 }
