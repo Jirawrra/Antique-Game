@@ -3361,9 +3361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2628d0dce9aa33745b85152cd694c87c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  inventory: {fileID: 1033879051}
-  currency: {fileID: 1894796515}
-  ghostManager: {fileID: 0}
 --- !u!1 &894229221
 GameObject:
   m_ObjectHideFlags: 0

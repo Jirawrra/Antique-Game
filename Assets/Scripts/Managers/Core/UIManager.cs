@@ -16,7 +16,7 @@ namespace Managers.Core
         [SerializeField] private ShopManager shopManager;
 
         [Header("Currency UI")]
-        [SerializeField] private CurrencyManager currencyManager;
+        //  [SerializeField] private CurrencyManager currencyManager;
         [SerializeField] private TextMeshProUGUI obolsText;
         [SerializeField] private TextMeshProUGUI drachmaText;
 
@@ -38,8 +38,8 @@ namespace Managers.Core
 
         void Start()
         {
-            currencyManager.OnObolsChanged += UpdateObolsUI;
-            currencyManager.OnDrachmaChanged += UpdateDrachmaUI;
+            CurrencyManager.Instance.OnObolsChanged += UpdateObolsUI;
+            //CurrencyManager.Instance.OnDrachmaChanged += UpdateDrachmaUI;
         }
 
         void Update()

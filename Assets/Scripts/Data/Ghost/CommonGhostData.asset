@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
   ghostID: 1
   ghostName: CommonGhost
-  ghostSprite: {fileID: 4514066551911091984, guid: 1537dde1099702d409e75e8373281857, type: 3}
+  ghostSprite: {fileID: 5897510772955152161, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   coinReward: 10
   patienceLevel: 30

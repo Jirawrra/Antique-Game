@@ -4,77 +4,49 @@ using UnityEngine.InputSystem;
 
 public class CurrencyManager : MonoBehaviour
 {
-    [Header("Currency Values")]
-    [SerializeField] private int obols;   // Standard
-    [SerializeField] private int drachma; // Premium
+    public static CurrencyManager Instance;
 
-    // Events to notify UI
+    [SerializeField] private int startingBalance = 500;
+    private int balance;
+
     public event Action<int> OnObolsChanged;
-    public event Action<int> OnDrachmaChanged;
 
-    // Properties to auto-update UI 
-    public int Obols
+    private void Awake()
     {
-        get => obols;
-        set
-        {
-            obols = value;
-            OnObolsChanged?.Invoke(obols);
-        }
-    }
+        Instance = this;
+        balance = startingBalance;
 
-    public int Drachma
-    {
-        get => drachma;
-        set
-        {
-            drachma = value;
-            OnDrachmaChanged?.Invoke(drachma);
-        }
     }
 
     private void Start()
     {
-        // Make sure UI reflects starting values
-        OnObolsChanged?.Invoke(obols);
-        OnDrachmaChanged?.Invoke(drachma);
+        OnObolsChanged?.Invoke(balance); //fires after UIManager has subscribed in its own Start
     }
 
-    private void Update()
-    {
-        // Debug keys to add currency
-        if (Keyboard.current != null)
-        {
-            if (Keyboard.current.oKey.wasPressedThisFrame)
-                AddObols(10);
 
-            if (Keyboard.current.dKey.wasPressedThisFrame)
-                AddDrachma(5);
+    public int GetBalance() => balance;
+
+    public bool HasEnough(int amount) => balance >= amount;
+
+    public bool Spend(int amount)
+    {
+        if (!HasEnough(amount))
+        {
+            Debug.LogWarning("Insufficient funds.");
+            return false;
         }
+
+        balance -= amount;
+        OnObolsChanged?.Invoke(balance);
+        Debug.Log($"Spent {amount}. Remaining balance: {balance}");
+        return true;
     }
 
-    // Public methods to modify currency
-    public void AddObols(int amount) => Obols += amount;
-    public void AddDrachma(int amount) => Drachma += amount;
-
-    public bool SpendObols(int amount)
+    public void Earn(int amount)
     {
-        if (Obols >= amount)
-        {
-            Obols -= amount;
-            return true;
-        }
-        return false;
-    }
-
-    public bool SpendDrachma(int amount)
-    {
-        if (Drachma >= amount)
-        {
-            Drachma -= amount;
-            return true;
-        }
-        return false;
+        balance += amount;
+        OnObolsChanged?.Invoke(balance);
+        Debug.Log($"Earned {amount}. New balance: {balance}");
     }
 
 }

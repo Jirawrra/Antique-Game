@@ -1337,8 +1337,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 60
       y: 1327
-      width: 69
-      height: 40
+      width: 78
+      height: 104
     spriteID: 36049f4dee1d93f46b905397d02c48bc
     spriteBone: []
     spriteOutline: []
