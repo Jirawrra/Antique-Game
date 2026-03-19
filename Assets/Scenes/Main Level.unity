@@ -288,7 +288,7 @@ MonoBehaviour:
   m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
+  m_PointerBehavior: 2
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
 --- !u!114 &160263281
@@ -1459,6 +1459,7 @@ GameObject:
   - component: {fileID: 447643312}
   - component: {fileID: 447643316}
   - component: {fileID: 447643317}
+  - component: {fileID: 447643318}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1627,6 +1628,22 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &447643318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447643311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.Physics2DRaycaster
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &464411140
 GameObject:
   m_ObjectHideFlags: 0
@@ -4705,7 +4722,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   shopManager: {fileID: 0}
-  currencyManager: {fileID: 1894796515}
   obolsText: {fileID: 287463618}
   drachmaText: {fileID: 2024748085}
   notificationPanel: {fileID: 1086476568}
@@ -5505,8 +5521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ced1257b171acc04496ae7b24dced8ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CurrencyManager
-  obols: 0
-  drachma: 0
+  startingBalance: 500
 --- !u!4 &1894796516
 Transform:
   m_ObjectHideFlags: 0

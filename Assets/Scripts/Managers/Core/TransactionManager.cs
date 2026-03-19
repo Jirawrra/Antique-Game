@@ -28,18 +28,31 @@ public class TransactionManager : MonoBehaviour
         return true;
     }
 
-    public bool TrySell(ItemData item, int amount = 1) // Returns true if the sale was successful, false otherwise
+    public bool TrySell(ItemData item, GhostBehavior ghost, int amount = 1)
     {
+        // Check the ghost actually wants this item
+        if (ghost.currentRequestedItem != item)
+        {
+            Debug.LogWarning($"{ghost.name} does not want {item.itemName}.");
+            ghost.OnFailedPurchase();
+            return false;
+        }
+
+        // Check the player has it in stock
         bool removed = InventoryManager.Instance.RemoveItem(item, amount);
         if (!removed)
         {
             Debug.LogWarning($"Cannot sell {item.itemName}: not enough stock.");
+            ghost.OnFailedPurchaseDueToStock();
             return false;
         }
 
+        // Pay the player
         int totalValue = item.ObolValue * amount;
         CurrencyManager.Instance.Earn(totalValue);
-        Debug.Log($"Sold {amount}x {item.itemName} for {totalValue}.");
+        Debug.Log($"Sold {amount}x {item.itemName} to ghost for {totalValue} obols.");
+
+        ghost.OnSuccessfulPurchase();
         return true;
     }
 }

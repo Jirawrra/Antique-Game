@@ -17,6 +17,7 @@ public class GhostSpawner : MonoBehaviour
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private Transform spawnPoint;
 
+
     [Header("Ghost Pool")]
     [SerializeField] private List<GhostData> availableGhosts; // This list should be populated with all the ghosts that can appear in the game, ideally set in the Inspector
     private int currentGhostCount;
