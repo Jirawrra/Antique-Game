@@ -4,17 +4,22 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// Manages buying and selling of items with queue support and delivery delays.
+/// Manages buying and selling of items with internal queue handling.
 /// </summary>
 public class TransactionManager : MonoBehaviour
 {
     public static TransactionManager Instance;
 
-    public event Action<ItemData, int> OnItemPurchased;   // Fired immediately after spending money
-    public event Action<ItemData, int> OnItemDelivered;   // Fired after delivery delay
+    // Event only for UI updates (slider, notifications)
+    public event Action<ItemData, int> OnItemDelivered;
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         Instance = this;
     }
 
@@ -22,11 +27,15 @@ public class TransactionManager : MonoBehaviour
     {
         public ItemData item;
         public int amount;
+        public float startTime;
+        public float deliveryTime;
 
         public PurchaseEntry(ItemData item, int amount)
         {
             this.item = item;
             this.amount = amount;
+            this.deliveryTime = Mathf.Max(item.deliveryTime, 0.1f);
+            this.startTime = Time.time;
         }
     }
 
@@ -34,54 +43,54 @@ public class TransactionManager : MonoBehaviour
     private Coroutine queueCoroutine;
 
     /// <summary>
-    /// Adds a purchase to the queue and starts processing if not already running.
+    /// Enqueues a purchase; validates currency internally.
     /// </summary>
     public void TryBuy(ItemData item, int amount = 1)
     {
         if (item == null || amount <= 0) return;
 
+        int totalCost = item.ObolValue * amount;
+
+        if (!CurrencyManager.Instance.HasEnough(totalCost))
+        {
+            Debug.LogWarning($"Cannot buy {item.itemName}: insufficient funds ({totalCost} obols).");
+            return; // abort safely
+        }
+
+        // Deduct currency immediately
+        CurrencyManager.Instance.Spend(totalCost);
+
+        // Enqueue purchase
         purchaseQueue.Enqueue(new PurchaseEntry(item, amount));
 
+        // Start processing if not already
         if (queueCoroutine == null)
             queueCoroutine = StartCoroutine(ProcessQueue());
     }
 
     /// <summary>
-    /// Sequentially processes queued purchases safely.
+    /// Processes queued purchases sequentially.
     /// </summary>
     private IEnumerator ProcessQueue()
     {
         while (purchaseQueue.Count > 0)
         {
             var entry = purchaseQueue.Peek();
-            int totalCost = entry.item.ObolValue * entry.amount;
 
-            // Check funds
-            if (!CurrencyManager.Instance.HasEnough(totalCost))
-            {
-                Debug.LogWarning($"Cannot buy {entry.item.itemName}: insufficient funds ({totalCost} required).");
-                purchaseQueue.Dequeue(); // Remove failed purchase
-                continue;
-            }
+            entry.startTime = Time.time;
 
-            // Spend immediately
-            CurrencyManager.Instance.Spend(totalCost);
-            OnItemPurchased?.Invoke(entry.item, entry.amount);
+            yield return new WaitForSeconds(entry.deliveryTime);
 
-            // Wait for delivery time
-            float deliveryTime = Mathf.Max(entry.item.deliveryTime, 0.1f);
-            yield return new WaitForSeconds(deliveryTime);
-
-            // Deliver the item
+            InventoryManager.Instance.AddItem(entry.item, entry.amount);
             OnItemDelivered?.Invoke(entry.item, entry.amount);
+
             purchaseQueue.Dequeue();
         }
 
-        queueCoroutine = null; // allow new queue to start
+        queueCoroutine = null;
     }
-
     /// <summary>
-    /// Returns the number of pending purchases in the queue for a specific item.
+    /// Returns pending purchase count for a specific item.
     /// </summary>
     public int GetQueueCount(ItemData item)
     {
@@ -95,11 +104,11 @@ public class TransactionManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Sell an item to a ghost.
+    /// Sell item to a ghost; independent of purchase queue.
     /// </summary>
     public bool TrySell(ItemData item, GhostBehavior ghost, int amount = 1)
     {
-        if (ghost == null || item == null || amount <= 0) return false;
+        if (item == null || ghost == null || amount <= 0) return false;
 
         if (ghost.currentRequestedItem != item)
         {
@@ -113,8 +122,24 @@ public class TransactionManager : MonoBehaviour
             return false;
         }
 
-        CurrencyManager.Instance.Earn(item.SellValue * amount);
+        int totalValue = item.SellValue * amount;
+        CurrencyManager.Instance.Earn(totalValue);
+
         ghost.OnSuccessfulPurchase();
         return true;
+    }
+
+    public float GetProgress(ItemData item)
+    {
+        if (purchaseQueue.Count == 0)
+            return 0f;
+
+        var entry = purchaseQueue.Peek();
+
+        if (entry.item != item)
+            return 0f;
+
+        float elapsed = Time.time - entry.startTime;
+        return Mathf.Clamp01(elapsed / entry.deliveryTime);
     }
 }

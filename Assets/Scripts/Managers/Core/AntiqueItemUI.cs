@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections;
 
 /// <summary>
-/// Handles the UI for a single antique item, including queued purchases and delivery slider.
+/// Displays a single antique item UI, handles visuals only.
 /// </summary>
 public class AntiqueItemUI : MonoBehaviour
 {
@@ -21,11 +20,7 @@ public class AntiqueItemUI : MonoBehaviour
     [SerializeField] private TMP_Text queueCountText;
 
     private ItemData item;
-    private Coroutine sliderCoroutine;
 
-    /// <summary>
-    /// Initializes the UI with item data.
-    /// </summary>
     public void Setup(ItemData itemData)
     {
         item = itemData;
@@ -35,94 +30,76 @@ public class AntiqueItemUI : MonoBehaviour
         nameText.text = item.itemName;
         eraText.text = item.era.ToString();
 
-        // Safe button subscription
         buyButton.onClick.RemoveAllListeners();
         buyButton.onClick.AddListener(BuyItem);
 
-        if (processingSlider != null)
-            processingSlider.value = 0f;
-
-        if (processingPanel != null)
-            processingPanel.SetActive(false);
-
-        // Safe event subscription
-        TransactionManager.Instance.OnItemDelivered -= OnItemDelivered;
-        TransactionManager.Instance.OnItemDelivered += OnItemDelivered;
+        // Reset visuals
+        processingSlider.value = 0f;
+        processingPanel.SetActive(false);
+        queueCountText.text = "";
     }
 
-    /// <summary>
-    /// Handles button click to buy item.
-    /// </summary>
+    private void OnEnable()
+    {
+        if (TransactionManager.Instance != null)
+            TransactionManager.Instance.OnItemDelivered += OnItemDelivered;
+    }
+
+    private void OnDisable()
+    {
+        if (TransactionManager.Instance != null)
+            TransactionManager.Instance.OnItemDelivered -= OnItemDelivered;
+    }
+
     private void BuyItem()
     {
         if (item == null) return;
 
-        int cost = item.ObolValue;
-        if (!CurrencyManager.Instance.HasEnough(cost))
-        {
-            Debug.LogWarning($"Not enough obols to buy {item.itemName}");
-            return;
-        }
+        TransactionManager.Instance.TryBuy(item);
 
-        if (processingPanel != null)
-            processingPanel.SetActive(true);
-
-        TransactionManager.Instance.TryBuy(item, 1);
-
-        if (sliderCoroutine == null)
-            sliderCoroutine = StartCoroutine(ProcessSliderQueue());
-    }
-
-    /// <summary>
-    /// Sequentially updates slider for each queued purchase.
-    /// </summary>
-    private IEnumerator ProcessSliderQueue()
-    {
-        while (TransactionManager.Instance.GetQueueCount(item) > 0)
-        {
-            float deliveryTime = Mathf.Max(item.deliveryTime, 0.1f);
-            float elapsed = 0f;
-
-            if (processingSlider != null)
-                processingSlider.value = 0f;
-
-            while (elapsed < deliveryTime)
-            {
-                elapsed += Time.deltaTime;
-                if (processingSlider != null)
-                    processingSlider.value = Mathf.Clamp01(elapsed / deliveryTime);
-                yield return null;
-            }
-
-            if (processingSlider != null)
-                processingSlider.value = 1f;
-
-            yield return null;
-        }
-
-        // Reset UI
-        if (processingPanel != null)
-            processingPanel.SetActive(false);
-
-        if (processingSlider != null)
-            processingSlider.value = 0f;
-
-        sliderCoroutine = null;
-    }
-
-    private void OnItemDelivered(ItemData deliveredItem, int amount)
-    {
-        if (deliveredItem != item) return;
-        Debug.Log($"Delivered {amount}x {item.itemName}");
+        // Immediate UI feedback
+        UpdateQueueText();
     }
 
     private void Update()
     {
         if (item == null) return;
 
+        //  Stock always accurate
         stockText.text = InventoryManager.Instance.GetStock(item).ToString();
 
-        int pending = TransactionManager.Instance.GetQueueCount(item);
-        queueCountText.text = pending > 0 ? pending.ToString() : "";
+        int queueCount = TransactionManager.Instance.GetQueueCount(item);
+
+        //  Queue text
+        queueCountText.text = queueCount > 0 ? queueCount.ToString() : "";
+
+        if (queueCount > 0)
+        {
+            processingPanel.SetActive(true);
+
+            //  Get REAL progress from TransactionManager
+            float progress = TransactionManager.Instance.GetProgress(item);
+
+            processingSlider.value = progress;
+        }
+        else
+        {
+            processingPanel.SetActive(false);
+            processingSlider.value = 0f;
+        }
+    }
+
+    private void UpdateQueueText()
+    {
+        int count = TransactionManager.Instance.GetQueueCount(item);
+        queueCountText.text = count > 0 ? count.ToString() : "";
+    }
+
+    private void OnItemDelivered(ItemData deliveredItem, int amount)
+    {
+        if (deliveredItem != item) return;
+
+        // Optional: feedback (sound, animation, etc.)
+        Debug.Log($"Delivered {amount}x {item.itemName}");
     }
 }

@@ -16,20 +16,6 @@ public class InventoryManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
-    private void OnEnable()
-    {
-        // Subscribe safely
-        if (TransactionManager.Instance != null)
-            TransactionManager.Instance.OnItemDelivered += AddItem;
-    }
-
-    private void OnDisable()
-    {
-        if (TransactionManager.Instance != null)
-            TransactionManager.Instance.OnItemDelivered -= AddItem;
-    }
-
     /// <summary>
     /// Add stock for an item
     /// </summary>
