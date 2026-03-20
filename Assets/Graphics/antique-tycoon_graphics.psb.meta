@@ -1291,10 +1291,10 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 60
-      y: 1890
-      width: 62
-      height: 74
+      x: 58
+      y: 1889
+      width: 71
+      height: 99
     spriteID: a07127743a5889f4c88c37e2bd1aaf4d
     spriteBone: []
     spriteOutline: []
@@ -1304,7 +1304,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 60, y: 1890}
-    spritePosition: {x: 255, y: 36}
+    spritePosition: {x: 286, y: 36}
   - name: at_ghost-rare_3a
     originalName: 
     pivot: {x: 0.5, y: 0.5}

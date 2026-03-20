@@ -31,4 +31,6 @@ public class ItemData : ScriptableObject
     public Era era;        // Era of the item
     public Rarity rarity;  // Spawn Rarity
     public int ObolValue;  // Item Value
+    public int SellValue;
+
 }

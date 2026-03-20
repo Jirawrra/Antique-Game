@@ -27,5 +27,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b212df3f219eab2499e07a26e11f71ed, type: 2}
   allowedGhosts:
   - {fileID: 11400000, guid: 66421f8e72c2284428db68fea468fe41, type: 2}
+  - {fileID: 11400000, guid: 3011cc8e95ad320458fc231ad20f55ef, type: 2}
+  - {fileID: 11400000, guid: f662fea939f41ff4ea3fb63f2297b618, type: 2}
   - {fileID: 11400000, guid: 2823def85b5995944a68d1fc9938c3ef, type: 2}
-  coinsNeededToUnlockNextTier: 0
+  - {fileID: 11400000, guid: 5b249fb90986a1f46b13a46a54417bff, type: 2}
+  coinsNeededToUnlockNextTier: 1500

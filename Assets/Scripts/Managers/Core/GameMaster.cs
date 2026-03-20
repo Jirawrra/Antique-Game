@@ -16,6 +16,11 @@ public class GameMaster : MonoBehaviour
     private void Start()
     {
         ApplyTier();
+        CurrencyManager.Instance.OnObolsChanged += HandleCurrencyChanged;
+    }
+    private void OnDisable()
+    {
+        CurrencyManager.Instance.OnObolsChanged -= HandleCurrencyChanged;
     }
 
     private void Awake()
@@ -56,7 +61,17 @@ public class GameMaster : MonoBehaviour
         Debug.Log($"Tier changed to Tier {CurrentTierLevel}");
     }
 
+    private void HandleCurrencyChanged(int newBalance)
+    {
+        if (CurrentTierIndex >= tiers.Length - 1)
+            return;
 
+        int requiredCoins = CurrentTier.coinsNeededToUnlockNextTier;
 
+        if (newBalance >= requiredCoins)
+        {
+            IncreaseTier();
+        }
+    }
 
 }

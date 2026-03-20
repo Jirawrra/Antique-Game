@@ -12,7 +12,7 @@ public class TransactionManager : MonoBehaviour
 
     public bool TryBuy(ItemData item, int amount = 1) // Returns true if the purchase was successful, false otherwise
     {
-        int totalCost = item.ObolValue * amount;
+        int totalCost = item.ObolValue * amount; // Calculate the total cost of the purchase
 
         if (!CurrencyManager.Instance.HasEnough(totalCost))
         {
@@ -47,9 +47,10 @@ public class TransactionManager : MonoBehaviour
             return false;
         }
 
-        // Pay the player
-        int totalValue = item.ObolValue * amount;
+        // Pay the player using SELL value
+        int totalValue = item.SellValue * amount;
         CurrencyManager.Instance.Earn(totalValue);
+
         Debug.Log($"Sold {amount}x {item.itemName} to ghost for {totalValue} obols.");
 
         ghost.OnSuccessfulPurchase();

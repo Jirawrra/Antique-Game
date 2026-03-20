@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 134f7cbf4b43c4944a4a124f276f0c66, type: 3}
   m_Name: UncommonGhostData
   m_EditorClassIdentifier: Assembly-CSharp::GhostData
-  ghostID: 2
+  ghostID: 4
   ghostName: UncommonGhost
   ghostSprite: {fileID: 7488451030142141082, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   coinReward: 30
