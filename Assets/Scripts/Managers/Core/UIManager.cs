@@ -13,7 +13,7 @@ namespace Managers.Core
 
         private Tab currentTab = Tab.None;
 
-        [SerializeField] private ShopManager shopManager;
+        //[SerializeField] private ShopManager shopManager;
 
         [Header("Currency UI")]
         //  [SerializeField] private CurrencyManager currencyManager;
