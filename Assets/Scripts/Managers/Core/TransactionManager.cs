@@ -3,20 +3,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Manages buying and selling of items with queue support and delivery delays.
+/// </summary>
 public class TransactionManager : MonoBehaviour
 {
     public static TransactionManager Instance;
 
-    // Events
     public event Action<ItemData, int> OnItemPurchased;   // Fired immediately after spending money
-    public event Action<ItemData, int> OnItemDelivered;  // Fired after delivery delay
+    public event Action<ItemData, int> OnItemDelivered;   // Fired after delivery delay
 
     private void Awake()
     {
         Instance = this;
     }
 
-    // Represents a purchase in the queue
     private class PurchaseEntry
     {
         public ItemData item;
@@ -29,31 +30,27 @@ public class TransactionManager : MonoBehaviour
         }
     }
 
-    // Queue for pending purchases
     private Queue<PurchaseEntry> purchaseQueue = new Queue<PurchaseEntry>();
-    private bool isProcessingQueue = false;
+    private Coroutine queueCoroutine;
 
     /// <summary>
-    /// Public method called when player wants to buy an item.
-    /// Adds it to the queue.
+    /// Adds a purchase to the queue and starts processing if not already running.
     /// </summary>
-    public void TryBuy(ItemData item, int amount = 1, float deliveryDelay = 2f)
+    public void TryBuy(ItemData item, int amount = 1)
     {
+        if (item == null || amount <= 0) return;
+
         purchaseQueue.Enqueue(new PurchaseEntry(item, amount));
 
-        if (!isProcessingQueue)
-        {
-            StartCoroutine(ProcessQueue(deliveryDelay));
-        }
+        if (queueCoroutine == null)
+            queueCoroutine = StartCoroutine(ProcessQueue());
     }
 
     /// <summary>
-    /// Coroutine that processes the purchase queue sequentially.
+    /// Sequentially processes queued purchases safely.
     /// </summary>
-    private IEnumerator ProcessQueue(float deliveryDelay)
+    private IEnumerator ProcessQueue()
     {
-        isProcessingQueue = true;
-
         while (purchaseQueue.Count > 0)
         {
             var entry = purchaseQueue.Peek();
@@ -62,30 +59,25 @@ public class TransactionManager : MonoBehaviour
             // Check funds
             if (!CurrencyManager.Instance.HasEnough(totalCost))
             {
-                Debug.LogWarning($"Cannot buy {entry.item.itemName}: insufficient funds.");
+                Debug.LogWarning($"Cannot buy {entry.item.itemName}: insufficient funds ({totalCost} required).");
                 purchaseQueue.Dequeue(); // Remove failed purchase
                 continue;
             }
 
             // Spend immediately
             CurrencyManager.Instance.Spend(totalCost);
-
-            // Notify UI or any listener
             OnItemPurchased?.Invoke(entry.item, entry.amount);
 
-            Debug.Log($"Processing purchase of {entry.amount}x {entry.item.itemName} for {totalCost} obols...");
+            // Wait for delivery time
+            float deliveryTime = Mathf.Max(entry.item.deliveryTime, 0.1f);
+            yield return new WaitForSeconds(deliveryTime);
 
-            // Wait for delivery delay
-            yield return new WaitForSeconds(deliveryDelay);
-
-            // Notify InventoryManager / UI that item is delivered
+            // Deliver the item
             OnItemDelivered?.Invoke(entry.item, entry.amount);
-            Debug.Log($"Delivered {entry.amount}x {entry.item.itemName}");
-
-            purchaseQueue.Dequeue(); // Remove processed purchase
+            purchaseQueue.Dequeue();
         }
 
-        isProcessingQueue = false;
+        queueCoroutine = null; // allow new queue to start
     }
 
     /// <summary>
@@ -102,29 +94,26 @@ public class TransactionManager : MonoBehaviour
         return count;
     }
 
-    // Selling method (unchanged)
+    /// <summary>
+    /// Sell an item to a ghost.
+    /// </summary>
     public bool TrySell(ItemData item, GhostBehavior ghost, int amount = 1)
     {
+        if (ghost == null || item == null || amount <= 0) return false;
+
         if (ghost.currentRequestedItem != item)
         {
-            Debug.LogWarning($"{ghost.name} does not want {item.itemName}.");
             ghost.OnFailedPurchase();
             return false;
         }
 
-        bool removed = InventoryManager.Instance.RemoveItem(item, amount);
-        if (!removed)
+        if (!InventoryManager.Instance.RemoveItem(item, amount))
         {
-            Debug.LogWarning($"Cannot sell {item.itemName}: not enough stock.");
             ghost.OnFailedPurchaseDueToStock();
             return false;
         }
 
-        int totalValue = item.SellValue * amount;
-        CurrencyManager.Instance.Earn(totalValue);
-
-        Debug.Log($"Sold {amount}x {item.itemName} to ghost for {totalValue} obols.");
-
+        CurrencyManager.Instance.Earn(item.SellValue * amount);
         ghost.OnSuccessfulPurchase();
         return true;
     }

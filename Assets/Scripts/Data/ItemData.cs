@@ -32,5 +32,6 @@ public class ItemData : ScriptableObject
     public Rarity rarity;  // Spawn Rarity
     public int ObolValue;  // Item Value
     public int SellValue;
+    public float deliveryTime;
 
 }

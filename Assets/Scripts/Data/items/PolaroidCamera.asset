@@ -20,3 +20,4 @@ MonoBehaviour:
   rarity: 0
   ObolValue: 20
   SellValue: 30
+  deliveryTime: 5
