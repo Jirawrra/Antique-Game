@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d188267a67bf33c44aba2a89cdb1181d, type: 3}
+  m_Name: Cashier I
+  m_EditorClassIdentifier: Assembly-CSharp::Gameplay.Shop.Upgrades.UpgradeItemSo
+  upgradeItemSprite: {fileID: 6153377429729754245, guid: 8da097d3e0b889246b475ab290898983, type: 3}
+  upgradeItemName: I - Beg. Cashier
+  upgradeItemDescription: Completes order processes for a short time.
+  upgradeItemPrice: 500

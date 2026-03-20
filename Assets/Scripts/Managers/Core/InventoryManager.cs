@@ -4,39 +4,78 @@ using System.Collections.Generic;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Dictionary<ItemData, int> inventory = new();
+    public static InventoryManager Instance { get; private set; }
 
-    public event Action OnInventoryChanged; // correct event type
+    private Dictionary<ItemData, int> itemStocks = new Dictionary<ItemData, int>();
+    public event Action<ItemData, int> OnStockChanged;
 
-    public void AddItem(ItemData item)
+    private void Awake()
     {
-        if (!inventory.ContainsKey(item))
-            inventory[item] = 1;
+        if (Instance == null)
+            Instance = this;
         else
-            inventory[item]++;
-
-        OnInventoryChanged?.Invoke(); // notify UI
+            Destroy(gameObject);
     }
 
-    public void RemoveItem(ItemData item)
+    private void OnEnable()
     {
-        if (!inventory.ContainsKey(item)) return;
-
-        inventory[item]--;
-
-        if (inventory[item] <= 0)
-            inventory.Remove(item);
-
-        OnInventoryChanged?.Invoke(); // notify UI
+        // Subscribe safely
+        if (TransactionManager.Instance != null)
+            TransactionManager.Instance.OnItemDelivered += AddItem;
     }
 
-    public bool HasItem(ItemData item)
+    private void OnDisable()
     {
-        return inventory.ContainsKey(item);
+        if (TransactionManager.Instance != null)
+            TransactionManager.Instance.OnItemDelivered -= AddItem;
     }
 
-    public int GetItemCount(ItemData item)
+    /// <summary>
+    /// Add stock for an item
+    /// </summary>
+    public void AddItem(ItemData item, int amount)
     {
-        return inventory.ContainsKey(item) ? inventory[item] : 0;
+        if (item == null || amount <= 0)
+            return;
+
+        if (itemStocks.ContainsKey(item))
+            itemStocks[item] += amount;
+        else
+            itemStocks[item] = amount;
+
+        Debug.Log($"Added {amount}x {item.itemName}. Total: {itemStocks[item]}");
+
+        OnStockChanged?.Invoke(item, itemStocks[item]);
+    }
+
+    /// <summary>
+    /// Remove stock for an item
+    /// </summary>
+    public bool RemoveItem(ItemData item, int amount)
+    {
+        if (item == null || amount <= 0)
+            return false;
+
+        if (!itemStocks.ContainsKey(item) || itemStocks[item] < amount)
+            return false;
+
+        itemStocks[item] -= amount;
+
+        // Remove the item entirely if stock is zero
+        if (itemStocks[item] <= 0)
+            itemStocks.Remove(item);
+
+        OnStockChanged?.Invoke(item, GetStock(item));
+
+        return true;
+    }
+
+    /// <summary>
+    /// Get current stock for an item
+    /// </summary>
+    public int GetStock(ItemData item)
+    {
+        if (item == null) return 0;
+        return itemStocks.ContainsKey(item) ? itemStocks[item] : 0;
     }
 }

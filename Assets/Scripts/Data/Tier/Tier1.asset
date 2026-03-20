@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcbacbbf8c087545bffcaa5ce4e7cc7, type: 3}
+  m_Name: Tier1
+  m_EditorClassIdentifier: Assembly-CSharp::TierData
+  tierLevel: 1
+  TierName: MODERN ERA
+  maxGhosts: 2
+  spawnIntervalRange: {x: 2, y: 5}
+  allowedItems:
+  - {fileID: 11400000, guid: 7c286f89bf6aec24e96bc30139d71002, type: 2}
+  - {fileID: 11400000, guid: f7cc7c003943de749a8720f3d84cedea, type: 2}
+  - {fileID: 11400000, guid: d40a21db1516ce74f8cfea3306ccf111, type: 2}
+  newAllowedItems:
+  - {fileID: 11400000, guid: 7c286f89bf6aec24e96bc30139d71002, type: 2}
+  - {fileID: 11400000, guid: f7cc7c003943de749a8720f3d84cedea, type: 2}
+  - {fileID: 11400000, guid: d40a21db1516ce74f8cfea3306ccf111, type: 2}
+  allowedGhosts:
+  - {fileID: 11400000, guid: 66421f8e72c2284428db68fea468fe41, type: 2}
+  - {fileID: 11400000, guid: 3011cc8e95ad320458fc231ad20f55ef, type: 2}
+  - {fileID: 11400000, guid: f662fea939f41ff4ea3fb63f2297b618, type: 2}
+  coinsNeededToUnlockNextTier: 550

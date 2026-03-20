@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using Managers.Core;
 
 public class PopAnimation : MonoBehaviour
 {

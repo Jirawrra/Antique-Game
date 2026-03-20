@@ -19,6 +19,8 @@ public enum Era
 [CreateAssetMenu(fileName = "NewAntique", menuName = "Antique Shop/Item")]
 public class ItemData : ScriptableObject
 {
+    public string itemID;
+
     [Header("Identity")]
     public string itemName;
     [TextArea]
@@ -29,4 +31,7 @@ public class ItemData : ScriptableObject
     public Era era;        // Era of the item
     public Rarity rarity;  // Spawn Rarity
     public int ObolValue;  // Item Value
+    public int SellValue;
+    public float deliveryTime;
+
 }

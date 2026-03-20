@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 public class GhostBehavior : MonoBehaviour
 {
     [Header("References")]
@@ -19,12 +20,19 @@ public class GhostBehavior : MonoBehaviour
     [Header("Visual")]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private SpriteRenderer AntiqueImage;
+    [SerializeField] private GameObject sellButtonCanvas;
+
+    [Header("Hover")]
+    [SerializeField] private Color hoverColor = new Color(0.8f, 0.8f, 0.8f, 1f); // light grey tint
+    private Color defaultColor;
 
     [Header("Patience")]
     [SerializeField] private GameObject irritatedSprite;
     [SerializeField] private int currentPatience;
     private float patienceTimer = 0f;
     public float patienceDrainPerSecond = 1f;
+
+
     public void Init(GhostSpawner ghostSpawner, GameMaster gameMaster, GhostData data)
     {
         this.spawner = ghostSpawner;
@@ -37,6 +45,46 @@ public class GhostBehavior : MonoBehaviour
 
         ApplyData();
         RequestRandomItem();
+    }
+
+    private void Start()
+    {
+        defaultColor = spriteRenderer.color;
+        sellButtonCanvas.SetActive(false);
+
+        // EventTrigger trigger = gameObject.AddComponent<EventTrigger>();
+
+        // EventTrigger.Entry onClick = new EventTrigger.Entry();
+        // onClick.eventID = EventTriggerType.PointerClick;
+        // onClick.callback.AddListener((_) => OnGhostClicked());
+        // trigger.triggers.Add(onClick);
+    }
+
+
+    private void OnHoverEnter()
+    {
+        Debug.Log("Mouse Enter");
+        spriteRenderer.color = hoverColor;
+    }
+
+    private void OnHoverExit()
+    {
+        Debug.Log("Mouse Exit");
+        spriteRenderer.color = defaultColor;
+    }
+
+    private void OnGhostClicked()
+    {
+        Debug.Log("Ghost Clicked");
+        if (GhostSelector.GetSelectedGhost() == this)
+            GhostSelector.SelectGhost(null);
+        else
+            GhostSelector.SelectGhost(this);
+    }
+
+    public void SetSelected(bool selected)
+    {
+        sellButtonCanvas.SetActive(selected);
     }
 
     private void ApplyData()
@@ -111,11 +159,9 @@ public class GhostBehavior : MonoBehaviour
         }
     }
 
-    private void BuyItem()
+    public void BuyItem()
     {
-
-        // when transaction manager validates the purchase, it should call this method to let the ghost know the item was bought and they can leave      
-
+        TransactionManager.Instance.TrySell(currentRequestedItem, this);
     }
 
     public void ClearGhost()
@@ -126,22 +172,28 @@ public class GhostBehavior : MonoBehaviour
 
     public void OnSuccessfulPurchase()
     {
-        // This method should be called by the transaction manager when the player successfully buys the requested item for this ghost
-        // You can add any additional logic here (like playing a happy animation, giving rewards, etc.) before the ghost leaves
-
-        //give coin reward to player as consolation for failed purchase
+        Debug.Log("Ghost is happy with the purchase!");
         Leave();
     }
 
     public void OnFailedPurchase()
     {
-        // count patience level down by 1, if it reaches 0, the ghost leaves in disappointment
-        // ghostData.patienceLevel
-
-        // This method can be called by the transaction manager if the purchase fails (e.g., not enough coins)
-        // You can add any logic here for what happens when a purchase fails (like playing a sad animation, reducing patience, etc.)
         Debug.Log("Ghost has run out of patience and is leaving!");
         Leave();
+    }
+
+    public void OnFailedPurchaseDueToStock()
+    {
+
+        Debug.Log("Ghost is disappointed due to lack of stock!");
+
+        currentPatience -= 3; // penalty for not having the item in stock
+        currentPatience = Mathf.Max(0, currentPatience); // clamp so it doesn't go negative
+
+        UpdateIrritatedState();
+
+        if (currentPatience <= 0)
+            OnFailedPurchase(); // only leave if patience is fully drained
 
     }
 

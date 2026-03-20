@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcbacbbf8c087545bffcaa5ce4e7cc7, type: 3}
+  m_Name: Tier3
+  m_EditorClassIdentifier: Assembly-CSharp::TierData
+  tierLevel: 3
+  TierName: POST CLASSICAL
+  maxGhosts: 6
+  spawnIntervalRange: {x: 5, y: 10}
+  allowedItems:
+  - {fileID: 11400000, guid: 7c286f89bf6aec24e96bc30139d71002, type: 2}
+  - {fileID: 11400000, guid: f7cc7c003943de749a8720f3d84cedea, type: 2}
+  - {fileID: 11400000, guid: d40a21db1516ce74f8cfea3306ccf111, type: 2}
+  - {fileID: 11400000, guid: 16abe595c3e389e44a67888209819983, type: 2}
+  - {fileID: 11400000, guid: b212df3f219eab2499e07a26e11f71ed, type: 2}
+  - {fileID: 11400000, guid: 0c2bc8a31107c02479fefc4aa13b4424, type: 2}
+  - {fileID: 11400000, guid: d8740b00eab76fc458504bfaac975b5a, type: 2}
+  - {fileID: 11400000, guid: 87989fffd243d4f4f842ceca8a60ee9c, type: 2}
+  newAllowedItems:
+  - {fileID: 11400000, guid: 0c2bc8a31107c02479fefc4aa13b4424, type: 2}
+  - {fileID: 11400000, guid: d8740b00eab76fc458504bfaac975b5a, type: 2}
+  - {fileID: 11400000, guid: 87989fffd243d4f4f842ceca8a60ee9c, type: 2}
+  allowedGhosts:
+  - {fileID: 11400000, guid: 66421f8e72c2284428db68fea468fe41, type: 2}
+  - {fileID: 11400000, guid: 3011cc8e95ad320458fc231ad20f55ef, type: 2}
+  - {fileID: 11400000, guid: f662fea939f41ff4ea3fb63f2297b618, type: 2}
+  - {fileID: 11400000, guid: 89159e99d3a8eac429dec2217ab5ace9, type: 2}
+  - {fileID: 11400000, guid: c1300c98e1761014eb736822f05bb2cd, type: 2}
+  - {fileID: 11400000, guid: 2823def85b5995944a68d1fc9938c3ef, type: 2}
+  - {fileID: 11400000, guid: 5b249fb90986a1f46b13a46a54417bff, type: 2}
+  coinsNeededToUnlockNextTier: 3000

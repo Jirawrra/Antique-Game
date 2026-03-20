@@ -1,156 +1,119 @@
-using UnityEngine;
 using System;
-using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class UIManager : MonoBehaviour
+namespace Managers.Core
 {
-    private enum Tab { None, Antiques, Upgrades }
-    public static event Action OnNotificationClosed;
-    public static event Action OnNotificationOpened;
-
-    [Header("Notification")]
-    [SerializeField] private GameObject notificationPanel;
-
-    [Header("Panels")]
-    [SerializeField] private GameObject antiquesPanel;
-    [SerializeField] private GameObject upgradesPanel;
-    [SerializeField] private PanelSlideMove panelMover;
-
-    [Header("Currency UI")]
-    [SerializeField] private CurrencyManager currencyManager;
-    [SerializeField] private TextMeshProUGUI obolsText;
-    [SerializeField] private TextMeshProUGUI drachmaText;
-
-    [Header("Shop UI")]
-    [SerializeField] private Transform antiquesContentParent;
-    [SerializeField] private GameObject shopItemPrefab;
-
-    [SerializeField] private ShopManager shopManager;
-
-    private Tab currentTab = Tab.None;
-
-    void Start()
+    public class UIManager : MonoBehaviour
     {
-        if (currencyManager != null)
-        {
-            currencyManager.OnObolsChanged += UpdateObolsUI;
-            currencyManager.OnDrachmaChanged += UpdateDrachmaUI;
-        }
-    }
+        private enum Tab { None, Antiques, Upgrades }
+        public static event Action OnNotificationClosed;
+        public static event Action OnNotificationOpened;
 
-    void OnDestroy()
-    {
-        if (currencyManager != null)
-        {
-            currencyManager.OnObolsChanged -= UpdateObolsUI;
-            currencyManager.OnDrachmaChanged -= UpdateDrachmaUI;
-        }
-    }
+        private Tab currentTab = Tab.None;
 
-    void Update()
-    {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            Debug.Log("Space key pressed - toggling notification");
-            notificationPanel.SetActive(true);
-            OnNotificationOpened?.Invoke();
-        }
-    }
+        [SerializeField] private ShopManager shopManager;
 
-    void BuildAntiquesUI()
-    {
-        if (shopManager == null)
+        [Header("Currency UI")]
+        //  [SerializeField] private CurrencyManager currencyManager;
+        [SerializeField] private TextMeshProUGUI obolsText;
+        [SerializeField] private TextMeshProUGUI drachmaText;
+
+        [Header("Notification")]
+        [SerializeField] private GameObject notificationPanel;
+
+        [Header("Shop Panels")]
+        [SerializeField] private GameObject antiquesPanel;
+        [SerializeField] private GameObject upgradesPanel;
+        [SerializeField] private PanelSlideMove panelMover;
+
+        [Header("PremiumShop Panel")]
+        [SerializeField] private GameObject premiumShopPanel;
+
+        [Header("Black background Panel")]
+        [SerializeField] private GameObject backgroundOverlay;
+
+
+
+        void Start()
         {
-            Debug.LogError("ShopManager reference missing in UIManager");
-            return;
+            CurrencyManager.Instance.OnObolsChanged += UpdateObolsUI;
+            //CurrencyManager.Instance.OnDrachmaChanged += UpdateDrachmaUI;
         }
 
-        if (shopItemPrefab == null)
+        void Update()
         {
-            Debug.LogError("ShopItemPrefab not assigned in UIManager");
-            return;
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                Debug.Log("Space key pressed - toggling notification");
+                notificationPanel.SetActive(true);
+                OnNotificationOpened?.Invoke();
+            }
         }
 
-        if (antiquesContentParent == null)
+        public void CloseNotification()
         {
-            Debug.LogError("AntiquesContentParent not assigned in UIManager");
-            return;
+            // notificationPanel.SetActive(false);
+            OnNotificationClosed?.Invoke();
         }
 
-        // Clear existing UI
-        foreach (Transform child in antiquesContentParent)
-            Destroy(child.gameObject);
-
-        // Build UI for each shop item
-        foreach (var itemState in shopManager.shopItems)
+        public void OnPremiumShop()
         {
-            if (itemState.item == null) continue;
-
-            Debug.Log("Spawning shop item: " + itemState.item.itemName);
-
-            GameObject slot = Instantiate(shopItemPrefab, antiquesContentParent);
-
-            ShopItemUI ui = slot.GetComponent<ShopItemUI>();
-            if (ui != null)
-                ui.Setup(itemState.item);
-            else
-                Debug.LogError("ShopItemUI script missing on prefab!");
+            Debug.Log("Premium Shop Opened");
+            premiumShopPanel.SetActive(true);
+            backgroundOverlay.SetActive(true);
         }
 
-        Debug.Log("Shop items count: " + shopManager.shopItems.Count);
-    }
-
-    public void CloseNotification()
-    {
-        OnNotificationClosed?.Invoke();
-    }
-
-    public void OnAntiques(bool isOn)
-    {
-        if (!isOn) return;
-        HandleTab(Tab.Antiques);
-    }
-
-    public void OnUpgrades(bool isOn)
-    {
-        if (!isOn) return;
-        HandleTab(Tab.Upgrades);
-    }
-
-    private void HandleTab(Tab clickedTab)
-    {
-        if (currentTab == clickedTab) // Toggle the same tab
+        public void OnPremiumShopClose()
         {
-            if (panelMover.IsUp)
-                panelMover.SlideDown();
-            else
+            backgroundOverlay.SetActive(false);
+        }
+
+        public void OnAntiques(bool isOn)
+        {
+            if (!isOn) return;
+            HandleTab(Tab.Antiques);
+        }
+
+        public void OnUpgrades(bool isOn)
+        {
+            if (!isOn) return;
+
+            HandleTab(Tab.Upgrades);
+        }
+
+        private void HandleTab(Tab clickedTab)
+        {
+
+            if (currentTab == clickedTab) // Toggle the same tab
+            {
+                if (panelMover.IsUp)
+                    panelMover.SlideDown();
+                else
+                    panelMover.SlideUp();
+
+                return;
+            }
+
+            currentTab = clickedTab;
+
+            antiquesPanel.SetActive(clickedTab == Tab.Antiques); // Show Antiques panel if selected
+            upgradesPanel.SetActive(clickedTab == Tab.Upgrades); // Show Upgrades panel if selected
+
+            //Slide Up if the panel is not already up
+            if (!panelMover.IsUp)
                 panelMover.SlideUp();
-
-            return;
         }
 
-        currentTab = clickedTab;
-
-        antiquesPanel.SetActive(clickedTab == Tab.Antiques);
-        if (clickedTab == Tab.Antiques)
-            BuildAntiquesUI();
-
-        upgradesPanel.SetActive(clickedTab == Tab.Upgrades);
-
-        if (!panelMover.IsUp)
-            panelMover.SlideUp();
-    }
-
-    private void UpdateObolsUI(int amount)
-    {
-        if (obolsText != null)
+        private void UpdateObolsUI(int amount)
+        {
             obolsText.text = amount.ToString();
-    }
+        }
 
-    private void UpdateDrachmaUI(int amount)
-    {
-        if (drachmaText != null)
+        private void UpdateDrachmaUI(int amount)
+        {
             drachmaText.text = amount.ToString();
+        }
     }
 }
