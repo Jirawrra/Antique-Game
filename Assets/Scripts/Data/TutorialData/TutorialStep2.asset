@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1fa676a90786b4b86d2df9ce3df8c1, type: 3}
   m_Name: TutorialStep2
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
-  stepText: Step 2
+  stepText: "Customers want specific treasures. Watch the timers\u2014items only
+    become available once a certain amount of time passes!"
   stepImage: {fileID: 6148982943337052800, guid: aadff2096b287674eaa0285c697fc856, type: 3}

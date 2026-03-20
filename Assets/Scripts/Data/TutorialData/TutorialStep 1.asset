@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1fa676a90786b4b86d2df9ce3df8c1, type: 3}
   m_Name: TutorialStep 1
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
-  stepText: Step 1
+  stepText: A new face! Just in time, I need your help to manage the store.
   stepImage: {fileID: 21300000, guid: 0aea9164d97a8f44c87c3e4150c80d7c, type: 3}
