@@ -173,6 +173,15 @@ public class GhostBehavior : MonoBehaviour
     public void OnSuccessfulPurchase()
     {
         Debug.Log("Ghost is happy with the purchase!");
+
+        int value = currentRequestedItem.SellValue;
+
+        FloatingTextManager.Instance.Spawn(
+            $"+{value}",
+            transform.position
+
+        );
+
         Leave();
     }
 
