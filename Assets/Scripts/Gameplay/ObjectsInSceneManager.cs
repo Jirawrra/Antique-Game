@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Managers.Core;
 
 [Serializable]
 public class TierObjectReference

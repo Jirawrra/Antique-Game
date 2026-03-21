@@ -1,3 +1,4 @@
+using Managers.Core;
 using UnityEngine;
 using TMPro;
 

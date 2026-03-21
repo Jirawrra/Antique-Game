@@ -1,77 +1,80 @@
-using UnityEngine;
-using System.Collections.Generic;
 using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
-public class GameMaster : MonoBehaviour
+
+namespace Managers.Core
 {
-    public static GameMaster Instance { get; private set; }
-
-    [Header("Tier")]
-    [SerializeField] private TierData[] tiers;
-    public int CurrentTierIndex { get; private set; }
-    public TierData CurrentTier => tiers[CurrentTierIndex];
-    public int CurrentTierLevel => CurrentTier.tierLevel; // Display tiers starting from 1 instead of 0
-    public event Action<TierData> OnTierChanged;
-
-    private void Start()
+    public class GameMaster : MonoBehaviour
     {
-        ApplyTier();
-        CurrencyManager.Instance.OnObolsChanged += HandleCurrencyChanged;
-    }
-    private void OnDisable()
-    {
-        CurrencyManager.Instance.OnObolsChanged -= HandleCurrencyChanged;
-    }
+        public static GameMaster Instance { get; private set; }
 
-    private void Awake()
-    {
-        // Standard Singleton pattern
-        if (Instance == null)
+        [Header("Tier")]
+        [SerializeField] private TierData[] tiers;
+        public int CurrentTierIndex { get; private set; }
+        public TierData CurrentTier => tiers[CurrentTierIndex];
+        public int CurrentTierLevel => CurrentTier.tierLevel; // Display tiers starting from 1 instead of 0
+        public event Action<TierData> OnTierChanged;
+
+        private void Start()
         {
-            Instance = this;
+            ApplyTier();
+            CurrencyManager.Instance.OnObolsChanged += HandleCurrencyChanged;
         }
-        else
+        private void OnDisable()
         {
-            Destroy(gameObject);
+            CurrencyManager.Instance.OnObolsChanged -= HandleCurrencyChanged;
         }
-    }
-    private void Update()
-    {
-        // DEBUG: Press T to increase tier
-        if (Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
+
+        private void Awake()
         {
-
-            IncreaseTier();
+            // Standard Singleton pattern
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-    }
-
-
-    public void IncreaseTier() // Call this when you want to move to the next tier
-    {
-        if (CurrentTierIndex >= tiers.Length - 1)
-            return;
-
-        CurrentTierIndex++;
-        ApplyTier();
-    }
-
-    private void ApplyTier() // This method applies the current tier's settings to the game
-    {
-        OnTierChanged?.Invoke(CurrentTier);
-        Debug.Log($"Tier changed to Tier {CurrentTierLevel}");
-    }
-
-    private void HandleCurrencyChanged(int newBalance)
-    {
-        if (CurrentTierIndex >= tiers.Length - 1)
-            return;
-
-        int requiredCoins = CurrentTier.coinsNeededToUnlockNextTier;
-
-        if (newBalance >= requiredCoins)
+        private void Update()
         {
-            IncreaseTier();
-        }
-    }
+            // DEBUG: Press T to increase tier
+            if (Keyboard.current != null && Keyboard.current.tKey.wasPressedThisFrame)
+            {
 
+                IncreaseTier();
+            }
+        }
+
+
+        public void IncreaseTier() // Call this when you want to move to the next tier
+        {
+            if (CurrentTierIndex >= tiers.Length - 1)
+                return;
+
+            CurrentTierIndex++;
+            ApplyTier();
+        }
+
+        private void ApplyTier() // This method applies the current tier's settings to the game
+        {
+            OnTierChanged?.Invoke(CurrentTier);
+            Debug.Log($"Tier changed to Tier {CurrentTierLevel}");
+        }
+
+        private void HandleCurrencyChanged(int newBalance)
+        {
+            if (CurrentTierIndex >= tiers.Length - 1)
+                return;
+
+            int requiredCoins = CurrentTier.coinsNeededToUnlockNextTier;
+
+            if (newBalance >= requiredCoins)
+            {
+                IncreaseTier();
+            }
+        }
+
+    }
 }

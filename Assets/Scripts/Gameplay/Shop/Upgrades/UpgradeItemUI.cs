@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Managers.Core
+namespace Gameplay.Shop.Upgrades
 {
     /// <summary>
     /// Displays a single antique item UI, handles visuals only.
@@ -13,13 +13,13 @@ namespace Managers.Core
         [SerializeField] private Image icon;
         [SerializeField] private TMP_Text upgradeLabel;
         [SerializeField] private TMP_Text upgradeDescription;
-        [SerializeField] private TMP_Text upgradeStock;
+        [SerializeField] private TMP_Text upgradeLevel;
         [SerializeField] private Button buyButton;
 
-        [Header("Processing UI")]
+        /*[Header("Processing UI")]
         [SerializeField] private GameObject processingPanel;
         [SerializeField] private Slider processingSlider;
-        //[SerializeField] private TMP_Text queueCountText;
+        [SerializeField] private TMP_Text queueCountText;*/
 
         private ItemData item;
 
@@ -35,10 +35,10 @@ namespace Managers.Core
             buyButton.onClick.RemoveAllListeners();
             buyButton.onClick.AddListener(BuyItem);
 
-            // Reset visuals
+            /* Reset visuals
             processingSlider.value = 0f;
             processingPanel.SetActive(false);
-            //queueCountText.text = "";
+            queueCountText.text = "";*/
         }
 
         private void OnEnable()
@@ -60,7 +60,7 @@ namespace Managers.Core
             TransactionManager.Instance.TryBuy(item);
 
             // Immediate UI feedback
-            UpdateQueueText();
+            // UpdateQueueText();
         }
 
         private void Update()
@@ -68,14 +68,14 @@ namespace Managers.Core
             if (item == null) return;
 
             //  Stock always accurate
-            stockText.text = InventoryManager.Instance.GetStock(item).ToString();
+            // stockText.text = InventoryManager.Instance.GetStock(item).ToString();
 
-            int queueCount = TransactionManager.Instance.GetQueueCount(item);
+            // int queueCount = TransactionManager.Instance.GetQueueCount(item);
 
             //  Queue text
-            queueCountText.text = queueCount > 0 ? queueCount.ToString() : "";
+            // queueCountText.text = queueCount > 0 ? queueCount.ToString() : "";
 
-            if (queueCount > 0)
+            /* if (queueCount > 0)
             {
                 processingPanel.SetActive(true);
 
@@ -88,14 +88,14 @@ namespace Managers.Core
             {
                 processingPanel.SetActive(false);
                 processingSlider.value = 0f;
-            }
+            }*/
         }
 
-        private void UpdateQueueText()
+        /*private void UpdateQueueText()
         {
             int count = TransactionManager.Instance.GetQueueCount(item);
             queueCountText.text = count > 0 ? count.ToString() : "";
-        }
+        }*/
 
         private void OnItemDelivered(ItemData deliveredItem, int amount)
         {

@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using Managers.Core;
 
 public class GhostSpawner : MonoBehaviour
 {
