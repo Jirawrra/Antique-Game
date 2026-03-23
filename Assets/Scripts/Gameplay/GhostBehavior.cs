@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using System.Collections;
+
 public class GhostBehavior : MonoBehaviour
 {
     [Header("References")]
@@ -31,6 +33,13 @@ public class GhostBehavior : MonoBehaviour
     [SerializeField] private int currentPatience;
     private float patienceTimer = 0f;
     public float patienceDrainPerSecond = 1f;
+
+    [Header("Indicators")]
+    [SerializeField] private GameObject noStockIndicator;
+
+
+
+
 
 
     public void Init(GhostSpawner ghostSpawner, GameMaster gameMaster, GhostData data)
@@ -193,17 +202,51 @@ public class GhostBehavior : MonoBehaviour
 
     public void OnFailedPurchaseDueToStock()
     {
-
         Debug.Log("Ghost is disappointed due to lack of stock!");
 
-        currentPatience -= 3; // penalty for not having the item in stock
-        currentPatience = Mathf.Max(0, currentPatience); // clamp so it doesn't go negative
+        if (noStockIndicator != null)
+        {
+            noStockIndicator.SetActive(true);
+            StartCoroutine(HideNoStockIndicator());
+        }
+
+        currentPatience -= 3;
+        currentPatience = Mathf.Max(0, currentPatience);
 
         UpdateIrritatedState();
 
         if (currentPatience <= 0)
-            OnFailedPurchase(); // only leave if patience is fully drained
+            OnFailedPurchase();
+    }
 
+    private IEnumerator HideNoStockIndicator()
+    {
+        SpriteRenderer sr = noStockIndicator.GetComponent<SpriteRenderer>();
+
+        if (sr == null)
+            yield break;
+
+        float duration = 0.5f;
+        float timer = 0f;
+
+        yield return new WaitForSeconds(1.5f);
+
+        Color originalColor = sr.color;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+
+            float alpha = 1 - (timer / duration);
+            sr.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
+
+            yield return null;
+        }
+
+        // Reset for next use
+        sr.color = new Color(originalColor.r, originalColor.g, originalColor.b, 1f);
+
+        noStockIndicator.SetActive(false);
     }
 
     public void Leave()

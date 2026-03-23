@@ -820,7 +820,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 3.6
+  orthographic size: 3.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -975,7 +975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &929852811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1655,8 +1655,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 35.691437, y: -12.2}
-  m_SizeDelta: {x: 70, y: 20}
+  m_AnchoredPosition: {x: 35.691437, y: -17.6}
+  m_SizeDelta: {x: 70, y: 12.3208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590687675
 MonoBehaviour:
@@ -1753,8 +1753,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Project Lead\nPatrick Vidanes \n\nGame Designer\nAlexander Gorospe \n\nLevel
-    Designer\nJayrone Ramirez\n \nLead Programmer\nChristopher Palad "
+  m_text: "Project Lead\nPatrick Vidanes \n\nProgrammer, Artist\nJayrone Ramirez\n
+    \nLead Programmer\nChristopher Palad "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 59d8e6edcd0c34b45a0f01990f028aaa, type: 2}
   m_sharedMaterial: {fileID: 2114590056356380818, guid: 59d8e6edcd0c34b45a0f01990f028aaa, type: 2}
