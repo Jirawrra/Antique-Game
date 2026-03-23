@@ -31,4 +31,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f662fea939f41ff4ea3fb63f2297b618, type: 2}
   - {fileID: 11400000, guid: 2823def85b5995944a68d1fc9938c3ef, type: 2}
   - {fileID: 11400000, guid: 5b249fb90986a1f46b13a46a54417bff, type: 2}
-  coinsNeededToUnlockNextTier: 1500
+  coinsNeededToUnlockNextTier: 800
