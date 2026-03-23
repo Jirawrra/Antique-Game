@@ -7371,7 +7371,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_AnchorMin.x
@@ -7379,15 +7379,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1013.9
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7419,11 +7419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 506.95
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 309041630006769065, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7439,11 +7439,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 959228616938733603, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4874067295173771898, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: m_Name
       value: Item Panel Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874067295173771898, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7966532374896550049, guid: 2fe7b4b1a0192874ca4f6dd8a282a49d, type: 3}
       propertyPath: processingPanel
