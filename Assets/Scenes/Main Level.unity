@@ -1558,12 +1558,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc14af38d351e84c982d5f3013a72d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
-  panSpeed: 20
+  panSensitivity: 1.2
   minBounds: {x: -30, y: -30}
   maxBounds: {x: 30, y: 30}
   panSmoothTime: 0.1
   returnDelay: 1
-  returnSpeed: 2.5
   returnSmoothTime: 0.3
 --- !u!114 &447643317
 MonoBehaviour:
@@ -5203,7 +5202,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbf6900165b8454aac203598434e009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
-  shopManager: {fileID: 0}
   obolsText: {fileID: 287463618}
   drachmaText: {fileID: 2024748085}
   notificationPanel: {fileID: 1086476568}
@@ -7605,6 +7603,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5544996729507756808, guid: c49983b4283d41b409e0f6dd7c08da94, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.8168945
+      objectReference: {fileID: 0}
     - target: {fileID: 7079358653388622210, guid: c49983b4283d41b409e0f6dd7c08da94, type: 3}
       propertyPath: m_Name
       value: Premium Shop
@@ -7612,6 +7614,18 @@ PrefabInstance:
     - target: {fileID: 7079358653388622210, guid: c49983b4283d41b409e0f6dd7c08da94, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220878400815053644, guid: c49983b4283d41b409e0f6dd7c08da94, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.8168945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220878400815053644, guid: c49983b4283d41b409e0f6dd7c08da94, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 160.81128
+      objectReference: {fileID: 0}
+    - target: {fileID: 9204121392030322834, guid: c49983b4283d41b409e0f6dd7c08da94, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.8168945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7897,7 +7911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 624663758251547326, guid: efe95774aca31b94dbb55376d8dac978, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.0019836426
+      value: -0.001953125
       objectReference: {fileID: 0}
     - target: {fileID: 624663758251547326, guid: efe95774aca31b94dbb55376d8dac978, type: 3}
       propertyPath: m_AnchoredPosition.y

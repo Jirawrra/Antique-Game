@@ -3,112 +3,111 @@ using System.Collections;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-
-public class CameraController : MonoBehaviour
+namespace Gameplay
 {
-
-    [Header("Pan Settings")]
-    public float panSpeed = 20f;
-    public Vector2 minBounds;
-    public Vector2 maxBounds;
-
-    [Header("Pan Smoothing")]
-    public float panSmoothTime = 0.1f;
-
-    private Vector3 targetPosition;
-    private Vector3 panVelocity;
-
-    [Header("Return Settings")]
-    public float returnDelay = 2f;
-    public float returnSpeed = 2.5f;
-
-    private Vector3 lastMousePos;
-    private Vector3 startPosition;
-
-    public float returnSmoothTime = 0.3f;
-    private bool isReturning = false;
-    private Coroutine returnRoutine;
-
-
-    void Start()
+    public class CameraController : MonoBehaviour
     {
-        startPosition = transform.position;
-        targetPosition = transform.position;
+        [Header("Pan Settings")]
+        public float panSensitivity = 1.2f;
+        public Vector2 minBounds;
+        public Vector2 maxBounds;
 
-    }
+        [Header("Pan Smoothing")]
+        public float panSmoothTime = 0.05f;
 
-    void Update()
-    {
-        //HandleZoom();
-        HandlePan();
-    }
+        private Vector3 targetPosition;
+        private Vector3 panVelocity;
 
-    void HandleZoom()
-    {
-        Debug.Log("Zoom: " + Mouse.current.scroll.ReadValue().y);
+        [Header("Return Settings")]
+        public float returnDelay = 2f;
+        public float returnSmoothTime = 0.3f;
+        
+        private Vector3 startPosition;
+        private bool isReturning;
+        private Coroutine returnRoutine;
 
-    }
-    void HandlePan()
-    {
-        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
-            return;
-
-        if (Input.GetMouseButtonDown(0))
+        private void Start()
         {
-            if (returnRoutine != null)
-                StopCoroutine(returnRoutine);
-            isReturning = false;
-            lastMousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            startPosition = transform.position;
+            targetPosition = transform.position;
         }
 
-        if (Input.GetMouseButton(0))
+        private void Update()
         {
-            Vector3 currentMousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            Vector3 direction = lastMousePos - currentMousePos;
-
-            targetPosition += new Vector3(
-                direction.x * panSpeed,
-                direction.y * panSpeed,
-                0f
+            //HandleZoom();
+            HandlePan();
+            
+            // Smooth movement toward target
+            var smoothing = isReturning ? returnSmoothTime : panSmoothTime;
+            transform.position = Vector3.SmoothDamp(
+                transform.position,
+                targetPosition,
+                ref panVelocity,
+                smoothing
             );
-
-            targetPosition.x = Mathf.Clamp(targetPosition.x, minBounds.x, maxBounds.x);
-            targetPosition.y = Mathf.Clamp(targetPosition.y, minBounds.y, maxBounds.y);
-
-            lastMousePos = currentMousePos;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        /*private void HandleZoom()
         {
+            Debug.Log("Zoom: " + Mouse.current.scroll.ReadValue().y);
+
+        }*/
+
+        private void HandlePan()
+        {
+            var pointer = Pointer.current;
+            if (pointer == null) return;
+            
+            // Check for the initial press
+            if (pointer.press.wasPressedThisFrame)
+            {
+                // Only stop the pan if we are ACTUALLY over UI on the first click
+                if (EventSystem.current && EventSystem.current.IsPointerOverGameObject())
+                    return;
+
+                if (returnRoutine != null) StopCoroutine(returnRoutine);
+                isReturning = false;
+            }
+
+            if (pointer.press.isPressed)
+            {
+                // If we started a "Return" and then clicked again, stop it immediately
+                if (isReturning) 
+                {
+                    isReturning = false;
+                    if (returnRoutine != null) StopCoroutine(returnRoutine);
+                }
+
+                Vector2 delta = pointer.delta.ReadValue();
+                
+                // If there's no movement, don't calculate (saves jitter)
+                if (delta == Vector2.zero) return;
+
+                float deviceMultiplier = 0.01f; 
+
+                Vector3 move = new Vector3(
+                    -delta.x * panSensitivity * deviceMultiplier,
+                    -delta.y * panSensitivity * deviceMultiplier,
+                    0f
+                );
+                
+                targetPosition += move;
+                
+                // Clamp bounds
+                targetPosition.x = Mathf.Clamp(targetPosition.x, minBounds.x, maxBounds.x);
+                targetPosition.y = Mathf.Clamp(targetPosition.y, minBounds.y, maxBounds.y);
+            }
+
+            if (!Pointer.current.press.wasReleasedThisFrame) return;
+            if (returnRoutine != null) StopCoroutine(returnRoutine);
             returnRoutine = StartCoroutine(ReturnToStart());
         }
 
-
-        float smoothTime = isReturning ? returnSmoothTime : panSmoothTime;
-        // Smooth movement toward target
-        transform.position = Vector3.SmoothDamp(
-      transform.position,
-      targetPosition,
-      ref panVelocity,
-      panSmoothTime
-      );
+        private IEnumerator ReturnToStart()
+        {
+            yield return new WaitForSeconds(returnDelay);
+            isReturning = true;
+            targetPosition = startPosition;
+        }
     }
-
-    IEnumerator ReturnToStart()
-    {
-        isReturning = true;
-        yield return new WaitForSeconds(returnDelay);
-
-
-        targetPosition = startPosition;
-
-        // Wait until close enough
-        while (Vector3.Distance(transform.position, startPosition) > 0.01f)
-            yield return null;
-
-        transform.position = startPosition;
-        isReturning = false;
-    }
-
-
 }
