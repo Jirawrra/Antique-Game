@@ -59,6 +59,8 @@ public class AntiqueItemUI : MonoBehaviour
 
         // Immediate UI feedback
         UpdateQueueText();
+
+
     }
 
     private void Update()

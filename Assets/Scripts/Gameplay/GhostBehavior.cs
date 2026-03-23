@@ -190,6 +190,7 @@ public class GhostBehavior : MonoBehaviour
             transform.position
 
         );
+        AudioManager.Instance.Play("Coins");
 
         Leave();
     }
@@ -203,6 +204,8 @@ public class GhostBehavior : MonoBehaviour
     public void OnFailedPurchaseDueToStock()
     {
         Debug.Log("Ghost is disappointed due to lack of stock!");
+
+        AudioManager.Instance.Play("Warning");
 
         if (noStockIndicator != null)
         {

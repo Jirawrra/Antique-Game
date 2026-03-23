@@ -59,6 +59,7 @@ public class GameMaster : MonoBehaviour
     {
         OnTierChanged?.Invoke(CurrentTier);
         Debug.Log($"Tier changed to Tier {CurrentTierLevel}");
+
     }
 
     private void HandleCurrencyChanged(int newBalance)
@@ -70,6 +71,7 @@ public class GameMaster : MonoBehaviour
 
         if (newBalance >= requiredCoins)
         {
+            AudioManager.Instance.Play("New Level");
             IncreaseTier();
         }
     }

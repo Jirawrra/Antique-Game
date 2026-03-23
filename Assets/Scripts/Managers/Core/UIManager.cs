@@ -74,6 +74,8 @@ namespace Managers.Core
         {
             if (!isOn) return;
             HandleTab(Tab.Antiques);
+            AudioManager.Instance.Play("Antique");
+
         }
 
         public void OnUpgrades(bool isOn)
@@ -81,6 +83,8 @@ namespace Managers.Core
             if (!isOn) return;
 
             HandleTab(Tab.Upgrades);
+            AudioManager.Instance.Play("Upgrade");
+
         }
 
         private void HandleTab(Tab clickedTab)

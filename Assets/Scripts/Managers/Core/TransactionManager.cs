@@ -54,11 +54,13 @@ public class TransactionManager : MonoBehaviour
         if (!CurrencyManager.Instance.HasEnough(totalCost))
         {
             Debug.LogWarning($"Cannot buy {item.itemName}: insufficient funds ({totalCost} obols).");
+            AudioManager.Instance.Play("Warning");
             return; // abort safely
         }
 
         // Deduct currency immediately
         CurrencyManager.Instance.Spend(totalCost);
+        AudioManager.Instance.Play("Credits Open");
 
         // Enqueue purchase
         purchaseQueue.Enqueue(new PurchaseEntry(item, amount));

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BoneKnife
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemID: 1
-  itemName: BONEKNIFE
-  description: bone knife sharp ooooooo
-  icon: {fileID: 21300000, guid: 02eebd992a2764e4189ecb16c6a06c5b, type: 3}
+  itemName: 8 BALL
+  description: BALL BALL
+  icon: {fileID: -5061630198354982925, guid: 8da097d3e0b889246b475ab290898983, type: 3}
   era: 0
   rarity: 0
   ObolValue: 20

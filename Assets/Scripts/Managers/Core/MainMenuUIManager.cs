@@ -16,10 +16,12 @@ public class MainMenuUIManager : MonoBehaviour
     {
         //loads game scene
         SceneLoader.Instance.LoadScene("Main Level");
+        AudioManager.Instance.Play("Play Game");
 
 
 
     }
+
 
     public void CreditsPanelOpened()
     {
@@ -27,6 +29,8 @@ public class MainMenuUIManager : MonoBehaviour
         creditsPanel.SetActive(true);
         OnCreditsPanelOpened?.Invoke();
         Debug.Log("Credits Panel Opened");
+
+        AudioManager.Instance.Play("Credits Open");
     }
 
     public void CreditsPanelClosed()
@@ -36,6 +40,7 @@ public class MainMenuUIManager : MonoBehaviour
         //creditsPanel.SetActive(false);
         OnCreditsPanelClosed?.Invoke();
         Debug.Log("Credits Panel Closed");
+        AudioManager.Instance.Play("Exit Button");
 
 
     }
