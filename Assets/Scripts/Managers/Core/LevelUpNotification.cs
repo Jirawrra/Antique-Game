@@ -73,6 +73,7 @@ public class LevelUpNotification : MonoBehaviour
     {
         backgroundOverlay.SetActive(false);
         levelUpAnimator.AnimateClose();
+        AudioManager.Instance.Play("Play Game");
     }
 
 

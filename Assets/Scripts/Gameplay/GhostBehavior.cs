@@ -37,6 +37,11 @@ public class GhostBehavior : MonoBehaviour
     [Header("Indicators")]
     [SerializeField] private GameObject noStockIndicator;
 
+    [Header("Stock Visual")]
+    [SerializeField] private Color outOfStockColor = new Color(0.5f, 0.5f, 0.5f, 0.6f);
+    private Color normalColor = Color.white;
+
+
 
 
 
@@ -84,11 +89,33 @@ public class GhostBehavior : MonoBehaviour
 
     private void OnGhostClicked()
     {
+        AudioManager.Instance.Play("Play Game");
         Debug.Log("Ghost Clicked");
         if (GhostSelector.GetSelectedGhost() == this)
             GhostSelector.SelectGhost(null);
         else
             GhostSelector.SelectGhost(this);
+    }
+
+    private void OnEnable()
+    {
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.OnStockChanged += HandleStockChanged;
+    }
+
+    private void OnDisable()
+    {
+        if (InventoryManager.Instance != null)
+            InventoryManager.Instance.OnStockChanged -= HandleStockChanged;
+    }
+
+
+    private void HandleStockChanged(ItemData item, int newAmount)
+    {
+        if (item == currentRequestedItem)
+        {
+            UpdateStockVisual();
+        }
     }
 
     public void SetSelected(bool selected)
@@ -119,7 +146,22 @@ public class GhostBehavior : MonoBehaviour
 
         AntiqueImage.sprite = currentRequestedItem.icon;
 
+        UpdateStockVisual();
 
+
+    }
+    private void UpdateStockVisual()
+    {
+        int stock = InventoryManager.Instance.GetStock(currentRequestedItem);
+
+        if (stock <= 0)
+        {
+            AntiqueImage.color = outOfStockColor; // gray
+        }
+        else
+        {
+            AntiqueImage.color = normalColor; // normal
+        }
     }
 
     private void Update()
