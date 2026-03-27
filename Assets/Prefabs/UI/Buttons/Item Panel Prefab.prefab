@@ -806,10 +806,10 @@ MonoBehaviour:
   eraText: {fileID: 1490182754305227272}
   stockText: {fileID: 3129811086077747815}
   buyButton: {fileID: 9135955579694774464}
+  obolValueText: {fileID: 3141250517306465656}
   processingPanel: {fileID: 2115325338803352642}
   processingSlider: {fileID: 4302962728353245757}
   queueCountText: {fileID: 808218211675776305}
-  deliveryDelay: 2
 --- !u!1 &5933543986542165108
 GameObject:
   m_ObjectHideFlags: 0

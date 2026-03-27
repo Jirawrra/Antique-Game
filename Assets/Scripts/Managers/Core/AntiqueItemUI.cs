@@ -13,6 +13,7 @@ public class AntiqueItemUI : MonoBehaviour
     [SerializeField] private TMP_Text eraText;
     [SerializeField] private TMP_Text stockText;
     [SerializeField] private Button buyButton;
+    [SerializeField] private TMP_Text obolValueText;
 
     [Header("Processing UI")]
     [SerializeField] private GameObject processingPanel;
@@ -29,6 +30,7 @@ public class AntiqueItemUI : MonoBehaviour
         icon.sprite = item.icon;
         nameText.text = item.itemName;
         eraText.text = item.era.ToString();
+        obolValueText.text = item.ObolValue.ToString();
 
         buyButton.onClick.RemoveAllListeners();
         buyButton.onClick.AddListener(BuyItem);
