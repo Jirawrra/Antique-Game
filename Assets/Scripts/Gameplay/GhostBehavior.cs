@@ -89,12 +89,13 @@ public class GhostBehavior : MonoBehaviour
 
     private void OnGhostClicked()
     {
-        AudioManager.Instance.Play("Play Game");
+
         Debug.Log("Ghost Clicked");
         if (GhostSelector.GetSelectedGhost() == this)
             GhostSelector.SelectGhost(null);
         else
             GhostSelector.SelectGhost(this);
+        AudioManager.Instance.Play("Play Game");
     }
 
     private void OnEnable()

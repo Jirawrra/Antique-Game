@@ -21,6 +21,7 @@ public class AudioManager : MonoBehaviour
 
     private Dictionary<string, Sound> soundDictionary;
 
+
     void Awake()
     {
         // Singleton setup

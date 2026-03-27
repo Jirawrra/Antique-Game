@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1438211582616512666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4758808766328380764}
+  - component: {fileID: 2927350074176538007}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4758808766328380764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438211582616512666}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 816.53564, y: 1091.9633, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2927350074176538007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438211582616512666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbec53dac0e3a3e4f9fd77c7c6ba4b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  sounds:
+  - name: Credits Open
+    clip: {fileID: 8300000, guid: ef6829d89f7aa664c8dbf532045e41a6, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Exit Button
+    clip: {fileID: 8300000, guid: 1050f0f9383191c4a90479d8440aa22a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Play Game
+    clip: {fileID: 8300000, guid: bf98c67397ff36544b8a07e1d8f63242, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Antique
+    clip: {fileID: 8300000, guid: 3d98e50e4e6b40f4a83f74be907d2414, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Upgrade
+    clip: {fileID: 8300000, guid: 49f0e572dfb13cb43933b094d6b749c7, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Coins
+    clip: {fileID: 8300000, guid: 498b898f83a4d934e939edfecfa3bc96, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Warning
+    clip: {fileID: 8300000, guid: 7f1ddeb6eedb9a04492eac453cd4cb1a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: New Level
+    clip: {fileID: 8300000, guid: f54262b22ade7de4187cb3d80e9f5852, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}

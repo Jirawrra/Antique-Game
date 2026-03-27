@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1fa676a90786b4b86d2df9ce3df8c1, type: 3}
   m_Name: TutorialStep 3
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
-  stepText: step3
+  stepText: Make sure you watch out for the customer's temper! Take too long with
+    their items and they will leave, and Charon will penalize us
   stepImage: {fileID: -5061630198354982925, guid: 8da097d3e0b889246b475ab290898983, type: 3}
