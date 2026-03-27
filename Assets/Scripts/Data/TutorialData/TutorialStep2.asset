@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
   stepText: Customers want specific treasures. Watch the timers! items only become
     available once a certain amount of time passes
-  stepImage: {fileID: 6148982943337052800, guid: aadff2096b287674eaa0285c697fc856, type: 3}
+  stepImage: {fileID: -5392625257635239999, guid: 8f4696a167df6e942b526cba8dfaf140, type: 3}

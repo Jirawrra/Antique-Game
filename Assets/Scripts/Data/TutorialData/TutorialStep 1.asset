@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TutorialStep 1
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
   stepText: 'A new face! Just in time, I need your help to manage the store. '
-  stepImage: {fileID: 21300000, guid: 41a29bfb7a8f3c94b92a0c69b4412762, type: 3}
+  stepImage: {fileID: -1463966574967315270, guid: bfbc4087471774940b41d80b81cd3305, type: 3}

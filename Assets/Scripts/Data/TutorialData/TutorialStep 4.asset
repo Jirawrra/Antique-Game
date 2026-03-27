@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
   stepText: Go ahead and Buy your first item now to show me you've got the hang of
     it!
-  stepImage: {fileID: -3713020765942568172, guid: 8da097d3e0b889246b475ab290898983, type: 3}
+  stepImage: {fileID: 21300000, guid: 701fa4f2447362a468526e7dedf978ba, type: 3}

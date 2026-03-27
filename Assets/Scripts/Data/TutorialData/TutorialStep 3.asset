@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TutorialStepData
   stepText: Make sure you watch out for the customer's temper! Take too long with
     their items and they will leave, and Charon will penalize us
-  stepImage: {fileID: -5061630198354982925, guid: 8da097d3e0b889246b475ab290898983, type: 3}
+  stepImage: {fileID: 9182157284707403512, guid: e155f3d5095945a439c657e513f66ff9, type: 3}
