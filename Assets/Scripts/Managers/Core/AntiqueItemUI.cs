@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Managers.Core;
 
 /// <summary>
 /// Displays a single antique item UI, handles visuals only.
@@ -14,6 +15,8 @@ public class AntiqueItemUI : MonoBehaviour
     [SerializeField] private TMP_Text stockText;
     [SerializeField] private Button buyButton;
     [SerializeField] private TMP_Text obolValueText;
+
+    [SerializeField] private TMP_Text sellValueText;
 
     [Header("Processing UI")]
     [SerializeField] private GameObject processingPanel;
@@ -30,7 +33,11 @@ public class AntiqueItemUI : MonoBehaviour
         icon.sprite = item.icon;
         nameText.text = item.itemName;
         eraText.text = item.era.ToString();
+        int upgradedValue = UpgradeManager.Instance.GetModifiedSellValue(item.SellValue); // Show upgraded value from the start
+        sellValueText.text = upgradedValue.ToString(); // Display the modified sell value
         obolValueText.text = item.ObolValue.ToString();
+
+
 
         buyButton.onClick.RemoveAllListeners();
         buyButton.onClick.AddListener(BuyItem);
@@ -45,13 +52,32 @@ public class AntiqueItemUI : MonoBehaviour
     {
         if (TransactionManager.Instance != null)
             TransactionManager.Instance.OnItemDelivered += OnItemDelivered;
+
+        if (UpgradeManager.Instance != null)
+            UpgradeManager.Instance.OnUpgradeChanged += RefreshUI;
+
+        UIManager.OnShopTabOpened += RefreshUI;
     }
 
     private void OnDisable()
     {
         if (TransactionManager.Instance != null)
             TransactionManager.Instance.OnItemDelivered -= OnItemDelivered;
+
+        if (UpgradeManager.Instance != null)
+            UpgradeManager.Instance.OnUpgradeChanged -= RefreshUI;
+
+        UIManager.OnShopTabOpened -= RefreshUI;
     }
+
+    private void RefreshUI()
+    {
+        if (item == null) return;
+
+        int upgradedValue = UpgradeManager.Instance.GetModifiedSellValue(item.SellValue);
+        sellValueText.text = upgradedValue.ToString();
+    }
+
 
     private void BuyItem()
     {
@@ -106,4 +132,6 @@ public class AntiqueItemUI : MonoBehaviour
         // Optional: feedback (sound, animation, etc.)
         Debug.Log($"Delivered {amount}x {item.itemName}");
     }
+
+
 }

@@ -34,6 +34,8 @@ namespace Managers.Core
         [Header("Black background Panel")]
         [SerializeField] private GameObject backgroundOverlay;
 
+        public static event Action OnShopTabOpened;
+
 
 
         void Start()
@@ -105,6 +107,10 @@ namespace Managers.Core
             antiquesPanel.SetActive(clickedTab == Tab.Antiques); // Show Antiques panel if selected
             upgradesPanel.SetActive(clickedTab == Tab.Upgrades); // Show Upgrades panel if selected
 
+            //FORCE REFRESH HERE
+            RefreshCurrencyUI();
+            OnShopTabOpened?.Invoke();
+
             //Slide Up if the panel is not already up
             if (!panelMover.IsUp)
                 panelMover.SlideUp();
@@ -119,5 +125,16 @@ namespace Managers.Core
         {
             drachmaText.text = amount.ToString();
         }
+
+        private void RefreshCurrencyUI()
+        {
+            if (CurrencyManager.Instance == null) return;
+
+            // Update Obols display
+            UpdateObolsUI(CurrencyManager.Instance.GetBalance());
+
+        }
     }
+
+
 }

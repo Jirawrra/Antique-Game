@@ -34,7 +34,8 @@ public class TransactionManager : MonoBehaviour
         {
             this.item = item;
             this.amount = amount;
-            this.deliveryTime = Mathf.Max(item.deliveryTime, 0.1f);
+            float upgradedTime = UpgradeManager.Instance.GetModifiedDeliveryTime(item.deliveryTime);
+            this.deliveryTime = Mathf.Max(upgradedTime, 0.1f);
             this.startTime = Time.time;
         }
     }
@@ -49,7 +50,8 @@ public class TransactionManager : MonoBehaviour
     {
         if (item == null || amount <= 0) return;
 
-        int totalCost = item.ObolValue * amount;
+        int modifiedCost = item.ObolValue;
+        int totalCost = modifiedCost * amount;
 
         if (!CurrencyManager.Instance.HasEnough(totalCost))
         {
@@ -124,7 +126,11 @@ public class TransactionManager : MonoBehaviour
             return false;
         }
 
-        int totalValue = item.SellValue * amount;
+
+        // Calculate earnings with upgrades
+        int upgradedValue = UpgradeManager.Instance.GetModifiedSellValue(item.SellValue);
+        int totalValue = upgradedValue * amount;
+
         CurrencyManager.Instance.Earn(totalValue);
 
         ghost.OnSuccessfulPurchase();

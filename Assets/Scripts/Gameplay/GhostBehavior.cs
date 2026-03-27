@@ -226,7 +226,7 @@ public class GhostBehavior : MonoBehaviour
     {
         Debug.Log("Ghost is happy with the purchase!");
 
-        int value = currentRequestedItem.SellValue;
+        int value = UpgradeManager.Instance.GetModifiedSellValue(currentRequestedItem.SellValue);
 
         FloatingTextManager.Instance.Spawn(
             $"+{value}",
